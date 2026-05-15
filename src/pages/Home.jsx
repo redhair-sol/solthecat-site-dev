@@ -88,8 +88,8 @@ const ToggleButton = styled.button`
 `;
 
 const QuoteBox = styled(motion.div)`
-  background-color: rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(248, 187, 208, 0.5);
+  background-color: rgba(255, 248, 235, 0.7);
+  border: 1px solid var(--sol-line);
   padding: 1.2rem;
   border-radius: 1.5rem;
   margin-top: 1.6rem;
@@ -99,8 +99,9 @@ const QuoteBox = styled(motion.div)`
 `;
 
 const QuoteTitle = styled.h3`
-  font-size: 1.3rem;
-  color: #8e24aa;
+  font-family: var(--sol-serif);
+  font-size: 1.6rem;
+  color: var(--sol-ink);
   margin-bottom: 0.5rem;
 `;
 
@@ -110,8 +111,8 @@ const QuoteText = styled.p`
 `;
 
 const BadgeBox = styled(motion.div)`
-  background-color: rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(248, 187, 208, 0.5);
+  background-color: rgba(255, 248, 235, 0.7);
+  border: 1px solid var(--sol-line);
   padding: 1rem;
   border-radius: 1.5rem;
   max-width: 600px;
@@ -126,7 +127,7 @@ const BadgeIntro = styled.p`
 
 const BadgeName = styled.p`
   font-size: 1.1rem;
-  color: #8e24aa;
+  color: var(--sol-sun);
   font-weight: 600;
 `;
 
@@ -152,8 +153,8 @@ const UnlockedText = styled.p`
 `;
 
 const GamesCard = styled(motion.div)`
-  background-color: rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(248, 187, 208, 0.5);
+  background-color: rgba(255, 248, 235, 0.7);
+  border: 1px solid var(--sol-line);
   padding: 1.5rem;
   border-radius: 1.5rem;
   max-width: 600px;
@@ -163,9 +164,10 @@ const GamesCard = styled(motion.div)`
 `;
 
 const GamesTitle = styled.h3`
-  color: #6a1b9a;
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-family: var(--sol-serif);
+  color: var(--sol-ink);
+  font-size: 1.7rem;
+  font-weight: 600;
 `;
 
 const GamesText = styled.p`
@@ -187,8 +189,8 @@ const GamesCTA = styled(Link)`
 // Deeper-pink accent so it visually distinguishes from the soft pink Games
 // card right below it (the "hot now" vs "browse all" relationship).
 const ChallengeCard = styled(motion.div)`
-  background-color: rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(193, 135, 216, 0.5);
+  background-color: rgba(255, 248, 235, 0.7);
+  border: 1px solid var(--sol-line);
   padding: 1.5rem;
   border-radius: 1.5rem;
   max-width: 600px;
@@ -198,7 +200,7 @@ const ChallengeCard = styled(motion.div)`
 `;
 
 const ChallengeKicker = styled.p`
-  color: #aa4dc8;
+  color: var(--sol-sun);
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 0.8rem;
@@ -207,9 +209,10 @@ const ChallengeKicker = styled.p`
 `;
 
 const ChallengeTitle = styled.h3`
-  color: #6a1b9a;
-  font-size: 1.4rem;
-  font-weight: 700;
+  font-family: var(--sol-serif);
+  color: var(--sol-ink);
+  font-size: 1.7rem;
+  font-weight: 600;
   margin: 0 0 0.3rem;
 `;
 
@@ -220,7 +223,8 @@ const ChallengeSubtitle = styled.p`
 `;
 
 const ChallengeTop3 = styled.div`
-  background: #ffffffcc;
+  background: rgba(255, 248, 235, 0.9);
+  border: 1px solid var(--sol-line);
   border-radius: 0.8rem;
   padding: 0.6rem 0.9rem;
   margin: 0.5rem auto 1rem;
@@ -230,7 +234,7 @@ const ChallengeTop3 = styled.div`
 
 const ChallengeTop3Title = styled.p`
   font-weight: 700;
-  color: #6a1b9a;
+  color: var(--sol-ink-soft);
   margin: 0 0 0.3rem;
   text-align: center;
   font-size: 0.85rem;
