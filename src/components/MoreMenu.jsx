@@ -79,22 +79,22 @@ export default function MoreMenu({ isOpen, onClose }) {
         aria-label="More navigation"
       >
         <div
-          className="bg-gradient-to-b from-[#fff3f8] to-[#fce4ec] rounded-t-3xl shadow-[0_-8px_30px_rgba(170,77,200,0.25)] max-h-[85vh] overflow-y-auto"
+          className="bg-gradient-to-b from-[var(--sol-cream)] to-[var(--sol-cream-2)] rounded-t-3xl shadow-[0_-8px_30px_rgba(26,22,20,0.12)] max-h-[85vh] overflow-y-auto"
           style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
         >
           {/* Drag handle (visual only) */}
           <div className="flex justify-center pt-3 pb-2">
-            <div className="w-12 h-1.5 bg-[#c187d8]/50 rounded-full" />
+            <div className="w-12 h-1.5 bg-[var(--sol-line)] rounded-full" />
           </div>
 
           {/* Header — label + close button (cat lives at the bottom right, draggable) */}
           <div className="flex items-center justify-between px-6 pb-4">
             <div>
-              <p className="text-[0.65rem] uppercase tracking-wider text-[#5b2b7b] font-semibold">
+              <p className="text-[0.65rem] uppercase tracking-wider text-[#4a3f37] font-semibold">
                 {t.header}
               </p>
               <p
-                className={`${navSizeClass} text-[#6a1b9a] leading-none`}
+                className={`${navSizeClass} text-[#1a1614] leading-none`}
                 style={navStyle}
               >
                 {t.tagline}
@@ -103,10 +103,10 @@ export default function MoreMenu({ isOpen, onClose }) {
             <button
               type="button"
               onClick={onClose}
-              className="p-2 rounded-full bg-white/80 shadow-md hover:scale-110 transition-transform"
+              className="p-2 rounded-full bg-[var(--sol-cream)] border border-[var(--sol-line)] shadow-sm hover:scale-110 transition-transform"
               aria-label="Close menu"
             >
-              <X className="w-5 h-5 text-[#5b2b7b]" />
+              <X className="w-5 h-5 text-[#1a1614]" />
             </button>
           </div>
 
@@ -122,8 +122,8 @@ export default function MoreMenu({ isOpen, onClose }) {
                   className={({ isActive }) =>
                     `flex items-center gap-3 px-4 py-3 rounded-xl transition-colors ${
                       isActive
-                        ? "bg-[#f8bbd0] text-[#6a1b9a] font-bold"
-                        : "text-[#5b2b7b] hover:bg-white/60 active:bg-white/80"
+                        ? "bg-[var(--sol-cream-2)] text-[#1a1614] font-bold"
+                        : "text-[#4a3f37] hover:bg-[#1a1614]/5 active:bg-[#1a1614]/10"
                     }`
                   }
                 >
