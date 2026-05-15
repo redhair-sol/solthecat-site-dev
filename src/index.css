@@ -19,6 +19,11 @@
   --sol-ink-soft: #4a3f37;
   --sol-line: #d9cdb8;
 
+  /* Dusty editorial accents — replace candy pink/purple */
+  --sol-rose:  #d4a5a5;
+  --sol-plum:  #8b6b8e;
+  --sol-mauve: #7a5a7c;
+
   --sol-serif: 'Instrument Serif', Georgia, serif;
   --sol-sans: 'Inter', system-ui, sans-serif;
 }

@@ -75,8 +75,9 @@ const LanguageToggle = styled.div`
 const ToggleButton = styled.button`
   padding: 0.3rem 0.8rem;
   min-width: 150px;
-  border: 1px solid #ccc;
-  background-color: ${({ $active }) => ($active ? "#f8bbd0" : "#fff")};
+  border: 1px solid var(--sol-line);
+  background-color: ${({ $active }) => ($active ? "var(--sol-rose)" : "transparent")};
+  color: ${({ $active }) => ($active ? "var(--sol-cream)" : "var(--sol-ink)")};
   border-radius: 8px;
   font-size: 0.85rem;
   cursor: pointer;
@@ -85,6 +86,7 @@ const ToggleButton = styled.button`
   justify-content: center;
   gap: 0.4rem;
   font-weight: 500;
+  transition: background-color 0.2s, color 0.2s;
 `;
 
 const QuoteBox = styled(motion.div)`
@@ -178,8 +180,8 @@ const GamesText = styled.p`
 const GamesCTA = styled(Link)`
   display: inline-block;
   padding: 0.6rem 1.2rem;
-  background-color: #c187d8;
-  color: white;
+  background-color: var(--sol-plum);
+  color: var(--sol-cream);
   text-decoration: none;
   border-radius: 1rem;
   font-weight: bold;
@@ -259,8 +261,8 @@ const ChallengeTop3Empty = styled.p`
 const ChallengeCTA = styled(Link)`
   display: inline-block;
   padding: 0.6rem 1.2rem;
-  background-color: #c187d8;
-  color: white;
+  background-color: var(--sol-plum);
+  color: var(--sol-cream);
   text-decoration: none;
   border-radius: 1rem;
   font-weight: bold;
@@ -284,11 +286,15 @@ const ChallengePill = styled.span`
   background: ${({ $variant }) =>
     $variant === "done" ? "#a5d6a7" :
     $variant === "streak" ? "#ffe0b2" :
-    "#f3e5f5"};
+    "rgba(255, 248, 235, 0.9)"};
   color: ${({ $variant }) =>
     $variant === "done" ? "#1b5e20" :
     $variant === "streak" ? "#bf360c" :
-    "#6a1b9a"};
+    "var(--sol-mauve)"};
+  border: 1px solid ${({ $variant }) =>
+    $variant === "done" || $variant === "streak"
+      ? "transparent"
+      : "var(--sol-line)"};
 `;
 
 const InstagramLink = styled.a`
