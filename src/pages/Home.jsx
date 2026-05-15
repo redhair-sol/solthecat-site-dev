@@ -5,7 +5,6 @@ import { Helmet } from "react-helmet-async";
 import { useEffect, useState } from "react";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import PageContainer from "../components/PageContainer.jsx";
-import SolButton from "../components/SolButton.jsx";
 import Hero from "../components/Hero.jsx";
 import useStreakBadges from "../hooks/useStreakBadges";
 import {
@@ -86,48 +85,6 @@ const ToggleButton = styled.button`
   justify-content: center;
   gap: 0.4rem;
   font-weight: 500;
-`;
-
-const HeroTagline = styled.h2`
-  font-size: 1.8rem;
-  font-weight: 600;
-  font-family: 'Playfair Display', serif;
-  color: #4a005f;
-  font-style: italic;
-  margin: 1.2rem 0;
-`;
-
-const Flair = styled.p`
-  font-size: 1.3rem;
-  font-style: italic;
-  color: #6a1b9a;
-  margin-bottom: 2rem;
-`;
-
-const Bio = styled.p`
-  max-width: 600px;
-  margin: 0 auto 0.5rem;
-  padding: 0 1rem;
-  color: #5b2b7b;
-  font-size: 1rem;
-  line-height: 1.6;
-`;
-
-// Sits between the bio paragraph and the "View the Journey" button. Reads
-// the episode count from public/episodes.json at runtime so the line updates
-// itself whenever a new episode is added — no manual copy edit needed.
-const CityCount = styled.p`
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  color: #aa4dc8;
-  font-size: 1rem;
-  margin: 0.8rem 0 0.4rem;
-`;
-
-const CityCountNum = styled.span`
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #6a1b9a;
 `;
 
 const QuoteBox = styled(motion.div)`
@@ -361,16 +318,6 @@ export default function Home() {
   const [quote, setQuote] = useState("");
   const [mode, setMode] = useState("mood");
   const [isLive, setIsLive] = useState(false);
-  const [episodeCount, setEpisodeCount] = useState(null);
-
-  // Pull the live count of published episodes so the hero line auto-updates
-  // when a new episode is added (no manual copy edit each release).
-  useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}episodes.json`)
-      .then((r) => r.json())
-      .then((data) => setEpisodeCount(data.filter((ep) => ep.visible).length))
-      .catch(() => { /* leave null → bio shows the "50+" fallback */ });
-  }, []);
 
   // Daily challenge — picked from today's date, then top 3 fetched live.
   const dailyChallenge = getTodayChallenge();
@@ -494,14 +441,8 @@ export default function Home() {
 
   const content = {
     en: {
-      title: "the journey of a Queen",
-      flair: "Fluffy. Fierce. Fabulous. 🐾🐾🐾",
-      bio: "Welcome to the official home of solthecat, the feline queen behind the SOLadventures series. From Athens to Paris and beyond, Sol brings elegance, attitude, and a touch of royal paw-power to every destination. Follow her travels, her tales, and her timeless stare.",
-      cityCountBefore: "Solthecat has roamed ",
-      cityCountAfter: " cities and counting...",
       metaDescription:
         "Follow Sol the Cat across 50+ cities — from Athens to Petra. Read travel stories, play 12 free mini-games, and beat the daily challenge.",
-      viewJourney: "View the Journey",
       quoteTitle:
         mode === "fortune"
           ? "Royal Fortune of the Day"
@@ -528,14 +469,8 @@ export default function Home() {
         `Next badge: ${name} in ${days} day${days > 1 ? "s" : ""}`,
     },
     el: {
-      title: "το ταξίδι μιας Βασίλισσας",
-      flair: "Χνουδωτή. Δυναμική. Ακαταμάχητη. 🐾🐾🐾",
-      bio: "Καλωσήρθες στο επίσημο σπίτι της solthecat, της πρωταγωνίστριας της σειράς SOLadventures. Από την Αθήνα ως το Παρίσι και πέρα, η Sol φέρνει κομψότητα, ύφος και βασιλική γοητεία σε κάθε της στάση. Ακολούθησε τα ταξίδια της, τις ιστορίες της και το διαχρονικό της βλέμμα.",
-      cityCountBefore: "Η solthecat έχει επισκεφθεί ",
-      cityCountAfter: " πόλεις και συνεχίζει...",
       metaDescription:
         "Ακολούθα τη Sol the Cat σε 50+ πόλεις — από την Αθήνα μέχρι την Πέτρα. Διάβασε ταξιδιωτικές ιστορίες, παίξε 12 δωρεάν mini-games και νίκα την καθημερινή πρόκληση.",
-      viewJourney: "Δες το Ταξίδι",
       quoteTitle:
         mode === "fortune"
           ? "Η Πατουσένια Συμβουλή της Ημέρας"
