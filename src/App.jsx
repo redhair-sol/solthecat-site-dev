@@ -15,11 +15,8 @@ function App() {
       <ScrollToTop />
       <Topbar />
 
-      {/* Ορατό λευκό κενό ΜΟΝΟ σε desktop (≥1024px — tablets σε portrait χρησιμοποιούν mobile UI) */}
-      <div className="hidden lg:block h-6 w-full bg-white"></div>
-
-      <div className="w-full min-h-screen bg-royal-bg flex flex-col items-center pt-20 lg:pt-24 pb-20 lg:pb-0">
-        <div className="flex w-full max-w-screen-xl flex-grow bg-royal-bg">
+      <div className="w-full min-h-screen bg-transparent flex flex-col items-center pt-20 lg:pt-24 pb-20 lg:pb-0">
+        <div className="flex w-full max-w-screen-xl flex-grow bg-transparent">
           <main className="flex-grow px-4 py-2 md:py-6 w-full">
             <Outlet />
           </main>

@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import PageContainer from "../components/PageContainer.jsx";
 import SolButton from "../components/SolButton.jsx";
+import Hero from "../components/Hero.jsx";
 import useStreakBadges from "../hooks/useStreakBadges";
 import {
   getTodayChallenge,
@@ -130,7 +131,8 @@ const CityCountNum = styled.span`
 `;
 
 const QuoteBox = styled(motion.div)`
-  background-color: #fff3f8;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(248, 187, 208, 0.5);
   padding: 1.2rem;
   border-radius: 1.5rem;
   margin-top: 1.6rem;
@@ -147,11 +149,12 @@ const QuoteTitle = styled.h3`
 
 const QuoteText = styled.p`
   font-style: italic;
-  color: #6a1b9a;
+  color: var(--sol-ink-soft);
 `;
 
 const BadgeBox = styled(motion.div)`
-  background-color: #fff3f8;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(248, 187, 208, 0.5);
   padding: 1rem;
   border-radius: 1.5rem;
   max-width: 600px;
@@ -161,7 +164,7 @@ const BadgeBox = styled(motion.div)`
 `;
 
 const BadgeIntro = styled.p`
-  color: #5b2b7b;
+  color: var(--sol-ink-soft);
 `;
 
 const BadgeName = styled.p`
@@ -171,28 +174,29 @@ const BadgeName = styled.p`
 `;
 
 const BadgeDesc = styled.p`
-  color: #6a1b9a;
+  color: var(--sol-ink-soft);
 `;
 
 const StreakText = styled.p`
-  color: #5b2b7b;
+  color: var(--sol-ink);
   margin-top: 0.5rem;
 `;
 
 const NextBadgeText = styled.p`
-  color: #6a1b9a;
+  color: var(--sol-ink-soft);
   font-size: 0.9rem;
   margin-top: 0.4rem;
   font-style: italic;
 `;
 
 const UnlockedText = styled.p`
-  color: #4a005f;
+  color: var(--sol-ink);
   margin-top: 0.5rem;
 `;
 
 const GamesCard = styled(motion.div)`
-  background-color: #f8bbd0;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(248, 187, 208, 0.5);
   padding: 1.5rem;
   border-radius: 1.5rem;
   max-width: 600px;
@@ -208,7 +212,7 @@ const GamesTitle = styled.h3`
 `;
 
 const GamesText = styled.p`
-  color: #4a005f;
+  color: var(--sol-ink-soft);
   margin-bottom: 1.2rem;
 `;
 
@@ -226,8 +230,8 @@ const GamesCTA = styled(Link)`
 // Deeper-pink accent so it visually distinguishes from the soft pink Games
 // card right below it (the "hot now" vs "browse all" relationship).
 const ChallengeCard = styled(motion.div)`
-  background-color: #fff3f8;
-  border: 2px solid #c187d8;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(193, 135, 216, 0.5);
   padding: 1.5rem;
   border-radius: 1.5rem;
   max-width: 600px;
@@ -253,7 +257,7 @@ const ChallengeTitle = styled.h3`
 `;
 
 const ChallengeSubtitle = styled.p`
-  color: #5b2b7b;
+  color: var(--sol-ink-soft);
   margin: 0 0 1rem;
   font-size: 0.95rem;
 `;
@@ -279,12 +283,12 @@ const ChallengeTop3Row = styled.div`
   display: flex;
   justify-content: space-between;
   font-size: 0.9rem;
-  color: #5b2b7b;
+  color: var(--sol-ink);
   padding: 0.1rem 0;
 `;
 
 const ChallengeTop3Empty = styled.p`
-  color: #5b2b7b;
+  color: var(--sol-ink-soft);
   font-size: 0.8rem;
   font-style: italic;
   text-align: center;
@@ -571,6 +575,7 @@ export default function Home() {
       </Helmet>
 
       <RelativePageContainer
+        noBg
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -594,20 +599,9 @@ export default function Home() {
           </ToggleButton>
         </LanguageToggle>
 
-        <HeroTagline>{t.title}</HeroTagline>
-        <Flair>{t.flair}</Flair>
-        <Bio>{t.bio}</Bio>
-
-        <CityCount>
-          {t.cityCountBefore}
-          <CityCountNum>{episodeCount ?? "50+"}</CityCountNum>
-          {t.cityCountAfter}
-        </CityCount>
-
-        {/* JOURNEY BUTTON */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-          <SolButton to="/episodes">{t.viewJourney}</SolButton>
-        </motion.div>
+        {/* Hero v2 — Warm Editorial. Portrait photo with cozy golden-hour
+            lighting; pairs with the cream/sun/ink palette. */}
+        <Hero photo="/images/sol-hero.jpg" />
 
         {/* QUOTE TOGGLE */}
         <LanguageToggle style={{ marginTop: "2.4rem" }}>

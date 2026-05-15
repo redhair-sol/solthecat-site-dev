@@ -2,13 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ——————————————————————————————————————————————————— */
+/* Hero v2 — Warm Editorial palette + fonts                */
+/* Tokens namespaced with --sol-* so they don't collide      */
+/* with existing styles elsewhere on the site.              */
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  /* solthecat warm editorial palette */
+  --sol-cream: #f5efe4;
+  --sol-cream-2: #ede4d3;
+  --sol-sun: #e8a838;
+  --sol-ink: #1a1614;
+  --sol-ink-soft: #4a3f37;
+  --sol-line: #d9cdb8;
+
+  --sol-serif: 'Instrument Serif', Georgia, serif;
+  --sol-sans: 'Inter', system-ui, sans-serif;
+}
+
 /* ————————————————————————————— */
 /* General layout + font optimizations */
 
 body {
   margin: 0;
   font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
-  background-color: #fffafc;
+  background-color: var(--sol-cream);
   font-display: swap;
 }
 
