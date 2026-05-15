@@ -17,8 +17,8 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
     line-height: 1.6;
-    background: #fff;
-    color: #333;
+    background: var(--sol-cream);
+    color: var(--sol-ink);
   }
 
   a {
