@@ -2,18 +2,17 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams, Link } from "react-router-dom";
-import styled from "styled-components";
 import { Helmet } from "react-helmet-async";
 import { Search, X } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import PageContainer from "../components/PageContainer.jsx";
+import { fonts } from "../theme.js";
 import { detectRegion } from "../utils/region.js";
 
 // Pulls the human-friendly city name out of the episode title so the
-// per-card quiz CTA reads "Play the Athens quiz", "Play the Saint-Louis quiz"
-// etc. Titles follow the pattern "SOLadventure #N – CityName, rest…" — we
-// grab whatever sits between " – " and the first comma. Falls back to a
-// title-cased slug for safety (e.g. "lapaz" → "Lapaz").
+// per-card quiz CTA reads "Play the Athens quiz" etc. Titles follow the
+// pattern "SOLadventure #N – CityName, rest…" — we grab whatever sits
+// between " – " and the first comma. Falls back to a title-cased slug.
 function extractCityName(ep, lang) {
   const title =
     (typeof ep.title === "object" ? ep.title[lang] : ep.title) || "";
@@ -31,6 +30,32 @@ function extractCityName(ep, lang) {
   return "";
 }
 
+// Renders the episode title with the city name in italic sun (mirrors the
+// "sol *the* cat" logo accent pattern). Falls back to plain text if no city
+// can be located inside the title.
+function renderTitleWithCityAccent(title, city) {
+  if (!city) return title;
+  const idx = title.indexOf(city);
+  if (idx === -1) return title;
+  const before = title.slice(0, idx);
+  const after = title.slice(idx + city.length);
+  return (
+    <>
+      {before}
+      <em
+        className="not-italic"
+        style={{
+          fontStyle: "italic",
+          color: "var(--sol-sun)",
+        }}
+      >
+        {city}
+      </em>
+      {after}
+    </>
+  );
+}
+
 // Region keys produced by the lat/lng classifier in src/utils/region.js.
 const REGION_KEYS = [
   "all",
@@ -42,220 +67,8 @@ const REGION_KEYS = [
   "oceania",
 ];
 
-const TopSection = styled.div`
-  margin-bottom: 2rem;
-`;
-
-const Heading = styled.h1`
-  font-size: 2rem;
-  color: #1a1614;
-  margin-bottom: 0.5rem;
-`;
-
-const Subheading = styled.p`
-  font-size: 1rem;
-  color: #4a3f37;
-  margin: 0 auto;
-  max-width: 600px;
-  line-height: 1.5;
-`;
-
-const ChipsRow = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  justify-content: center;
-  max-width: 600px;
-  width: 100%;
-  margin: 0 auto 1rem;
-`;
-
-const Chip = styled.button`
-  padding: 0.35rem 0.85rem;
-  font-size: 0.85rem;
-  font-family: 'Poppins', sans-serif;
-  border: 1.5px solid #8b6b8e;
-  background: ${({ $active }) => ($active ? "#8b6b8e" : "#ffffffee")};
-  color: ${({ $active }) => ($active ? "#fff" : "#4a3f37")};
-  border-radius: 999px;
-  cursor: pointer;
-  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
-
-  &:hover {
-    background: ${({ $active }) => ($active ? "#8b6b8e" : "#ede4d3")};
-    border-color: #8b6b8e;
-  }
-`;
-
-const SearchWrapper = styled.div`
-  position: relative;
-  max-width: 600px;
-  width: 100%;
-  margin: 0 auto 1rem;
-`;
-
-const SearchInput = styled.input`
-  width: 100%;
-  padding: 0.7rem 2.5rem 0.7rem 2.7rem;
-  font-size: 1rem;
-  border: 2px solid #8b6b8e;
-  border-radius: 999px;
-  background: #ffffffee;
-  color: #4a3f37;
-  font-family: 'Poppins', sans-serif;
-  outline: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-  box-sizing: border-box;
-
-  &:focus {
-    border-color: #8b6b8e;
-    box-shadow: 0 0 0 3px rgba(26, 22, 20, 0.15);
-  }
-
-  &::placeholder {
-    color: #8b6b8e;
-    opacity: 0.85;
-  }
-`;
-
-const SearchIconWrapper = styled.span`
-  position: absolute;
-  left: 0.95rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #8b6b8e;
-  pointer-events: none;
-  display: flex;
-  align-items: center;
-`;
-
-const ClearButton = styled.button`
-  position: absolute;
-  right: 0.6rem;
-  top: 50%;
-  transform: translateY(-50%);
-  background: transparent;
-  border: none;
-  color: #8b6b8e;
-  cursor: pointer;
-  padding: 0.3rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.2s ease;
-
-  &:hover {
-    background: rgba(26, 22, 20, 0.1);
-  }
-`;
-
-const ResultCount = styled.p`
-  font-size: 0.85rem;
-  color: #4a3f37;
-  font-style: italic;
-  margin: 0 auto 1.5rem;
-  text-align: center;
-`;
-
-const NoResults = styled.p`
-  font-size: 1rem;
-  color: #4a3f37;
-  font-style: italic;
-  text-align: center;
-  max-width: 600px;
-  margin: 1.5rem auto;
-`;
-
-const EpisodeCard = styled.div`
-  background: #ffffffcc;
-  padding: 1.5rem;
-  border-radius: 1.5rem;
-  max-width: 600px;
-  width: 100%;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-`;
-
-const EpisodeImage = styled.img`
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  border-radius: 1rem;
-  object-fit: cover;
-  margin-bottom: 1rem;
-`;
-
-const EpisodeTitle = styled.h2`
-  font-size: 1.2rem;
-  color: #1a1614;
-  margin-bottom: 0.5rem;
-`;
-
-const EpisodeQuote = styled.p`
-  font-style: italic;
-  color: #944f9e;
-  margin-bottom: 0.5rem;
-  font-size: 0.95rem;
-`;
-
-const EpisodeCaption = styled.p`
-  font-size: 0.9rem;
-  color: #333;
-`;
-
-const StoryContainer = styled.div`
-  margin-top: 1.2rem;
-  font-size: 0.9rem;
-  color: #444;
-  text-align: justify;
-`;
-
-const StoryTitle = styled.h3`
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: #1a1614;
-`;
-
-// Per-card CTA row that pushes the user from "read story" to "play the quiz
-// for this city". Sits at the end of each card. Funnel fix — analytics
-// showed visitors browse /episodes but rarely reach /games on their own.
-const CTARow = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 1rem;
-`;
-
-const QuizCTA = styled(Link)`
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.55rem 1rem;
-  background: #8b6b8e;
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 999px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 0.85rem;
-  box-shadow: 0 2px 8px rgba(26, 22, 20, 0.25);
-  transition: background 0.15s ease, transform 0.15s ease;
-
-  &:hover {
-    background: #8b6b8e;
-    transform: scale(1.03);
-  }
-`;
-
-const ErrorBox = styled.div`
-  background: #ffebee;
-  color: #c62828;
-  padding: 1rem 1.2rem;
-  border-radius: 1rem;
-  max-width: 600px;
-  margin: 1rem auto;
-  font-size: 0.95rem;
-  text-align: center;
-`;
+// Shared Tailwind class fragments to keep the JSX readable.
+const SERIF = { fontFamily: '"Instrument Serif", serif' };
 
 export default function Episodes() {
   const [episodes, setEpisodes] = useState([]);
@@ -280,15 +93,16 @@ export default function Episodes() {
 
   const t = {
     en: {
-      heading: "Sol’s Episodes 🎥",
+      headingPrefix: "Sol’s ",
+      headingAccent: "Episodes",
       subheading: "Follow the pawprints of royalty",
-      placeholder: "Search by city or keyword...",
-      noResults: (q) => `No episodes found for "${q}". Try another keyword.`,
+      placeholder: "Search by city or keyword…",
+      noResults: (q) => `No episodes found for “${q}”. Try another keyword.`,
       matches: (n) => `${n} ${n === 1 ? "match" : "matches"}`,
       clearLabel: "Clear search",
       storyTitle: "SOL’s Tale",
       loadFail: "Couldn't load episodes. Please try refreshing the page.",
-      quizCTA: (city) => `🧠 Play the ${city} quiz →`,
+      quizCTA: (city) => `Play the ${city} quiz →`,
       metaDescription:
         "All 52 SOLadventures — short travel stories from Athens, Rome, Paris, Marrakech, Petra and beyond. Each city, a queen's-eye view.",
       regions: {
@@ -302,15 +116,16 @@ export default function Episodes() {
       },
     },
     el: {
-      heading: "Τα επεισόδια της Sol 🎥",
+      headingPrefix: "Τα επεισόδια της ",
+      headingAccent: "Sol",
       subheading: "Ακολούθησε τα πατουσάκια της βασίλισσας",
-      placeholder: "Αναζήτηση με πόλη ή λέξη-κλειδί...",
-      noResults: (q) => `Δεν βρέθηκαν επεισόδια για "${q}". Δοκίμασε άλλη λέξη.`,
+      placeholder: "Αναζήτηση με πόλη ή λέξη-κλειδί…",
+      noResults: (q) => `Δεν βρέθηκαν επεισόδια για “${q}”. Δοκίμασε άλλη λέξη.`,
       matches: (n) => `${n} ${n === 1 ? "αποτέλεσμα" : "αποτελέσματα"}`,
       clearLabel: "Καθαρισμός αναζήτησης",
       storyTitle: "Το Παραμύθι της SOL",
       loadFail: "Δεν φόρτωσαν τα επεισόδια. Παρακαλώ δοκίμασε refresh.",
-      quizCTA: (city) => `🧠 Παίξε το quiz της ${city} →`,
+      quizCTA: (city) => `Παίξε το quiz της ${city} →`,
       metaDescription:
         "Όλα τα 52 SOLadventures — μικρές ταξιδιωτικές ιστορίες από Αθήνα, Ρώμη, Παρίσι, Μαρακές, Πέτρα και ακόμη πιο πέρα. Κάθε πόλη, μια βασιλική ματιά.",
       regions: {
@@ -334,8 +149,6 @@ export default function Episodes() {
       .then((data) => {
         const visibleEpisodes = data
           .filter((ep) => ep.visible)
-          // Backfill region for any entry that ships without one (new episodes
-          // can omit the field — we derive it from location.lat/lng).
           .map((ep) =>
             ep.region
               ? ep
@@ -347,16 +160,16 @@ export default function Episodes() {
           id: 999,
           title: {
             en: `SOLadventure #${nextNumber} – Coming Soon`,
-            el: `SOLadventure #${nextNumber} – Έρχεται Σύντομα`
+            el: `SOLadventure #${nextNumber} – Έρχεται Σύντομα`,
           },
           image: "episodes/coming-soon.webp",
           caption: {
             en: "Stay tuned for the next purrfect stop",
-            el: "Μείνε συντονισμένος για τον επόμενο σταθμό"
+            el: "Μείνε συντονισμένος για τον επόμενο σταθμό",
           },
           visible: false,
           quote: "",
-          story: { en: "", el: "" }
+          story: { en: "", el: "" },
         };
 
         visibleEpisodes.push(teaser);
@@ -372,10 +185,8 @@ export default function Episodes() {
   const trimmedQuery = searchQuery.trim();
   const isSearching = trimmedQuery.length > 0;
   const isFilteringRegion = selectedRegion !== "all";
-  // Hide teaser whenever any filter is active.
   const isFiltered = isSearching || isFilteringRegion;
 
-  // Only show region chips for regions that actually have episodes.
   const availableRegions = useMemo(() => {
     const present = new Set(
       episodes.filter((ep) => ep.visible !== false && ep.region).map((ep) => ep.region)
@@ -387,7 +198,6 @@ export default function Episodes() {
     if (!isFiltered) return episodes;
     const q = trimmedQuery.toLowerCase();
     return episodes.filter((ep) => {
-      // Hide the "Coming Soon" teaser while filtering — it is not a real result.
       if (ep.visible === false) return false;
       if (isFilteringRegion && ep.region !== selectedRegion) return false;
       if (isSearching) {
@@ -405,7 +215,17 @@ export default function Episodes() {
       }
       return true;
     });
-  }, [episodes, isFiltered, isSearching, isFilteringRegion, selectedRegion, trimmedQuery, language]);
+  }, [
+    episodes,
+    isFiltered,
+    isSearching,
+    isFilteringRegion,
+    selectedRegion,
+    trimmedQuery,
+    language,
+  ]);
+
+  const scriptStyle = fonts.navStyleFor(language);
 
   return (
     <>
@@ -422,98 +242,180 @@ export default function Episodes() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <TopSection>
-          <Heading>{t.heading}</Heading>
-          <Subheading>{t.subheading}</Subheading>
-        </TopSection>
-
-        <ChipsRow role="group" aria-label={t.regions.all}>
-          {availableRegions.map((r) => (
-            <Chip
-              key={r}
-              type="button"
-              $active={selectedRegion === r}
-              onClick={() => handleRegionChange(r)}
-              aria-pressed={selectedRegion === r}
+        {/* Header */}
+        <header className="text-center mb-10 md:mb-14">
+          <h1
+            className="text-[clamp(2.4rem,6vw,3.6rem)] leading-[1.05] text-[var(--sol-ink)]"
+            style={SERIF}
+          >
+            {t.headingPrefix}
+            <em
+              className="not-italic"
+              style={{
+                ...SERIF,
+                fontStyle: "italic",
+                color: "var(--sol-sun)",
+              }}
             >
-              {t.regions[r]}
-            </Chip>
-          ))}
-        </ChipsRow>
+              {t.headingAccent}
+            </em>
+          </h1>
+          <p
+            className="mt-3 text-[1rem] md:text-[1.05rem] italic text-[var(--sol-ink-soft)]"
+            style={SERIF}
+          >
+            {t.subheading}
+          </p>
+        </header>
 
-        <SearchWrapper>
-          <SearchIconWrapper>
+        {/* Region chips */}
+        <div
+          role="group"
+          aria-label={t.regions.all}
+          className="flex flex-wrap justify-center gap-2 max-w-[640px] w-full mx-auto mb-4"
+        >
+          {availableRegions.map((r) => {
+            const active = selectedRegion === r;
+            return (
+              <button
+                key={r}
+                type="button"
+                onClick={() => handleRegionChange(r)}
+                aria-pressed={active}
+                className={[
+                  "px-3.5 py-1.5 text-[0.85rem] rounded-full border transition-colors duration-150",
+                  active
+                    ? "bg-[var(--sol-rose)] text-[var(--sol-cream)] border-[var(--sol-rose)]"
+                    : "bg-transparent text-[var(--sol-ink-soft)] border-[var(--sol-line)] hover:border-[var(--sol-rose)] hover:text-[var(--sol-ink)]",
+                ].join(" ")}
+              >
+                {t.regions[r]}
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Search */}
+        <div className="relative max-w-[640px] w-full mx-auto mb-4">
+          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[var(--sol-ink-soft)] pointer-events-none flex items-center">
             <Search size={18} />
-          </SearchIconWrapper>
-          <SearchInput
+          </span>
+          <input
             type="search"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder={t.placeholder}
             aria-label={t.placeholder}
+            className="w-full pl-11 pr-10 py-2.5 text-[1rem] rounded-full bg-[var(--sol-cream)] border border-[var(--sol-line)] text-[var(--sol-ink)] placeholder:text-[var(--sol-ink-soft)] outline-none transition-colors focus:border-[var(--sol-sun)] focus:ring-2 focus:ring-[var(--sol-sun)]/25"
           />
           {isSearching && (
-            <ClearButton
+            <button
               type="button"
               onClick={() => setSearchQuery("")}
               aria-label={t.clearLabel}
+              className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 rounded-full text-[var(--sol-ink-soft)] hover:text-[var(--sol-ink)] hover:bg-[var(--sol-cream-2)] transition-colors flex items-center justify-center"
             >
               <X size={16} />
-            </ClearButton>
+            </button>
           )}
-        </SearchWrapper>
+        </div>
 
         {isFiltered && filteredEpisodes.length > 0 && (
-          <ResultCount>{t.matches(filteredEpisodes.length)}</ResultCount>
+          <p className="text-[0.85rem] italic text-[var(--sol-ink-soft)] text-center mb-6">
+            {t.matches(filteredEpisodes.length)}
+          </p>
         )}
 
         {loadError && (
-          <ErrorBox role="alert">{t.loadFail}</ErrorBox>
+          <div
+            role="alert"
+            className="max-w-[640px] mx-auto my-4 px-5 py-4 rounded-2xl text-center text-[0.95rem] bg-[var(--sol-cream-2)] text-[var(--sol-ink)] border border-[var(--sol-line)]"
+          >
+            {t.loadFail}
+          </div>
         )}
 
         {!loadError && isFiltered && filteredEpisodes.length === 0 && (
-          <NoResults>
+          <p className="text-[1rem] italic text-[var(--sol-ink-soft)] text-center max-w-[640px] mx-auto my-6">
             {isSearching
               ? t.noResults(trimmedQuery)
               : t.noResults(t.regions[selectedRegion])}
-          </NoResults>
+          </p>
         )}
 
-        {filteredEpisodes.map((ep, idx) => (
-          <EpisodeCard key={ep.id}>
-            <EpisodeImage
-              src={`${import.meta.env.BASE_URL}${ep.image}`}
-              alt={typeof ep.title === "object" ? ep.title[language] : ep.title}
-              width="800"
-              height="800"
-              loading={idx === 0 ? "eager" : "lazy"}
-              fetchpriority={idx === 0 ? "high" : "auto"}
-              decoding="async"
-            />
-            <EpisodeTitle>
-              {typeof ep.title === "object" ? ep.title[language] : ep.title}
-            </EpisodeTitle>
-            {ep.quote && <EpisodeQuote>{ep.quote}</EpisodeQuote>}
-            <EpisodeCaption>
-              {typeof ep.caption === "object" ? ep.caption[language] : ep.caption}
-            </EpisodeCaption>
+        {/* Episode cards */}
+        <div className="flex flex-col items-center gap-8 mt-2">
+          {filteredEpisodes.map((ep, idx) => {
+            const epTitle =
+              typeof ep.title === "object" ? ep.title[language] : ep.title;
+            const epCaption =
+              typeof ep.caption === "object" ? ep.caption[language] : ep.caption;
+            const cityForAccent = extractCityName(ep, language);
 
-            {ep.story && ep.story[language] && (
-              <StoryContainer>
-                <StoryTitle>{t.storyTitle}</StoryTitle>
-                <p>{ep.story[language]}</p>
-              </StoryContainer>
-            )}
+            return (
+              <article
+                key={ep.id}
+                className="bg-[var(--sol-cream-2)] rounded-3xl max-w-[640px] w-full p-5 md:p-6 shadow-[0_2px_12px_rgba(26,22,20,0.06)] transition-shadow hover:shadow-[0_4px_18px_rgba(26,22,20,0.09)]"
+              >
+                <img
+                  src={`${import.meta.env.BASE_URL}${ep.image}`}
+                  alt={epTitle}
+                  width="800"
+                  height="800"
+                  loading={idx === 0 ? "eager" : "lazy"}
+                  fetchpriority={idx === 0 ? "high" : "auto"}
+                  decoding="async"
+                  className="w-full aspect-square object-cover rounded-2xl mb-5"
+                />
 
-            {ep.visible !== false && ep.city && (
-              <CTARow>
-                <QuizCTA to="/games/cityquiz">
-                  {t.quizCTA(extractCityName(ep, language))}
-                </QuizCTA>
-              </CTARow>
-            )}
-          </EpisodeCard>
-        ))}
+                <h2
+                  className="text-[1.5rem] md:text-[1.7rem] leading-snug text-[var(--sol-ink)] mb-2"
+                  style={SERIF}
+                >
+                  {renderTitleWithCityAccent(epTitle, cityForAccent)}
+                </h2>
+
+                {ep.quote && (
+                  <p
+                    className="italic text-[var(--sol-ink-soft)] mb-2 text-[0.98rem]"
+                    style={SERIF}
+                  >
+                    {ep.quote}
+                  </p>
+                )}
+
+                <p className="text-[0.95rem] text-[var(--sol-ink)]">
+                  {epCaption}
+                </p>
+
+                {ep.story && ep.story[language] && (
+                  <div className="mt-5 pt-4 border-t border-[var(--sol-line)]">
+                    <h3
+                      className="text-[1.15rem] text-[var(--sol-ink)] mb-2"
+                      style={scriptStyle}
+                    >
+                      {t.storyTitle}
+                    </h3>
+                    <p className="text-[0.95rem] text-[var(--sol-ink)] leading-relaxed text-justify">
+                      {ep.story[language]}
+                    </p>
+                  </div>
+                )}
+
+                {ep.visible !== false && ep.city && (
+                  <div className="flex justify-end mt-5">
+                    <Link
+                      to="/games/cityquiz"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-[0.9rem] font-medium bg-[var(--sol-plum)] text-[var(--sol-cream)] no-underline transition-all hover:bg-[var(--sol-mauve)] hover:scale-[1.02] shadow-[0_2px_8px_rgba(26,22,20,0.12)]"
+                    >
+                      {t.quizCTA(extractCityName(ep, language))}
+                    </Link>
+                  </div>
+                )}
+              </article>
+            );
+          })}
+        </div>
       </PageContainer>
     </>
   );
