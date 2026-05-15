@@ -38,8 +38,8 @@ export default function BottomTabBar() {
 
   const baseTab =
     "flex flex-col items-center justify-center gap-1 flex-1 py-2 transition-colors duration-150";
-  const inactiveTab = "text-[#5b2b7b] hover:text-[#aa4dc8]";
-  const activeTab = "text-[#6a1b9a]";
+  const inactiveTab = "text-[#4a3f37] hover:text-[#1a1614]";
+  const activeTab = "text-[#1a1614]";
   const labelStyle = fonts.navStyleFor(language);
   const labelSizeClass = fonts.navSizeClassFor(language, "text-[0.95rem]");
 
@@ -47,14 +47,14 @@ export default function BottomTabBar() {
     <>
       <nav
         className="lg:hidden fixed bottom-0 left-0 right-0 z-[1100]
-                   border-t border-[#f8bbd0]
-                   shadow-[0_-2px_10px_rgba(170,77,200,0.12)]"
+                   border-t border-[var(--sol-line)]
+                   shadow-[0_-2px_10px_rgba(26,22,20,0.06)]"
         style={{
           // Inline style fallbacks for older browsers / strict content filters
           // (e.g. MI Browser) where Tailwind arbitrary values or backdrop-blur
           // may not apply correctly. Solid bg (no transparency) avoids the
           // "invisible bar" failure mode of `bg/95 + backdrop-blur` chain.
-          backgroundColor: "#fff3f8",
+          backgroundColor: "#f5efe4",
           paddingBottom: "env(safe-area-inset-bottom, 0)",
         }}
         aria-label="Primary mobile navigation"
