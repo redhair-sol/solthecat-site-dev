@@ -117,10 +117,10 @@ export default function MoreMenu({ isOpen, onClose }) {
                   to={item.to}
                   onClick={onClose}
                   className={({ isActive }) =>
-                    `flex items-center gap-3 px-4 py-3.5 rounded-xl transition-colors ${
+                    `flex items-center gap-3 py-3.5 rounded-xl transition-colors ${
                       isActive
-                        ? "bg-[var(--sol-cream-2)] text-[#1a1614] font-bold"
-                        : "text-[#4a3f37] hover:bg-[#1a1614]/5 active:bg-[#1a1614]/10"
+                        ? "border-l-2 border-[#d4a5a5] pl-[14px] pr-4 text-[#1a1614] font-medium"
+                        : "px-4 text-[#4a3f37] hover:bg-[#1a1614]/5 active:bg-[#1a1614]/10"
                     }`
                   }
                 >
@@ -161,7 +161,7 @@ export default function MoreMenu({ isOpen, onClose }) {
               alt="Sol the Cat"
               className="w-24 h-24 object-contain rounded-xl cursor-grab active:cursor-grabbing select-none"
               drag
-              dragConstraints={{ top: -120, bottom: 30, left: -220, right: 20 }}
+              dragConstraints={{ top: -120, bottom: 0, left: -220, right: 20 }}
               dragElastic={0.2}
               animate={{ x: 0, y: 0 }}
               transition={{ type: "spring", stiffness: 300 }}
