@@ -38,7 +38,7 @@ const CurrentPawStyle = createGlobalStyle`
     position: absolute;
     inset: 0;
     border-radius: 50%;
-    background: rgba(170, 77, 200, 0.45);
+    background: rgba(26, 22, 20, 0.45);
     animation: solCurrentPulse 2s ease-out infinite;
     pointer-events: none;
   }
@@ -56,13 +56,13 @@ const CurrentPawStyle = createGlobalStyle`
 
 const Heading = styled.h1`
   font-size: 2rem;
-  color: #6a1b9a;
+  color: #1a1614;
   margin-bottom: 0.5rem;
 `;
 
 const Subheading = styled.p`
   font-size: 1rem;
-  color: #5b2b7b;
+  color: #4a3f37;
   margin-bottom: 1.5rem;
 `;
 
@@ -94,7 +94,7 @@ const MapWrapper = styled.div`
   margin: 0 auto;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(170, 77, 200, 0.15);
+  box-shadow: 0 4px 12px rgba(26, 22, 20, 0.15);
   /* Confine Leaflet's internal z-indices (controls up to 1000) within this
      stacking context so they cannot stack above fixed UI like the bottom
      tab bar or Instagram button. */
@@ -217,7 +217,7 @@ function AnimatedMarker({ route, delay = 3000, onUpdateIndex, onComplete }) {
     <>
       <Marker position={route[Math.min(currentIndex, route.length - 1)]} icon={pawIcon} />
       {traveled.length > 1 && (
-        <Polyline positions={traveled} color="#aa4dc8" weight={4} />
+        <Polyline positions={traveled} color="#8b6b8e" weight={4} />
       )}
     </>
   );
@@ -385,7 +385,7 @@ export default function SOLsJourneyAnimated() {
             {/* Full static polyline only after the user has watched the
                 journey play out. During idle we hide it for the reveal. */}
             {phase === "complete" && route.length > 1 && (
-              <Polyline positions={route} color="#aa4dc8" weight={4} />
+              <Polyline positions={route} color="#8b6b8e" weight={4} />
             )}
 
             {/* Focus the map on the current (last) city while idle so the

@@ -7,13 +7,13 @@ import PageContainer from "../components/PageContainer.jsx";
 // ✅ ΙΔΙΟ BUTTON ΠΑΝΤΟΥ
 const SolButton = styled(Link)`
   padding: 0.8rem 1.5rem;
-  background-color: #c187d8;
+  background-color: #8b6b8e;
   color: white;
   text-decoration: none;
   border-radius: 16px;
   font-weight: bold;
   display: inline-block;
-  box-shadow: 0 4px 10px rgba(170, 77, 200, 0.3);
+  box-shadow: 0 4px 10px rgba(26, 22, 20, 0.3);
   transition: transform 0.2s ease-in-out;
   margin-top: 1rem;
   align-self: center;
@@ -25,7 +25,7 @@ const SolButton = styled(Link)`
 
 const Heading = styled.h1`
   font-size: 2rem;
-  color: #6a1b9a;
+  color: #1a1614;
   margin-bottom: 0.5rem;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
@@ -33,7 +33,7 @@ const Heading = styled.h1`
 
 const Subheading = styled.p`
   font-size: 1rem;
-  color: #5b2b7b;
+  color: #4a3f37;
   margin-bottom: 2rem;
   font-family: 'Poppins', sans-serif;
 `;
@@ -89,7 +89,7 @@ const GameEmoji = styled.div`
 
 const GameTitle = styled.h2`
   font-size: 1.2rem;
-  color: #d35ca3;
+  color: #7a5a7c;
   margin-bottom: 0.5rem;
 
   @media (max-width: 480px) {

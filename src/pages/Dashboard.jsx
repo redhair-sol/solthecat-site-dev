@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const PageContainer = styled.div`
   padding: 2rem;
-  background: linear-gradient(to bottom, #fff1f9, #fce4ec);
+  background: linear-gradient(to bottom, #f5efe4, #ede4d3);
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
 `;
@@ -12,7 +12,7 @@ const PageContainer = styled.div`
 const Title = styled.h1`
   font-size: 2.5rem;
   font-weight: 600;
-  color: #aa4dc8;
+  color: #8b6b8e;
   margin-bottom: 1rem;
 `;
 

@@ -30,7 +30,7 @@ const SPAWN_MAX_MS = 1100;
 
 const Title = styled.h1`
   font-size: 2rem;
-  color: #6a1b9a;
+  color: #1a1614;
   margin-bottom: 0.5rem;
 
   @media (max-width: 480px) {
@@ -40,7 +40,7 @@ const Title = styled.h1`
 
 const Subtitle = styled.p`
   font-size: 1rem;
-  color: #5b2b7b;
+  color: #4a3f37;
   margin-bottom: 1rem;
   max-width: 600px;
   text-align: center;
@@ -55,14 +55,14 @@ const HUDRow = styled.div`
   margin-bottom: 1rem;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  color: #6a1b9a;
+  color: #1a1614;
 `;
 
 const HUDChip = styled.div`
   background: #ffffffcc;
   padding: 0.5rem 1rem;
   border-radius: 999px;
-  box-shadow: 0 2px 6px rgba(170, 77, 200, 0.15);
+  box-shadow: 0 2px 6px rgba(26, 22, 20, 0.15);
   font-size: 0.95rem;
 `;
 
@@ -79,7 +79,7 @@ const Cell = styled.div`
   aspect-ratio: 1 / 1;
   background: #ffffffcc;
   border-radius: 1rem;
-  border: 2px solid #f8bbd0;
+  border: 2px solid #d4a5a5;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -114,14 +114,14 @@ const QuickBadge = styled.span`
 
 const StartButton = styled.button`
   padding: 0.8rem 1.5rem;
-  background-color: #c187d8;
+  background-color: #8b6b8e;
   color: white;
   border: none;
   border-radius: 16px;
   font-weight: bold;
   font-family: 'Poppins', sans-serif;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(170, 77, 200, 0.3);
+  box-shadow: 0 4px 10px rgba(26, 22, 20, 0.3);
   transition: transform 0.2s ease-in-out;
   margin-top: 1rem;
 
@@ -136,7 +136,7 @@ const FinalCard = styled(motion.div)`
   border-radius: 1.5rem;
   width: 100%;
   max-width: 500px;
-  box-shadow: 0 4px 16px rgba(170, 77, 200, 0.18);
+  box-shadow: 0 4px 16px rgba(26, 22, 20, 0.18);
   text-align: center;
   margin-top: 1rem;
 `;
@@ -144,7 +144,7 @@ const FinalCard = styled(motion.div)`
 // --- Leaderboard styled bits (mirrored from CatchCats for visual parity) ---
 const Top3Box = styled.div`
   background: #ffffffcc;
-  border: 2px solid #f8bbd0;
+  border: 2px solid #d4a5a5;
   border-radius: 1rem;
   padding: 0.8rem 1rem;
   margin: 0.5rem auto;
@@ -156,7 +156,7 @@ const Top3Box = styled.div`
 
 const Top3Title = styled.p`
   font-weight: 700;
-  color: #6a1b9a;
+  color: #1a1614;
   margin: 0 0 0.4rem;
   text-align: center;
   font-size: 0.95rem;
@@ -166,12 +166,12 @@ const Top3Row = styled.div`
   display: flex;
   justify-content: space-between;
   font-size: 0.95rem;
-  color: #5b2b7b;
+  color: #4a3f37;
   padding: 0.15rem 0;
 `;
 
 const Top3Empty = styled.p`
-  color: #5b2b7b;
+  color: #4a3f37;
   font-size: 0.85rem;
   font-style: italic;
   text-align: center;
@@ -179,7 +179,7 @@ const Top3Empty = styled.p`
 `;
 
 const PersonalBestText = styled.p`
-  color: #aa4dc8;
+  color: #8b6b8e;
   font-weight: 600;
   font-family: 'Poppins', sans-serif;
   font-size: 0.9rem;
@@ -197,25 +197,25 @@ const NameInputRow = styled.div`
 
 const NameInput = styled.input`
   padding: 0.6rem 1rem;
-  border: 2px solid #c187d8;
+  border: 2px solid #8b6b8e;
   border-radius: 999px;
   font-family: 'Poppins', sans-serif;
   font-size: 0.95rem;
-  color: #5b2b7b;
+  color: #4a3f37;
   outline: none;
   width: 12ch;
 
   &:focus {
-    border-color: #aa4dc8;
-    box-shadow: 0 0 0 3px rgba(170, 77, 200, 0.15);
+    border-color: #8b6b8e;
+    box-shadow: 0 0 0 3px rgba(26, 22, 20, 0.15);
   }
 `;
 
 const SmallButton = styled.button`
   padding: 0.6rem 1.2rem;
-  background-color: ${({ $secondary }) => ($secondary ? "#ffffff" : "#c187d8")};
-  color: ${({ $secondary }) => ($secondary ? "#6a1b9a" : "white")};
-  border: 2px solid #c187d8;
+  background-color: ${({ $secondary }) => ($secondary ? "#ffffff" : "#8b6b8e")};
+  color: ${({ $secondary }) => ($secondary ? "#1a1614" : "white")};
+  border: 2px solid #8b6b8e;
   border-radius: 999px;
   font-weight: 700;
   font-family: 'Poppins', sans-serif;
@@ -230,20 +230,20 @@ const SmallButton = styled.button`
 
 const FinalScore = styled.h2`
   font-size: 1.6rem;
-  color: #6a1b9a;
+  color: #1a1614;
   margin-bottom: 0.5rem;
 `;
 
 const FinalMessage = styled.p`
   font-size: 1rem;
-  color: #5b2b7b;
+  color: #4a3f37;
   margin-bottom: 1rem;
 `;
 
 const BackLink = styled(Link)`
   display: block;
   margin-top: 2rem;
-  color: #d35ca3;
+  color: #7a5a7c;
   text-decoration: none;
   font-weight: bold;
 
@@ -519,7 +519,7 @@ export default function SolTap() {
             <Subtitle style={{ fontSize: "0.85rem", marginTop: "-0.5rem" }}>
               <span style={{ color: "#ff9800", fontWeight: 700 }}>★ {t.legendQuick}</span>
               {" · "}
-              <span style={{ color: "#aa4dc8", fontWeight: 700 }}>👑 {t.legendCrown}</span>
+              <span style={{ color: "#8b6b8e", fontWeight: 700 }}>👑 {t.legendCrown}</span>
             </Subtitle>
 
             <Top3Box>
@@ -594,7 +594,7 @@ export default function SolTap() {
             {qualifiesForLeaderboard() && submitState === "idle" && (
               <>
                 <PersonalBestText>{t.qualifies}</PersonalBestText>
-                <p style={{ color: "#5b2b7b", fontSize: "0.85rem", margin: "0.3rem 0" }}>
+                <p style={{ color: "#4a3f37", fontSize: "0.85rem", margin: "0.3rem 0" }}>
                   {t.enterName}
                 </p>
                 <NameInputRow>

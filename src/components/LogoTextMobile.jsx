@@ -6,7 +6,7 @@ export default function LogoTextMobile() {
       <div
         style={{
           fontFamily: '"Dancing Script", cursive',
-          color: "#aa4dc8", // ή #9253a5 αν προτιμάς πιο βαθύ
+          color: "#8b6b8e", // ή #9253a5 αν προτιμάς πιο βαθύ
           fontWeight: 700,
           fontSize: "2rem",
           display: "inline-flex",

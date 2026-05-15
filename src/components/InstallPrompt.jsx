@@ -122,8 +122,8 @@ export default function InstallPrompt() {
   return (
     <div
       className="fixed bottom-28 lg:bottom-20 left-4 right-4 lg:left-auto lg:right-6 lg:max-w-sm
-                 z-[1100] bg-white rounded-2xl shadow-[0_8px_24px_rgba(170,77,200,0.25)]
-                 border border-[#f8bbd0] p-4 flex items-start gap-3"
+                 z-[1100] bg-white rounded-2xl shadow-[0_8px_24px_rgba(26, 22, 20,0.25)]
+                 border border-[#d4a5a5] p-4 flex items-start gap-3"
       role="dialog"
       aria-label={t.title}
     >
@@ -135,15 +135,15 @@ export default function InstallPrompt() {
         height="48"
       />
       <div className="flex-1 min-w-0">
-        <p className="font-semibold text-[#6a1b9a] text-sm">{t.title}</p>
+        <p className="font-semibold text-[#1a1614] text-sm">{t.title}</p>
 
         {mode === "chromium" && (
           <>
-            <p className="text-[#5b2b7b] text-xs mt-0.5">{t.subtitleChromium}</p>
+            <p className="text-[#4a3f37] text-xs mt-0.5">{t.subtitleChromium}</p>
             <div className="flex gap-2 mt-2">
               <button
                 onClick={handleInstall}
-                className="px-3 py-1.5 bg-[#c187d8] text-white text-xs font-bold rounded-full
+                className="px-3 py-1.5 bg-[#8b6b8e] text-white text-xs font-bold rounded-full
                            hover:scale-105 transition-transform shadow"
               >
                 {t.install}
@@ -153,10 +153,10 @@ export default function InstallPrompt() {
         )}
 
         {mode === "ios" && (
-          <p className="text-[#5b2b7b] text-xs mt-0.5 leading-relaxed">
+          <p className="text-[#4a3f37] text-xs mt-0.5 leading-relaxed">
             {t.iosTap}{" "}
             <Share
-              className="inline-block w-4 h-4 align-text-bottom text-[#aa4dc8]"
+              className="inline-block w-4 h-4 align-text-bottom text-[#8b6b8e]"
               aria-label="Share"
             />{" "}
             {t.iosThen} {t.iosAdd}
@@ -165,10 +165,10 @@ export default function InstallPrompt() {
       </div>
       <button
         onClick={handleDismiss}
-        className="p-1 rounded-full hover:bg-[#fce4ec] transition-colors flex-shrink-0"
+        className="p-1 rounded-full hover:bg-[#ede4d3] transition-colors flex-shrink-0"
         aria-label={t.dismiss}
       >
-        <X className="w-4 h-4 text-[#5b2b7b]" />
+        <X className="w-4 h-4 text-[#4a3f37]" />
       </button>
     </div>
   );

@@ -9,14 +9,14 @@ import { upperLocal } from "../utils/greekUpper.js";
 
 const Heading = styled.h1`
   font-size: 2rem;
-  color: #6a1b9a;
+  color: #1a1614;
   margin-bottom: 0.5rem;
   font-family: 'Poppins', sans-serif;
 `;
 
 const Subtitle = styled.p`
   font-size: 1rem;
-  color: #5b2b7b;
+  color: #4a3f37;
   margin-bottom: 2rem;
   font-family: 'Poppins', sans-serif;
 `;
@@ -51,7 +51,7 @@ const ProductCard = styled.div`
 
   &:hover {
     transform: scale(1.03);
-    box-shadow: 0 8px 20px rgba(170, 77, 200, 0.18);
+    box-shadow: 0 8px 20px rgba(26, 22, 20, 0.18);
   }
 `;
 
@@ -77,7 +77,7 @@ const RibbonCorner = styled.span`
   position: absolute;
   top: 0.6rem;
   right: 0.6rem;
-  background: #aa4dc8;
+  background: #8b6b8e;
   color: white;
   font-size: 0.7rem;
   font-weight: 700;
@@ -85,15 +85,15 @@ const RibbonCorner = styled.span`
   padding: 0.25rem 0.6rem;
   border-radius: 999px;
   font-family: 'Poppins', sans-serif;
-  box-shadow: 0 2px 6px rgba(170, 77, 200, 0.3);
+  box-shadow: 0 2px 6px rgba(26, 22, 20, 0.3);
 `;
 
 const FlavorPill = styled.span`
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
-  background: #fce4ec;
-  color: #5b2b7b;
+  background: #ede4d3;
+  color: #4a3f37;
   font-size: 0.8rem;
   padding: 0.25rem 0.7rem;
   border-radius: 999px;
@@ -103,7 +103,7 @@ const FlavorPill = styled.span`
 
 const ProductName = styled.h2`
   font-size: 1.25rem;
-  color: #6a1b9a;
+  color: #1a1614;
   margin-bottom: 0.5rem;
   font-family: 'Poppins', sans-serif;
 `;
@@ -123,13 +123,13 @@ const StatusLabel = styled.span`
   border-radius: 999px;
   background-color: ${(props) =>
     props.status === "coming_soon"
-      ? "#f8bbd0"
+      ? "#d4a5a5"
       : props.status === "available"
       ? "#c8e6c9"
       : "#ef9a9a"};
   color: ${(props) =>
     props.status === "coming_soon"
-      ? "#6a1b9a"
+      ? "#1a1614"
       : props.status === "available"
       ? "#2e7d32"
       : "#c62828"};

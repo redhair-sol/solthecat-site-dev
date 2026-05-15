@@ -34,7 +34,7 @@ const Content = styled.div`
 
 const Title = styled.h1`
   font-size: 2rem;
-  color: #6a1b9a;
+  color: #1a1614;
   margin-bottom: 0.5rem;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
@@ -42,14 +42,14 @@ const Title = styled.h1`
 
 const IntroText = styled.p`
   font-size: 1rem;
-  color: #5b2b7b;
+  color: #4a3f37;
   margin-bottom: 1.5rem;
   line-height: 1.6;
 `;
 
 const FunFactsTitle = styled.h2`
   font-size: 1.75rem;
-  color: #aa4dc8;
+  color: #8b6b8e;
   font-weight: 600;
   margin: 2rem 0 1rem;
 `;
@@ -74,7 +74,7 @@ const FooterText = styled.p`
 `;
 
 const ContactLink = styled.a`
-  color: #aa4dc8;
+  color: #8b6b8e;
   text-decoration: underline;
   &:hover {
     color: #7a3299;

@@ -11,7 +11,7 @@ import { celebrate } from "../utils/celebrate.js";
 
 const Title = styled.h1`
   font-size: 2rem;
-  color: #6a1b9a;
+  color: #1a1614;
   margin-bottom: 0.5rem;
 
   @media (max-width: 480px) {
@@ -21,7 +21,7 @@ const Title = styled.h1`
 
 const Subtitle = styled.p`
   font-size: 1rem;
-  color: #5b2b7b;
+  color: #4a3f37;
   margin-bottom: 2rem;
   max-width: 600px;
   text-align: center;
@@ -30,14 +30,14 @@ const Subtitle = styled.p`
 
 const BigButton = styled.button`
   padding: 0.8rem 1.5rem;
-  background-color: ${({ disabled }) => (disabled ? "#ccc" : "#c187d8")};
+  background-color: ${({ disabled }) => (disabled ? "#ccc" : "#8b6b8e")};
   color: white;
   border: none;
   border-radius: 16px;
   font-weight: bold;
   font-family: 'Poppins', sans-serif;
   cursor: ${({ disabled }) => (disabled ? "default" : "pointer")};
-  box-shadow: 0 4px 10px rgba(170, 77, 200, 0.3);
+  box-shadow: 0 4px 10px rgba(26, 22, 20, 0.3);
   transition: transform 0.2s ease-in-out;
   margin-top: 1rem;
 
@@ -61,7 +61,7 @@ const PawSpinner = styled(motion.div)`
 
 const LoadingText = styled.p`
   font-size: 1rem;
-  color: #5b2b7b;
+  color: #4a3f37;
   font-style: italic;
 `;
 
@@ -76,7 +76,7 @@ const RevealWrapper = styled(motion.div)`
 
 const RevealHeadline = styled.h2`
   font-size: 1.3rem;
-  color: #6a1b9a;
+  color: #1a1614;
   text-align: center;
   margin-bottom: 1rem;
   font-family: 'Poppins', sans-serif;
@@ -84,7 +84,7 @@ const RevealHeadline = styled.h2`
 `;
 
 const HighlightCity = styled.span`
-  color: #aa4dc8;
+  color: #8b6b8e;
   font-weight: 700;
 `;
 
@@ -93,7 +93,7 @@ const RevealCard = styled.div`
   padding: 1.5rem;
   border-radius: 1.5rem;
   width: 100%;
-  box-shadow: 0 4px 16px rgba(170, 77, 200, 0.18);
+  box-shadow: 0 4px 16px rgba(26, 22, 20, 0.18);
   text-align: center;
 `;
 
@@ -107,7 +107,7 @@ const RevealImage = styled.img`
 
 const RevealTitle = styled.h3`
   font-size: 1.1rem;
-  color: #6a1b9a;
+  color: #1a1614;
   margin-bottom: 0.5rem;
 `;
 
@@ -135,14 +135,14 @@ const ButtonRow = styled.div`
 const PrimaryAction = styled(Link)`
   display: inline-block;
   padding: 0.8rem 1.5rem;
-  background-color: #c187d8;
+  background-color: #8b6b8e;
   color: white;
   text-decoration: none;
   border: none;
   border-radius: 16px;
   font-weight: bold;
   font-family: 'Poppins', sans-serif;
-  box-shadow: 0 4px 10px rgba(170, 77, 200, 0.3);
+  box-shadow: 0 4px 10px rgba(26, 22, 20, 0.3);
   transition: transform 0.2s ease-in-out;
 
   &:hover {
@@ -153,17 +153,17 @@ const PrimaryAction = styled(Link)`
 const SecondaryAction = styled.button`
   padding: 0.8rem 1.5rem;
   background-color: #ffffff;
-  color: #6a1b9a;
-  border: 2px solid #c187d8;
+  color: #1a1614;
+  border: 2px solid #8b6b8e;
   border-radius: 16px;
   font-weight: bold;
   font-family: 'Poppins', sans-serif;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(170, 77, 200, 0.15);
+  box-shadow: 0 4px 10px rgba(26, 22, 20, 0.15);
   transition: transform 0.2s ease-in-out, background 0.2s ease;
 
   &:hover {
-    background-color: #fce4ec;
+    background-color: #ede4d3;
     transform: scale(1.05);
   }
 `;
@@ -171,7 +171,7 @@ const SecondaryAction = styled.button`
 const BackLink = styled(Link)`
   display: block;
   margin-top: 2rem;
-  color: #d35ca3;
+  color: #7a5a7c;
   text-decoration: none;
   font-weight: bold;
 

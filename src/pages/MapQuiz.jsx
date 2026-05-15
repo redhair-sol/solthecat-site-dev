@@ -24,7 +24,7 @@ const MAX_PER_ROUND = 1000;
 
 const Title = styled.h1`
   font-size: 2rem;
-  color: #6a1b9a;
+  color: #1a1614;
   margin-bottom: 0.5rem;
 
   @media (max-width: 480px) {
@@ -34,7 +34,7 @@ const Title = styled.h1`
 
 const Subtitle = styled.p`
   font-size: 1rem;
-  color: #5b2b7b;
+  color: #4a3f37;
   margin-bottom: 1rem;
   max-width: 600px;
   text-align: center;
@@ -43,21 +43,21 @@ const Subtitle = styled.p`
 
 const ScoreLine = styled.p`
   font-size: 0.95rem;
-  color: #6a1b9a;
+  color: #1a1614;
   font-weight: 600;
   margin-bottom: 1rem;
 `;
 
 const BigButton = styled.button`
   padding: 0.8rem 1.5rem;
-  background-color: ${({ disabled }) => (disabled ? "#ccc" : "#c187d8")};
+  background-color: ${({ disabled }) => (disabled ? "#ccc" : "#8b6b8e")};
   color: white;
   border: none;
   border-radius: 16px;
   font-weight: bold;
   font-family: 'Poppins', sans-serif;
   cursor: ${({ disabled }) => (disabled ? "default" : "pointer")};
-  box-shadow: 0 4px 10px rgba(170, 77, 200, 0.3);
+  box-shadow: 0 4px 10px rgba(26, 22, 20, 0.3);
   transition: transform 0.2s ease-in-out;
   margin-top: 1rem;
 
@@ -76,7 +76,7 @@ const PhotoCard = styled.div`
   background: #ffffff;
   border-radius: 1rem;
   padding: 0.5rem;
-  box-shadow: 0 4px 16px rgba(170, 77, 200, 0.18);
+  box-shadow: 0 4px 16px rgba(26, 22, 20, 0.18);
   text-align: center;
 `;
 
@@ -90,7 +90,7 @@ const Photo = styled.img`
 
 const PhotoCaption = styled.p`
   font-size: 0.9rem;
-  color: #5b2b7b;
+  color: #4a3f37;
   font-style: italic;
   margin: 0.5rem 0 0;
 `;
@@ -103,8 +103,8 @@ const MapWrapper = styled.div`
   margin: 0 auto 1rem;
   border-radius: 1rem;
   overflow: hidden;
-  border: 2px solid #c187d8;
-  box-shadow: 0 4px 16px rgba(170, 77, 200, 0.18);
+  border: 2px solid #8b6b8e;
+  box-shadow: 0 4px 16px rgba(26, 22, 20, 0.18);
   cursor: ${({ $clickable }) => ($clickable ? "crosshair" : "default")};
   /* Confine Leaflet's internal z-indices within this stacking context. */
   position: relative;
@@ -129,7 +129,7 @@ const ResultCard = styled(motion.div)`
   border-radius: 1.5rem;
   width: 100%;
   max-width: 600px;
-  box-shadow: 0 4px 16px rgba(170, 77, 200, 0.18);
+  box-shadow: 0 4px 16px rgba(26, 22, 20, 0.18);
   text-align: center;
   margin: 0.5rem auto 1rem;
 `;
@@ -141,13 +141,13 @@ const ResultEmoji = styled.div`
 
 const ResultPoints = styled.h2`
   font-size: 1.4rem;
-  color: #6a1b9a;
+  color: #1a1614;
   margin: 0 0 0.3rem;
 `;
 
 const ResultDistance = styled.p`
   font-size: 0.95rem;
-  color: #5b2b7b;
+  color: #4a3f37;
   margin: 0;
 `;
 
@@ -157,27 +157,27 @@ const FinalCard = styled(motion.div)`
   border-radius: 1.5rem;
   width: 100%;
   max-width: 500px;
-  box-shadow: 0 4px 16px rgba(170, 77, 200, 0.18);
+  box-shadow: 0 4px 16px rgba(26, 22, 20, 0.18);
   text-align: center;
   margin-top: 1rem;
 `;
 
 const FinalScore = styled.h2`
   font-size: 1.6rem;
-  color: #6a1b9a;
+  color: #1a1614;
   margin-bottom: 0.5rem;
 `;
 
 const FinalMessage = styled.p`
   font-size: 1rem;
-  color: #5b2b7b;
+  color: #4a3f37;
   margin-bottom: 1rem;
 `;
 
 const BackLink = styled(Link)`
   display: block;
   margin-top: 2rem;
-  color: #d35ca3;
+  color: #7a5a7c;
   text-decoration: none;
   font-weight: bold;
 
@@ -200,7 +200,7 @@ const ErrorBox = styled.div`
 // --- Leaderboard styled bits (mirrored from CatchCats for visual parity) ---
 const Top3Box = styled.div`
   background: #ffffffcc;
-  border: 2px solid #f8bbd0;
+  border: 2px solid #d4a5a5;
   border-radius: 1rem;
   padding: 0.8rem 1rem;
   margin: 0.5rem auto 1rem;
@@ -212,7 +212,7 @@ const Top3Box = styled.div`
 
 const Top3Title = styled.p`
   font-weight: 700;
-  color: #6a1b9a;
+  color: #1a1614;
   margin: 0 0 0.4rem;
   text-align: center;
   font-size: 0.95rem;
@@ -222,12 +222,12 @@ const Top3Row = styled.div`
   display: flex;
   justify-content: space-between;
   font-size: 0.95rem;
-  color: #5b2b7b;
+  color: #4a3f37;
   padding: 0.15rem 0;
 `;
 
 const Top3Empty = styled.p`
-  color: #5b2b7b;
+  color: #4a3f37;
   font-size: 0.85rem;
   font-style: italic;
   text-align: center;
@@ -235,7 +235,7 @@ const Top3Empty = styled.p`
 `;
 
 const PersonalBestText = styled.p`
-  color: #aa4dc8;
+  color: #8b6b8e;
   font-weight: 600;
   font-family: 'Poppins', sans-serif;
   font-size: 0.9rem;
@@ -253,25 +253,25 @@ const NameInputRow = styled.div`
 
 const NameInput = styled.input`
   padding: 0.6rem 1rem;
-  border: 2px solid #c187d8;
+  border: 2px solid #8b6b8e;
   border-radius: 999px;
   font-family: 'Poppins', sans-serif;
   font-size: 0.95rem;
-  color: #5b2b7b;
+  color: #4a3f37;
   outline: none;
   width: 12ch;
 
   &:focus {
-    border-color: #aa4dc8;
-    box-shadow: 0 0 0 3px rgba(170, 77, 200, 0.15);
+    border-color: #8b6b8e;
+    box-shadow: 0 0 0 3px rgba(26, 22, 20, 0.15);
   }
 `;
 
 const SmallButton = styled.button`
   padding: 0.6rem 1.2rem;
-  background-color: ${({ $secondary }) => ($secondary ? "#ffffff" : "#c187d8")};
-  color: ${({ $secondary }) => ($secondary ? "#6a1b9a" : "white")};
-  border: 2px solid #c187d8;
+  background-color: ${({ $secondary }) => ($secondary ? "#ffffff" : "#8b6b8e")};
+  color: ${({ $secondary }) => ($secondary ? "#1a1614" : "white")};
+  border: 2px solid #8b6b8e;
   border-radius: 999px;
   font-weight: 700;
   font-family: 'Poppins', sans-serif;
@@ -706,7 +706,7 @@ export default function MapQuiz() {
                 {phase === "reveal" && polylinePositions && (
                   <Polyline
                     positions={polylinePositions}
-                    pathOptions={{ color: "#c187d8", weight: 3, dashArray: "6 8" }}
+                    pathOptions={{ color: "#8b6b8e", weight: 3, dashArray: "6 8" }}
                   />
                 )}
               </MapContainer>
@@ -753,7 +753,7 @@ export default function MapQuiz() {
             {qualifiesForLeaderboard() && submitState === "idle" && (
               <>
                 <PersonalBestText>{t.qualifies}</PersonalBestText>
-                <p style={{ color: "#5b2b7b", fontSize: "0.85rem", margin: "0.3rem 0" }}>
+                <p style={{ color: "#4a3f37", fontSize: "0.85rem", margin: "0.3rem 0" }}>
                   {t.enterName}
                 </p>
                 <NameInputRow>

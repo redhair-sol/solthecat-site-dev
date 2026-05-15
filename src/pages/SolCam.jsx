@@ -10,7 +10,7 @@ import { streamURL, checkStream } from "../utils/streamUtils.js";
 // ----- STYLES (Παραμένουν ως έχουν) -----
 const Title = styled.h1`
   font-size: 2rem;
-  color: #6a1b9a;
+  color: #1a1614;
   margin-bottom: 0.5rem;
   text-align: center;
   font-family: 'Poppins', sans-serif;
@@ -18,7 +18,7 @@ const Title = styled.h1`
 
 const Subtitle = styled.p`
   font-size: 1rem;
-  color: #5b2b7b;
+  color: #4a3f37;
   margin-bottom: 2rem;
   text-align: center;
   font-family: 'Poppins', sans-serif;

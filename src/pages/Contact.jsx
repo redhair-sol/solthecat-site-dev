@@ -6,14 +6,14 @@ import { CONTACT_FORM_URL } from "../config.js";
 
 const Heading = styled.h1`
   font-size: 2rem;
-  color: #6a1b9a;
+  color: #1a1614;
   margin-bottom: 0.5rem;
   font-family: 'Poppins', sans-serif;
 `;
 
 const Subtitle = styled.p`
   font-size: 1rem;
-  color: #5b2b7b;
+  color: #4a3f37;
   margin-bottom: 2rem;
   text-align: center;
 `;
@@ -44,7 +44,7 @@ const LanguageToggle = styled.div`
 const ToggleButton = styled.button`
   padding: 0.3rem 0.8rem;
   border: 1px solid #ccc;
-  background-color: ${({ $active }) => ($active ? '#f8bbd0' : '#fff')};
+  background-color: ${({ $active }) => ($active ? '#d4a5a5' : '#fff')};
   border-radius: 8px;
   font-size: 0.85rem;
   cursor: pointer;

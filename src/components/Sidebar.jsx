@@ -11,7 +11,7 @@ export default function Sidebar() {
       <div className="md:hidden">
         {!menuOpen && (
           <button
-            className="fixed top-4 left-4 z-50 p-2 bg-[#f8bbd0] text-black rounded shadow-md hover:scale-105 transition-transform"
+            className="fixed top-4 left-4 z-50 p-2 bg-[#d4a5a5] text-black rounded shadow-md hover:scale-105 transition-transform"
             onClick={() => setMenuOpen(true)}
             aria-label="Open menu"
           >

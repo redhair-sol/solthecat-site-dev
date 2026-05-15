@@ -9,7 +9,7 @@ import SolButton from "../components/SolButton.jsx";
 
 const Title = styled.h1`
   font-size: 2rem;
-  color: #6a1b9a;
+  color: #1a1614;
   margin-bottom: 0.5rem;
 
   @media (max-width: 480px) {
@@ -19,7 +19,7 @@ const Title = styled.h1`
 
 const Subtitle = styled.p`
   font-size: 1rem;
-  color: #5b2b7b;
+  color: #4a3f37;
   margin-bottom: 1rem;
 `;
 
@@ -60,7 +60,7 @@ const Item = styled.img`
 const Info = styled.p`
   text-align: center;
   font-weight: bold;
-  color: #8e24aa;
+  color: #1a1614;
   margin-top: 1rem;
 `;
 
@@ -68,7 +68,7 @@ const BackLink = styled(Link)`
   display: block;
   margin-top: 2rem;
   text-align: center;
-  color: #d35ca3;
+  color: #7a5a7c;
   text-decoration: none;
   font-weight: bold;
 `;

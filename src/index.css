@@ -92,18 +92,22 @@ body {
 @layer components {
   /* Active navigation link */
   .nav-link-active {
-    @apply relative text-pink-600;
+    @apply relative;
+    color: var(--sol-ink);
   }
 
   .nav-link-active::after {
     content: '';
-    @apply absolute left-0 bottom-[-2px] w-full h-1 bg-pink-600 rounded-t;
+    @apply absolute left-0 bottom-[-2px] w-full h-[2px] rounded-t;
+    background: var(--sol-rose);
   }
 
   /* Primary button style */
   .btn {
-    @apply inline-block px-6 py-3 bg-purple-600 text-white rounded-lg
+    @apply inline-block px-6 py-3 rounded-lg
            transition-transform duration-200 ease-out;
+    background: var(--sol-plum);
+    color: var(--sol-cream);
   }
 
   .btn:hover {

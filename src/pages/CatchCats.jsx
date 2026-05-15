@@ -51,7 +51,7 @@ const LEVELS = [
 
 const Title = styled.h1`
   font-size: 2rem;
-  color: #6a1b9a;
+  color: #1a1614;
   margin-bottom: 0.5rem;
 
   @media (max-width: 480px) {
@@ -61,7 +61,7 @@ const Title = styled.h1`
 
 const Subtitle = styled.p`
   font-size: 1rem;
-  color: #5b2b7b;
+  color: #4a3f37;
   margin-bottom: 1rem;
   max-width: 600px;
   text-align: center;
@@ -75,7 +75,7 @@ const HUDRow = styled.div`
   flex-wrap: wrap;
   margin-bottom: 0.8rem;
   font-family: 'Poppins', sans-serif;
-  color: #6a1b9a;
+  color: #1a1614;
   font-weight: 700;
 `;
 
@@ -83,7 +83,7 @@ const HUDChip = styled.div`
   background: #ffffffcc;
   padding: 0.45rem 0.95rem;
   border-radius: 999px;
-  box-shadow: 0 2px 6px rgba(170, 77, 200, 0.15);
+  box-shadow: 0 2px 6px rgba(26, 22, 20, 0.15);
   font-size: 0.9rem;
 `;
 
@@ -104,10 +104,10 @@ const PlayArea = styled.div`
   background-image: ${({ $bg }) =>
     $bg
       ? `linear-gradient(rgba(255, 243, 248, 0.55), rgba(252, 228, 236, 0.55)), url("${$bg}")`
-      : `linear-gradient(to bottom, #fff1f9 0%, #fce4ec 100%)`};
+      : `linear-gradient(to bottom, #f5efe4 0%, #ede4d3 100%)`};
   background-size: cover;
   background-position: center;
-  border: 2px solid #c187d8;
+  border: 2px solid #8b6b8e;
   border-radius: 1rem;
   overflow: hidden;
   touch-action: none;
@@ -120,7 +120,7 @@ const FallingCat = styled(motion.span)`
   font-size: 2.4rem;
   pointer-events: none;
   transform: translateX(-50%);
-  filter: drop-shadow(0 2px 4px rgba(170, 77, 200, 0.25));
+  filter: drop-shadow(0 2px 4px rgba(26, 22, 20, 0.25));
 `;
 
 const BasketWrap = styled.div`
@@ -158,7 +158,7 @@ const ScorePopup = styled(motion.div)`
 
 const SoundToggle = styled.button`
   background: #ffffffcc;
-  border: 2px solid #c187d8;
+  border: 2px solid #8b6b8e;
   border-radius: 999px;
   width: 2.5rem;
   height: 2.5rem;
@@ -187,7 +187,7 @@ const TitleRow = styled.div`
 
 const Top3Box = styled.div`
   background: #ffffffcc;
-  border: 2px solid #f8bbd0;
+  border: 2px solid #d4a5a5;
   border-radius: 1rem;
   padding: 0.8rem 1rem;
   margin: 0.5rem auto;
@@ -199,7 +199,7 @@ const Top3Box = styled.div`
 
 const Top3Title = styled.p`
   font-weight: 700;
-  color: #6a1b9a;
+  color: #1a1614;
   margin: 0 0 0.4rem;
   text-align: center;
   font-size: 0.95rem;
@@ -209,12 +209,12 @@ const Top3Row = styled.div`
   display: flex;
   justify-content: space-between;
   font-size: 0.95rem;
-  color: #5b2b7b;
+  color: #4a3f37;
   padding: 0.15rem 0;
 `;
 
 const Top3Empty = styled.p`
-  color: #5b2b7b;
+  color: #4a3f37;
   font-size: 0.85rem;
   font-style: italic;
   text-align: center;
@@ -222,7 +222,7 @@ const Top3Empty = styled.p`
 `;
 
 const PersonalBestText = styled.p`
-  color: #aa4dc8;
+  color: #8b6b8e;
   font-weight: 600;
   font-family: 'Poppins', sans-serif;
   font-size: 0.9rem;
@@ -240,25 +240,25 @@ const NameInputRow = styled.div`
 
 const NameInput = styled.input`
   padding: 0.6rem 1rem;
-  border: 2px solid #c187d8;
+  border: 2px solid #8b6b8e;
   border-radius: 999px;
   font-family: 'Poppins', sans-serif;
   font-size: 0.95rem;
-  color: #5b2b7b;
+  color: #4a3f37;
   outline: none;
   width: 12ch;
 
   &:focus {
-    border-color: #aa4dc8;
-    box-shadow: 0 0 0 3px rgba(170, 77, 200, 0.15);
+    border-color: #8b6b8e;
+    box-shadow: 0 0 0 3px rgba(26, 22, 20, 0.15);
   }
 `;
 
 const SmallButton = styled.button`
   padding: 0.6rem 1.2rem;
-  background-color: ${({ $secondary }) => ($secondary ? "#ffffff" : "#c187d8")};
-  color: ${({ $secondary }) => ($secondary ? "#6a1b9a" : "white")};
-  border: 2px solid #c187d8;
+  background-color: ${({ $secondary }) => ($secondary ? "#ffffff" : "#8b6b8e")};
+  color: ${({ $secondary }) => ($secondary ? "#1a1614" : "white")};
+  border: 2px solid #8b6b8e;
   border-radius: 999px;
   font-weight: 700;
   font-family: 'Poppins', sans-serif;
@@ -273,14 +273,14 @@ const SmallButton = styled.button`
 
 const StartButton = styled.button`
   padding: 0.8rem 1.5rem;
-  background-color: #c187d8;
+  background-color: #8b6b8e;
   color: white;
   border: none;
   border-radius: 16px;
   font-weight: bold;
   font-family: 'Poppins', sans-serif;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(170, 77, 200, 0.3);
+  box-shadow: 0 4px 10px rgba(26, 22, 20, 0.3);
   transition: transform 0.2s ease-in-out;
   margin: 0.4rem;
 
@@ -299,9 +299,9 @@ const LevelGrid = styled.div`
 
 const LevelButton = styled.button`
   padding: 0.7rem 1.3rem;
-  background: ${({ $active }) => ($active ? "#c187d8" : "#ffffff")};
-  color: ${({ $active }) => ($active ? "white" : "#6a1b9a")};
-  border: 2px solid #c187d8;
+  background: ${({ $active }) => ($active ? "#8b6b8e" : "#ffffff")};
+  color: ${({ $active }) => ($active ? "white" : "#1a1614")};
+  border: 2px solid #8b6b8e;
   border-radius: 999px;
   font-weight: 700;
   font-family: 'Poppins', sans-serif;
@@ -319,27 +319,27 @@ const ResultCard = styled(motion.div)`
   border-radius: 1.5rem;
   width: 100%;
   max-width: 500px;
-  box-shadow: 0 4px 16px rgba(170, 77, 200, 0.18);
+  box-shadow: 0 4px 16px rgba(26, 22, 20, 0.18);
   text-align: center;
   margin-top: 1rem;
 `;
 
 const ResultTitle = styled.h2`
   font-size: 1.5rem;
-  color: #6a1b9a;
+  color: #1a1614;
   margin-bottom: 0.5rem;
 `;
 
 const ResultMessage = styled.p`
   font-size: 1rem;
-  color: #5b2b7b;
+  color: #4a3f37;
   margin-bottom: 1rem;
 `;
 
 const BackLink = styled(Link)`
   display: block;
   margin-top: 2rem;
-  color: #d35ca3;
+  color: #7a5a7c;
   text-decoration: none;
   font-weight: bold;
 
@@ -875,7 +875,7 @@ export default function CatchCats() {
                     key={p.id}
                     style={{
                       left: `${p.x}%`,
-                      color: p.isCrown ? "#ff9800" : "#6a1b9a",
+                      color: p.isCrown ? "#ff9800" : "#1a1614",
                     }}
                     initial={{ opacity: 1, top: "78%", scale: 0.7 }}
                     animate={{ opacity: 0, top: "55%", scale: 1.2 }}
@@ -917,7 +917,7 @@ export default function CatchCats() {
                 <PersonalBestText>{t.qualifies}</PersonalBestText>
                 <p
                   style={{
-                    color: "#5b2b7b",
+                    color: "#4a3f37",
                     fontSize: "0.85rem",
                     margin: "0.3rem 0",
                   }}

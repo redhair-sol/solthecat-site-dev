@@ -12,8 +12,8 @@ export default function MobileMenu({ isOpen, onClose }) {
   const linkClasses = ({ isActive }) =>
     `text-2xl transition-colors ${
       isActive
-        ? "text-purple-700 underline"
-        : "text-black hover:text-pink-300 hover:underline"
+        ? "text-[#1a1614] border-b-2 border-[#d4a5a5]"
+        : "text-[#4a3f37] hover:text-[#1a1614]"
     }`;
 
   return (
@@ -28,7 +28,7 @@ export default function MobileMenu({ isOpen, onClose }) {
 
       {/* Sliding menu */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-[#fce4ec] z-50 transform
+        className={`fixed top-0 left-0 h-full w-64 bg-[#ede4d3] z-50 transform
                     transition-transform duration-300 ${
                       isOpen ? "translate-x-0" : "-translate-x-full"
                     } shadow-lg flex flex-col`}

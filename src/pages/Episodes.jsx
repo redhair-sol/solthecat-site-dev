@@ -48,13 +48,13 @@ const TopSection = styled.div`
 
 const Heading = styled.h1`
   font-size: 2rem;
-  color: #6a1b9a;
+  color: #1a1614;
   margin-bottom: 0.5rem;
 `;
 
 const Subheading = styled.p`
   font-size: 1rem;
-  color: #5b2b7b;
+  color: #4a3f37;
   margin: 0 auto;
   max-width: 600px;
   line-height: 1.5;
@@ -74,16 +74,16 @@ const Chip = styled.button`
   padding: 0.35rem 0.85rem;
   font-size: 0.85rem;
   font-family: 'Poppins', sans-serif;
-  border: 1.5px solid #c187d8;
-  background: ${({ $active }) => ($active ? "#c187d8" : "#ffffffee")};
-  color: ${({ $active }) => ($active ? "#fff" : "#5b2b7b")};
+  border: 1.5px solid #8b6b8e;
+  background: ${({ $active }) => ($active ? "#8b6b8e" : "#ffffffee")};
+  color: ${({ $active }) => ($active ? "#fff" : "#4a3f37")};
   border-radius: 999px;
   cursor: pointer;
   transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 
   &:hover {
-    background: ${({ $active }) => ($active ? "#aa4dc8" : "#fce4ec")};
-    border-color: #aa4dc8;
+    background: ${({ $active }) => ($active ? "#8b6b8e" : "#ede4d3")};
+    border-color: #8b6b8e;
   }
 `;
 
@@ -98,22 +98,22 @@ const SearchInput = styled.input`
   width: 100%;
   padding: 0.7rem 2.5rem 0.7rem 2.7rem;
   font-size: 1rem;
-  border: 2px solid #c187d8;
+  border: 2px solid #8b6b8e;
   border-radius: 999px;
   background: #ffffffee;
-  color: #5b2b7b;
+  color: #4a3f37;
   font-family: 'Poppins', sans-serif;
   outline: none;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
   box-sizing: border-box;
 
   &:focus {
-    border-color: #aa4dc8;
-    box-shadow: 0 0 0 3px rgba(170, 77, 200, 0.15);
+    border-color: #8b6b8e;
+    box-shadow: 0 0 0 3px rgba(26, 22, 20, 0.15);
   }
 
   &::placeholder {
-    color: #c187d8;
+    color: #8b6b8e;
     opacity: 0.85;
   }
 `;
@@ -123,7 +123,7 @@ const SearchIconWrapper = styled.span`
   left: 0.95rem;
   top: 50%;
   transform: translateY(-50%);
-  color: #aa4dc8;
+  color: #8b6b8e;
   pointer-events: none;
   display: flex;
   align-items: center;
@@ -136,7 +136,7 @@ const ClearButton = styled.button`
   transform: translateY(-50%);
   background: transparent;
   border: none;
-  color: #aa4dc8;
+  color: #8b6b8e;
   cursor: pointer;
   padding: 0.3rem;
   border-radius: 50%;
@@ -146,13 +146,13 @@ const ClearButton = styled.button`
   transition: background 0.2s ease;
 
   &:hover {
-    background: rgba(170, 77, 200, 0.1);
+    background: rgba(26, 22, 20, 0.1);
   }
 `;
 
 const ResultCount = styled.p`
   font-size: 0.85rem;
-  color: #5b2b7b;
+  color: #4a3f37;
   font-style: italic;
   margin: 0 auto 1.5rem;
   text-align: center;
@@ -160,7 +160,7 @@ const ResultCount = styled.p`
 
 const NoResults = styled.p`
   font-size: 1rem;
-  color: #5b2b7b;
+  color: #4a3f37;
   font-style: italic;
   text-align: center;
   max-width: 600px;
@@ -187,7 +187,7 @@ const EpisodeImage = styled.img`
 
 const EpisodeTitle = styled.h2`
   font-size: 1.2rem;
-  color: #6a1b9a;
+  color: #1a1614;
   margin-bottom: 0.5rem;
 `;
 
@@ -213,7 +213,7 @@ const StoryContainer = styled.div`
 const StoryTitle = styled.h3`
   font-weight: 600;
   margin-bottom: 0.5rem;
-  color: #6a1b9a;
+  color: #1a1614;
 `;
 
 // Per-card CTA row that pushes the user from "read story" to "play the quiz
@@ -230,18 +230,18 @@ const QuizCTA = styled(Link)`
   align-items: center;
   gap: 0.4rem;
   padding: 0.55rem 1rem;
-  background: #c187d8;
+  background: #8b6b8e;
   color: #ffffff;
   text-decoration: none;
   border-radius: 999px;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: 0.85rem;
-  box-shadow: 0 2px 8px rgba(170, 77, 200, 0.25);
+  box-shadow: 0 2px 8px rgba(26, 22, 20, 0.25);
   transition: background 0.15s ease, transform 0.15s ease;
 
   &:hover {
-    background: #aa4dc8;
+    background: #8b6b8e;
     transform: scale(1.03);
   }
 `;

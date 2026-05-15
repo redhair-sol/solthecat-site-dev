@@ -6,24 +6,23 @@
 // `accent` is buttons/links, `surface` is card backgrounds, etc.
 
 export const colors = {
-  // Primary purples (headings, body)
-  primary: "#6a1b9a",       // H1, page titles
-  primarySoft: "#5b2b7b",   // body text, subheadings
-  primaryDeep: "#4a005f",   // hero italic, emphasized labels
-  primaryHilite: "#8e24aa", // quote titles, info accents
+  // Names are kept for backwards compatibility, but the values are now the
+  // warm-editorial tokens. Anything that imports `colors.primary` etc. gets
+  // the new palette automatically without rewriting call sites.
+  primary: "#1a1614",       // ink (was #1a1614 purple)
+  primarySoft: "#4a3f37",   // ink-soft (was #4a3f37)
+  primaryDeep: "#1a1614",   // ink (was #1a1614)
+  primaryHilite: "#1a1614", // ink (was #1a1614)
 
-  // Accent purples (buttons, links, polylines)
-  accent: "#aa4dc8",        // map polyline, hover, secondary buttons
-  accentLight: "#c187d8",   // primary CTA buttons
-  accentPink: "#d35ca3",    // game card titles, back links
+  accent: "#8b6b8e",        // plum (was #8b6b8e)
+  accentLight: "#8b6b8e",   // plum (was #8b6b8e)
+  accentPink: "#7a5a7c",    // mauve (was #7a5a7c)
 
-  // Pinks (toggles, hover, surfaces)
-  pinkSoft: "#f8bbd0",      // toggle active bg, hover surfaces, games card
-  pinkSurface: "#fff3f8",   // quote/badge box bg
-  pinkBgFrom: "#fff1f9",    // page gradient start
-  pinkBgTo: "#fce4ec",      // page gradient end
+  pinkSoft: "#d4a5a5",      // rose (was #d4a5a5)
+  pinkSurface: "#ede4d3",   // cream-2 (was #ede4d3)
+  pinkBgFrom: "#f5efe4",    // cream (was #f5efe4)
+  pinkBgTo: "#ede4d3",      // cream-2 (was #ede4d3)
 
-  // Live stream badge
   liveGreen: "#47c9a0",
 };
 
@@ -34,10 +33,10 @@ export const gradients = {
 
 // Common box shadows.
 export const shadows = {
-  button: "0 4px 10px rgba(170, 77, 200, 0.3)",
+  button: "0 4px 10px rgba(26, 22, 20, 0.15)",
   card: "0 4px 12px rgba(0, 0, 0, 0.05)",
   cardElevated: "0 4px 12px rgba(0, 0, 0, 0.08)",
-  tile: "0 4px 16px rgba(170, 77, 200, 0.15)",
+  tile: "0 4px 16px rgba(26, 22, 20, 0.08)",
 };
 
 // Navigation font (top nav, bottom tab labels, drawer items).

@@ -21,13 +21,13 @@ const REGION_KEYS = [
 
 const Title = styled.h1`
   font-size: 2rem;
-  color: #6a1b9a;
+  color: #1a1614;
   margin-bottom: 0.5rem;
 `;
 
 const Subheading = styled.p`
   font-size: 1rem;
-  color: #5b2b7b;
+  color: #4a3f37;
   margin-bottom: 2rem;
 `;
 
@@ -45,16 +45,16 @@ const Chip = styled.button`
   padding: 0.35rem 0.85rem;
   font-size: 0.85rem;
   font-family: 'Poppins', sans-serif;
-  border: 1.5px solid #c187d8;
-  background: ${({ $active }) => ($active ? "#c187d8" : "#ffffffee")};
-  color: ${({ $active }) => ($active ? "#fff" : "#5b2b7b")};
+  border: 1.5px solid #8b6b8e;
+  background: ${({ $active }) => ($active ? "#8b6b8e" : "#ffffffee")};
+  color: ${({ $active }) => ($active ? "#fff" : "#4a3f37")};
   border-radius: 999px;
   cursor: pointer;
   transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 
   &:hover {
-    background: ${({ $active }) => ($active ? "#aa4dc8" : "#fce4ec")};
-    border-color: #aa4dc8;
+    background: ${({ $active }) => ($active ? "#8b6b8e" : "#ede4d3")};
+    border-color: #8b6b8e;
   }
 `;
 
@@ -69,22 +69,22 @@ const SearchInput = styled.input`
   width: 100%;
   padding: 0.7rem 2.5rem 0.7rem 2.7rem;
   font-size: 1rem;
-  border: 2px solid #c187d8;
+  border: 2px solid #8b6b8e;
   border-radius: 999px;
   background: #ffffffee;
-  color: #5b2b7b;
+  color: #4a3f37;
   font-family: 'Poppins', sans-serif;
   outline: none;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
   box-sizing: border-box;
 
   &:focus {
-    border-color: #aa4dc8;
-    box-shadow: 0 0 0 3px rgba(170, 77, 200, 0.15);
+    border-color: #8b6b8e;
+    box-shadow: 0 0 0 3px rgba(26, 22, 20, 0.15);
   }
 
   &::placeholder {
-    color: #c187d8;
+    color: #8b6b8e;
     opacity: 0.85;
   }
 `;
@@ -94,7 +94,7 @@ const SearchIconWrapper = styled.span`
   left: 0.95rem;
   top: 50%;
   transform: translateY(-50%);
-  color: #aa4dc8;
+  color: #8b6b8e;
   pointer-events: none;
   display: flex;
   align-items: center;
@@ -107,7 +107,7 @@ const ClearButton = styled.button`
   transform: translateY(-50%);
   background: transparent;
   border: none;
-  color: #aa4dc8;
+  color: #8b6b8e;
   cursor: pointer;
   padding: 0.3rem;
   border-radius: 50%;
@@ -117,13 +117,13 @@ const ClearButton = styled.button`
   transition: background 0.2s ease;
 
   &:hover {
-    background: rgba(170, 77, 200, 0.1);
+    background: rgba(26, 22, 20, 0.1);
   }
 `;
 
 const ResultCount = styled.p`
   font-size: 0.85rem;
-  color: #5b2b7b;
+  color: #4a3f37;
   font-style: italic;
   margin: 0 auto 1rem;
   text-align: center;
@@ -131,7 +131,7 @@ const ResultCount = styled.p`
 
 const NoResults = styled.p`
   font-size: 1rem;
-  color: #5b2b7b;
+  color: #4a3f37;
   font-style: italic;
   text-align: center;
   max-width: 600px;
@@ -162,7 +162,7 @@ const Tile = styled.div`
   align-items: center;
   background: #ffffffcc;
   border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(170, 77, 200, 0.15);
+  box-shadow: 0 4px 16px rgba(26, 22, 20, 0.15);
   overflow: hidden;
   cursor: zoom-in;
 
