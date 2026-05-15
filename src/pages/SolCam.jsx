@@ -9,19 +9,21 @@ import { streamURL, checkStream } from "../utils/streamUtils.js";
 
 // ----- STYLES (Παραμένουν ως έχουν) -----
 const Title = styled.h1`
-  font-size: 2rem;
-  color: #1a1614;
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  line-height: 1.05;
+  color: var(--sol-ink);
   margin-bottom: 0.5rem;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
 `;
 
 const Subtitle = styled.p`
-  font-size: 1rem;
-  color: #4a3f37;
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--sol-ink-soft);
   margin-bottom: 2rem;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
 `;
 
 const VideoBox = styled.div`

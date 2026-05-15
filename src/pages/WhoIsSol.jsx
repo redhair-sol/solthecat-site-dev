@@ -33,24 +33,26 @@ const Content = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 2rem;
-  color: #1a1614;
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  line-height: 1.05;
+  color: var(--sol-ink);
   margin-bottom: 0.5rem;
-  font-family: 'Poppins', sans-serif;
   font-weight: 400;
 `;
 
 const IntroText = styled.p`
   font-size: 1rem;
-  color: #4a3f37;
+  color: var(--sol-ink-soft);
   margin-bottom: 1.5rem;
   line-height: 1.6;
 `;
 
 const FunFactsTitle = styled.h2`
-  font-size: 1.75rem;
-  color: #8b6b8e;
-  font-weight: 600;
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.9rem;
+  color: var(--sol-ink);
+  font-weight: 500;
   margin: 2rem 0 1rem;
 `;
 
@@ -58,26 +60,35 @@ const FunFactsList = styled.ul`
   list-style: disc;
   padding-left: 1.5rem;
   text-align: left;
-  color: #444;
+  color: var(--sol-ink);
   font-size: 1rem;
   line-height: 1.6;
 `;
 
 const FunFactItem = styled.li`
   margin-bottom: 0.5rem;
+
+  strong {
+    color: var(--sol-ink);
+    font-weight: 600;
+  }
 `;
 
 const FooterText = styled.p`
   font-size: 0.875rem;
-  color: #666;
+  color: var(--sol-ink-soft);
   margin-top: 2rem;
 `;
 
 const ContactLink = styled.a`
-  color: #8b6b8e;
+  color: var(--sol-mauve);
   text-decoration: underline;
+  text-decoration-color: var(--sol-line);
+  text-underline-offset: 3px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
   &:hover {
-    color: #7a3299;
+    color: var(--sol-ink);
+    text-decoration-color: var(--sol-rose);
   }
 `;
 

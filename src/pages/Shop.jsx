@@ -8,17 +8,19 @@ import PageContainer from "../components/PageContainer.jsx";
 import { upperLocal } from "../utils/greekUpper.js";
 
 const Heading = styled.h1`
-  font-size: 2rem;
-  color: #1a1614;
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  line-height: 1.05;
+  color: var(--sol-ink);
   margin-bottom: 0.5rem;
-  font-family: 'Poppins', sans-serif;
 `;
 
 const Subtitle = styled.p`
-  font-size: 1rem;
-  color: #4a3f37;
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--sol-ink-soft);
   margin-bottom: 2rem;
-  font-family: 'Poppins', sans-serif;
 `;
 
 const ProductGrid = styled.div`
@@ -40,9 +42,10 @@ const ProductGrid = styled.div`
 `;
 
 const ProductCard = styled.div`
-  background: #ffffffee;
+  background: var(--sol-cream-2);
+  border: 1px solid var(--sol-line);
   border-radius: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 12px rgba(26, 22, 20, 0.06);
   padding: 1rem;
   text-align: center;
   display: flex;
@@ -77,40 +80,39 @@ const RibbonCorner = styled.span`
   position: absolute;
   top: 0.6rem;
   right: 0.6rem;
-  background: #8b6b8e;
-  color: white;
+  background: var(--sol-plum);
+  color: var(--sol-cream);
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.05em;
   padding: 0.25rem 0.6rem;
   border-radius: 999px;
-  font-family: 'Poppins', sans-serif;
-  box-shadow: 0 2px 6px rgba(26, 22, 20, 0.3);
+  box-shadow: 0 2px 6px rgba(26, 22, 20, 0.18);
 `;
 
 const FlavorPill = styled.span`
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
-  background: #ede4d3;
-  color: #4a3f37;
+  background: var(--sol-cream);
+  border: 1px solid var(--sol-line);
+  color: var(--sol-ink-soft);
   font-size: 0.8rem;
   padding: 0.25rem 0.7rem;
   border-radius: 999px;
   margin-bottom: 0.5rem;
-  font-family: 'Poppins', sans-serif;
 `;
 
 const ProductName = styled.h2`
-  font-size: 1.25rem;
-  color: #1a1614;
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.4rem;
+  color: var(--sol-ink);
   margin-bottom: 0.5rem;
-  font-family: 'Poppins', sans-serif;
 `;
 
 const ProductDescription = styled.p`
   font-size: 0.95rem;
-  color: #444;
+  color: var(--sol-ink-soft);
   margin-bottom: 1rem;
   flex-grow: 1;
 `;
@@ -137,8 +139,9 @@ const StatusLabel = styled.span`
 `;
 
 const ErrorBox = styled.div`
-  background: #ffebee;
-  color: #c62828;
+  background: var(--sol-cream-2);
+  border: 1px solid var(--sol-line);
+  color: var(--sol-ink);
   padding: 1rem 1.2rem;
   border-radius: 1rem;
   max-width: 600px;

@@ -5,15 +5,19 @@ import PageContainer from "../components/PageContainer.jsx";
 import { CONTACT_FORM_URL } from "../config.js";
 
 const Heading = styled.h1`
-  font-size: 2rem;
-  color: #1a1614;
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  line-height: 1.05;
+  color: var(--sol-ink);
   margin-bottom: 0.5rem;
-  font-family: 'Poppins', sans-serif;
+  text-align: center;
 `;
 
 const Subtitle = styled.p`
-  font-size: 1rem;
-  color: #4a3f37;
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--sol-ink-soft);
   margin-bottom: 2rem;
   text-align: center;
 `;
@@ -42,12 +46,14 @@ const LanguageToggle = styled.div`
 `;
 
 const ToggleButton = styled.button`
-  padding: 0.3rem 0.8rem;
-  border: 1px solid #ccc;
-  background-color: ${({ $active }) => ($active ? '#d4a5a5' : '#fff')};
-  border-radius: 8px;
+  padding: 0.3rem 0.9rem;
+  border: 1px solid var(--sol-line);
+  background-color: ${({ $active }) => ($active ? "var(--sol-rose)" : "transparent")};
+  color: ${({ $active }) => ($active ? "var(--sol-cream)" : "var(--sol-ink-soft)")};
+  border-radius: 999px;
   font-size: 0.85rem;
   cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
 `;
 
 export default function Contact() {
