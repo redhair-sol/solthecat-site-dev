@@ -300,7 +300,7 @@ const ChallengePill = styled.span`
 const InstagramLink = styled.a`
   display: inline-flex;
   align-items: center;
-  color: #6a1b9a;
+  color: var(--sol-mauve);
   margin-top: 1.6rem;
   text-decoration: none;
   font-weight: 500;

@@ -11,7 +11,7 @@ function InstagramFloatingButton() {
       href="https://www.instagram.com/solthecat01/"
       target="_blank"
       rel="noopener noreferrer"
-      className="block fixed bottom-24 lg:bottom-6 right-4 lg:right-[max(1rem,calc((100vw_-_1280px)/2_+_1rem))] z-[1100] bg-pink-400 text-white rounded-full p-3 shadow-lg opacity-50 lg:opacity-70 hover:opacity-100 transition-opacity"
+      className="block fixed bottom-24 lg:bottom-6 right-4 lg:right-[max(1rem,calc((100vw_-_1280px)/2_+_1rem))] z-[1100] bg-[#8b6b8e] text-[var(--sol-cream)] rounded-full p-3 shadow-lg opacity-50 lg:opacity-70 hover:opacity-100 transition-opacity"
       aria-label="Follow Sol on Instagram"
       animate={{ y: [0, -6, 0] }}
       transition={{
