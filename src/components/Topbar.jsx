@@ -48,15 +48,23 @@ export default function Topbar() {
     <header className="fixed top-0 left-0 z-[9999] w-full">
       <div className="w-full bg-[var(--sol-cream)] py-1 shadow-sm relative">
         <div className="max-w-screen-xl mx-auto px-4 flex items-center justify-center relative h-16">
-          {/* Κεντραρισμένο logo (mobile menu now lives in BottomTabBar's "More" tab) */}
-          <Link to="/">
-            <img
-              src="/icons/soladventures.webp"
-              alt="SOLadventures"
-              width="240"
-              height="64"
-              className="!h-16 lg:!h-12 object-contain"
-            />
+          {/* Κεντραρισμένο logo — text wordmark "sol the cat". Italic gold "the"
+              mirrors the Hero "Meet Sol" accent. Proper drawn asset can swap
+              this back to an <img> later without other Topbar changes. */}
+          <Link
+            to="/"
+            aria-label="sol the cat"
+            className="no-underline"
+            style={{
+              fontFamily: "var(--sol-serif)",
+              color: "var(--sol-ink)",
+              fontSize: "clamp(2rem, 5vw, 2.4rem)",
+              lineHeight: 1,
+              letterSpacing: "-0.01em",
+              fontWeight: 400,
+            }}
+          >
+            sol <span style={{ color: "var(--sol-sun)", fontStyle: "italic" }}>the</span> cat
           </Link>
         </div>
       </div>
