@@ -2,7 +2,6 @@ import React from "react";
 import GlobalStyle from "./styles/GlobalStyle.js";
 import ScrollToTop from "./components/ScrollToTop";
 import Topbar from "./components/Topbar";
-import InstagramFloatingButton from "./components/InstagramFloatingButton"; // ✅ ΝΕΟ
 import BottomTabBar from "./components/BottomTabBar"; // mobile-only bottom nav (revertable — see component header)
 import InstallPrompt from "./components/InstallPrompt"; // PWA install banner (Chromium-based browsers only)
 import { Outlet } from "react-router-dom";
@@ -23,10 +22,8 @@ function App() {
         </div>
       </div>
 
-      {/* ✅ Floating κουμπί Instagram μόνο σε κινητό */}
-      <InstagramFloatingButton />
-
-      {/* Bottom tab bar — mobile only */}
+      {/* Bottom tab bar — mobile only.
+          Instagram link now lives inside MoreMenu drawer, no longer a floating FAB. */}
       <BottomTabBar />
 
       {/* PWA install banner — appears when browser fires beforeinstallprompt */}

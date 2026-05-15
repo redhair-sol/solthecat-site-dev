@@ -12,7 +12,7 @@
 
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { X, Image as ImageIcon, Video, User, ShoppingBag, Mail } from "lucide-react";
+import { X, Image as ImageIcon, Video, User, ShoppingBag, Mail, Instagram } from "lucide-react";
 // motion is referenced as <motion.img> in JSX below — eslint without
 // eslint-plugin-react cannot track JSX-only identifiers as "used".
 // eslint-disable-next-line no-unused-vars
@@ -82,31 +82,28 @@ export default function MoreMenu({ isOpen, onClose }) {
           className="bg-gradient-to-b from-[var(--sol-cream)] to-[var(--sol-cream-2)] rounded-t-3xl shadow-[0_-8px_30px_rgba(26,22,20,0.12)] max-h-[85vh] overflow-y-auto"
           style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
         >
-          {/* Drag handle (visual only) */}
-          <div className="flex justify-center pt-3 pb-2">
-            <div className="w-12 h-1.5 bg-[var(--sol-line)] rounded-full" />
+          {/* Drag handle (visual only) — slim sol-line bar */}
+          <div className="flex justify-center pt-3 pb-3">
+            <div className="w-9 h-[3px] bg-[var(--sol-line)] rounded-full" />
           </div>
 
-          {/* Header — label + close button (cat lives at the bottom right, draggable) */}
-          <div className="flex items-center justify-between px-6 pb-4">
-            <div>
-              <p className="text-[0.65rem] uppercase tracking-wider text-[#4a3f37] font-semibold">
-                {t.header}
-              </p>
-              <p
-                className={`${navSizeClass} text-[#1a1614] leading-none`}
-                style={navStyle}
-              >
-                {t.tagline}
-              </p>
-            </div>
+          {/* Header — script tagline carries the section identity; the sans-uppercase
+              "MORE" eyebrow was removed because it duplicated and clashed with the
+              editorial voice. */}
+          <div className="flex items-center justify-between px-6 pb-6">
+            <p
+              className={`${navSizeClass} text-[#1a1614] leading-none`}
+              style={navStyle}
+            >
+              {t.tagline}
+            </p>
             <button
               type="button"
               onClick={onClose}
-              className="p-2 rounded-full bg-[var(--sol-cream)] border border-[var(--sol-line)] shadow-sm hover:scale-110 transition-transform"
+              className="p-2 text-[#4a3f37] hover:text-[#d4a5a5] transition-colors"
               aria-label="Close menu"
             >
-              <X className="w-5 h-5 text-[#1a1614]" />
+              <X className="w-5 h-5" />
             </button>
           </div>
 
@@ -120,7 +117,7 @@ export default function MoreMenu({ isOpen, onClose }) {
                   to={item.to}
                   onClick={onClose}
                   className={({ isActive }) =>
-                    `flex items-center gap-3 px-4 py-3 rounded-xl transition-colors ${
+                    `flex items-center gap-3 px-4 py-3.5 rounded-xl transition-colors ${
                       isActive
                         ? "bg-[var(--sol-cream-2)] text-[#1a1614] font-bold"
                         : "text-[#4a3f37] hover:bg-[#1a1614]/5 active:bg-[#1a1614]/10"
@@ -138,6 +135,24 @@ export default function MoreMenu({ isOpen, onClose }) {
               );
             })}
           </nav>
+
+          {/* Social — Instagram row. Moved out of a global floating FAB so it
+              stops covering hero copy on every mobile page; lives alongside the
+              other secondary entry points instead. */}
+          <div className="px-3 pt-3 mt-2 border-t border-[var(--sol-line)]">
+            <a
+              href="https://www.instagram.com/solthecat01/"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={onClose}
+              className="flex items-center gap-3 px-4 py-3.5 rounded-xl text-[#4a3f37] hover:bg-[#1a1614]/5 active:bg-[#1a1614]/10 transition-colors"
+            >
+              <Instagram className="w-5 h-5" aria-hidden="true" />
+              <span className={navSizeClass} style={navStyle}>
+                {language === "el" ? "Ακολούθα στο Instagram" : "Follow on Instagram"}
+              </span>
+            </a>
+          </div>
 
           {/* Draggable Sol — brand element, can be moved around */}
           <div className="flex justify-end px-6 pb-4">

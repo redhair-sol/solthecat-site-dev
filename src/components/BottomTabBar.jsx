@@ -72,10 +72,19 @@ export default function BottomTabBar() {
                   `${baseTab} ${isActive ? activeTab : inactiveTab}`
                 }
               >
-                <Icon className="w-6 h-6" aria-hidden="true" />
-                <span className={`${labelSizeClass} leading-none`} style={labelStyle}>
-                  {t[tab.key]}
-                </span>
+                {({ isActive }) => (
+                  <>
+                    <Icon className="w-6 h-6" aria-hidden="true" />
+                    <span
+                      className={`${labelSizeClass} leading-none ${
+                        isActive ? "border-b-2 border-[#d4a5a5] pb-0.5" : ""
+                      }`}
+                      style={labelStyle}
+                    >
+                      {t[tab.key]}
+                    </span>
+                  </>
+                )}
               </NavLink>
             );
           })}
