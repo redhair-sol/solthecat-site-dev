@@ -77,7 +77,7 @@ const ToggleButton = styled.button`
   min-width: 150px;
   border: 1px solid var(--sol-line);
   background-color: ${({ $active }) => ($active ? "var(--sol-rose)" : "transparent")};
-  color: ${({ $active }) => ($active ? "var(--sol-cream)" : "var(--sol-ink)")};
+  color: ${({ $active }) => ($active ? "var(--sol-cream)" : "var(--sol-ink-soft)")};
   border-radius: 8px;
   font-size: 0.85rem;
   cursor: pointer;
@@ -129,8 +129,8 @@ const BadgeIntro = styled.p`
 
 const BadgeName = styled.p`
   font-size: 1.1rem;
-  color: var(--sol-sun);
-  font-weight: 600;
+  color: var(--sol-ink);
+  font-weight: 500;
 `;
 
 const BadgeDesc = styled.p`
