@@ -122,17 +122,19 @@ export default function InstallPrompt() {
   return (
     <div
       className="fixed bottom-28 lg:bottom-20 left-4 right-4 lg:left-auto lg:right-6 lg:max-w-sm
-                 z-[1100] bg-white rounded-2xl shadow-[0_8px_24px_rgba(26, 22, 20,0.25)]
-                 border border-[#d4a5a5] p-4 flex items-start gap-3"
+                 z-[1100] bg-[var(--sol-cream)] rounded-2xl shadow-[0_12px_32px_-8px_rgba(26,22,20,0.18)]
+                 border border-[var(--sol-line)] p-4 flex items-start gap-3"
       role="dialog"
       aria-label={t.title}
     >
       <img
-        src="/icons/pwa-192.png"
+        src="/images/sol-hero.webp"
         alt=""
-        className="w-12 h-12 rounded-xl flex-shrink-0"
+        className="w-12 h-12 rounded-xl flex-shrink-0 object-cover"
         width="48"
         height="48"
+        loading="lazy"
+        decoding="async"
       />
       <div className="flex-1 min-w-0">
         <p className="font-semibold text-[#1a1614] text-sm">{t.title}</p>
