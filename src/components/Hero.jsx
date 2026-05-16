@@ -16,7 +16,10 @@ const TEXT = {
     statNapped: "napped today",
   },
   el: {
-    eyebrow: "Αθήνα, GR · βασιλεύει από το 2021",
+    // Pre-uppercased without accents — Greek typography rule: Greek capitals
+    // drop their tonos. CSS text-transform: uppercase does not strip accents,
+    // so we store the eyebrow in target case and the CSS rule becomes a no-op.
+    eyebrow: "ΑΘΗΝΑ, GR · ΒΑΣΙΛΕΥΕΙ ΑΠΟ ΤΟ 2021",
     photoAlt: "Η γάτα Sol",
     livePill: "LIVE · Κυνηγά σκόνη",
     lede:
@@ -53,8 +56,8 @@ export default function Hero({ photo = '/sol-hero.jpg' }) {
             {language === "el" ? (
               <>
                 Γνωρίστε τη <em>Sol</em>.<br />
-                Μια μικρή γάτα<br />
-                με μεγάλες απόψεις.
+                Μικρή γάτα.<br />
+                Μεγάλες απόψεις.
               </>
             ) : (
               <>
