@@ -7,28 +7,7 @@ import PageContainer from "../components/PageContainer.jsx";
 import TitleEm from "../components/TitleEm.jsx";
 import styled from "styled-components";
 
-const WatermarkedContainer = styled(PageContainer)`
-  position: relative;
-  overflow: hidden;
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: url('/images/sol-watermark.webp');
-    background-repeat: no-repeat;
-    background-position: center 8rem;
-    background-size: min(420px, 60%);
-    opacity: 0.08;
-    mix-blend-mode: multiply;
-    pointer-events: none;
-    z-index: 0;
-  }
-`;
-
 const Content = styled.div`
-  position: relative;
-  z-index: 1;
   max-width: 768px;
   margin: 0 auto;
   text-align: center;
@@ -173,7 +152,7 @@ export default function WhoIsSol() {
         <link rel="canonical" href="https://solthecat.com/whoissol" />
       </Helmet>
 
-      <WatermarkedContainer
+      <PageContainer
         alignTop
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -200,7 +179,7 @@ export default function WhoIsSol() {
             </ContactLink>
           </FooterText>
         </Content>
-      </WatermarkedContainer>
+      </PageContainer>
     </>
   );
 }
