@@ -63,7 +63,7 @@
    Scaling EL down to a 64px cap keeps editorial weight while restoring the
    photo/text height parity. */
 .sol-hero:lang(el) .sol-hero__title {
-  font-size: clamp(40px, 5vw, 64px);
+  font-size: clamp(44px, 5.5vw, 76px);
   line-height: 1.0;
 }
 .sol-hero__title em {
