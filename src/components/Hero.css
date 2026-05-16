@@ -34,6 +34,12 @@
   padding: 10px 14px; border-radius: 999px;
   display: inline-flex; align-items: center; gap: 8px;
   backdrop-filter: blur(8px);
+  text-decoration: none;
+  transition: transform .15s ease, background .15s ease;
+}
+.sol-hero__live:hover {
+  transform: translateY(-1px);
+  background: rgba(26,22,20,0.95);
 }
 .sol-hero__live .dot {
   width: 6px; height: 6px; border-radius: 50%;

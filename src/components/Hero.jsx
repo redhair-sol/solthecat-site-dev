@@ -32,7 +32,7 @@ const TEXT = {
   },
 };
 
-export default function Hero({ photo = '/sol-hero.jpg' }) {
+export default function Hero({ photo = '/sol-hero.jpg', isLive = false }) {
   const { language } = useLanguage();
   const t = TEXT[language];
 
@@ -42,10 +42,12 @@ export default function Hero({ photo = '/sol-hero.jpg' }) {
         {/* LEFT — photo */}
         <div className="sol-hero__media">
           <img src={photo} alt={t.photoAlt} />
-          <div className="sol-hero__live">
-            <span className="dot" />
-            {t.livePill}
-          </div>
+          {isLive && (
+            <a href="/solcam" className="sol-hero__live" aria-label={t.livePill}>
+              <span className="dot" />
+              {t.livePill}
+            </a>
+          )}
         </div>
 
         {/* RIGHT — text */}
