@@ -56,8 +56,8 @@ export default function Hero({ photo = '/sol-hero.jpg' }) {
             {language === "el" ? (
               <>
                 Γνωρίστε τη <em>Sol</em>.<br />
-                Μικρή γάτα.<br />
-                Μεγάλες απόψεις.
+                Μια μικρή γάτα<br />
+                με μεγάλες απόψεις.
               </>
             ) : (
               <>
