@@ -92,8 +92,8 @@ export default function Contact() {
     >
       <Heading>
         {language === "el"
-          ? <>Επικοινώνησε με τη <TitleEm>Sol</TitleEm> 📬</>
-          : <>Contact <TitleEm>Sol</TitleEm> the Cat 📬</>}
+          ? <>Επικοινώνησε με τη <TitleEm>Sol</TitleEm></>
+          : <>Contact <TitleEm>Sol</TitleEm> the Cat</>}
       </Heading>
 
       <LanguageToggle>

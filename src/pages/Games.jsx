@@ -121,7 +121,7 @@ export default function Games() {
       pageTitle: "Sol’s Game Room – SolTheCat",
       metaDescription:
         "12 free Sol the Cat mini-games — quizzes, memory, puzzles, reaction challenges. Climb the leaderboard and beat today's daily challenge.",
-      heading: <>Sol’s <TitleEm>Games</TitleEm> 🎮</>,
+      heading: <>Sol’s <TitleEm>Games</TitleEm></>,
       subtitle: "Pick your royal challenge",
       playText: "Play",
       games: [
@@ -215,7 +215,7 @@ export default function Games() {
       pageTitle: "Αίθουσα Παιχνιδιών της Sol – SolTheCat",
       metaDescription:
         "12 δωρεάν mini-games της Sol the Cat — quizzes, μνήμη, παζλ, αντανακλαστικά. Σκαρφάλωσε στη βαθμολογία και νίκα τη σημερινή πρόκληση.",
-      heading: <>Παιχνίδια της <TitleEm>Sol</TitleEm> 🎮</>,
+      heading: <>Παιχνίδια της <TitleEm>Sol</TitleEm></>,
       subtitle: "Διάλεξε τη βασιλική σου πρόκληση",
       playText: "Παίξε",
       games: [

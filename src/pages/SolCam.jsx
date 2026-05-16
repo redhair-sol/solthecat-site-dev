@@ -109,13 +109,13 @@ export default function SolCam() {
 
   const text = {
     en: {
-      title: <><TitleEm>SolCam</TitleEm> Live 🎥</>,
+      title: <><TitleEm>SolCam</TitleEm> Live</>,
       subtitle: "Live view of Queen Sol.",
       offline: "SolCam currently offline",
       live: "LIVE",
     },
     el: {
-      title: <><TitleEm>SolCam</TitleEm> Live 🎥</>,
+      title: <><TitleEm>SolCam</TitleEm> Live</>,
       subtitle: "Ζωντανή μετάδοση της Sol.",
       offline: "Η SolCam είναι εκτός λειτουργίας",
       live: "ΖΩΝΤΑΝΑ",
