@@ -96,7 +96,9 @@ const QuoteBox = styled(motion.div)`
   border-radius: 1.5rem;
   margin-top: 1.6rem;
   max-width: 600px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow:
+    0 1px 3px rgba(26, 22, 20, 0.06),
+    0 12px 32px -10px rgba(26, 22, 20, 0.14);
   text-align: center;
 `;
 
@@ -118,7 +120,9 @@ const BadgeBox = styled(motion.div)`
   padding: 1rem;
   border-radius: 1.5rem;
   max-width: 600px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow:
+    0 1px 3px rgba(26, 22, 20, 0.06),
+    0 12px 32px -10px rgba(26, 22, 20, 0.14);
   text-align: center;
   margin-top: 1.6rem;
 `;
@@ -162,7 +166,9 @@ const GamesCard = styled(motion.div)`
   max-width: 600px;
   margin-top: 1.6rem;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow:
+    0 1px 3px rgba(26, 22, 20, 0.06),
+    0 12px 32px -10px rgba(26, 22, 20, 0.14);
 `;
 
 const GamesTitle = styled.h3`
@@ -179,12 +185,19 @@ const GamesText = styled.p`
 
 const GamesCTA = styled(Link)`
   display: inline-block;
-  padding: 0.6rem 1.2rem;
-  background-color: var(--sol-plum);
+  padding: 0.75rem 1.5rem;
+  background-color: var(--sol-ink);
   color: var(--sol-cream);
   text-decoration: none;
-  border-radius: 1rem;
-  font-weight: bold;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: transform 0.2s, background-color 0.2s;
+
+  &:hover {
+    background-color: #2a221d;
+    transform: translateY(-1px);
+  }
 `;
 
 // --- Daily Challenge card ---
@@ -198,7 +211,9 @@ const ChallengeCard = styled(motion.div)`
   max-width: 600px;
   margin-top: 1.6rem;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow:
+    0 1px 3px rgba(26, 22, 20, 0.06),
+    0 12px 32px -10px rgba(26, 22, 20, 0.14);
 `;
 
 const ChallengeKicker = styled.p`
@@ -260,12 +275,19 @@ const ChallengeTop3Empty = styled.p`
 
 const ChallengeCTA = styled(Link)`
   display: inline-block;
-  padding: 0.6rem 1.2rem;
-  background-color: var(--sol-plum);
+  padding: 0.75rem 1.5rem;
+  background-color: var(--sol-ink);
   color: var(--sol-cream);
   text-decoration: none;
-  border-radius: 1rem;
-  font-weight: bold;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: transform 0.2s, background-color 0.2s;
+
+  &:hover {
+    background-color: #2a221d;
+    transform: translateY(-1px);
+  }
 `;
 
 const ChallengeStatusRow = styled.div`
@@ -300,10 +322,15 @@ const ChallengePill = styled.span`
 const InstagramLink = styled.a`
   display: inline-flex;
   align-items: center;
-  color: var(--sol-mauve);
+  color: var(--sol-ink-soft);
   margin-top: 1.6rem;
   text-decoration: none;
   font-weight: 500;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--sol-rose);
+  }
 `;
 
 const InstagramIcon = styled.img`
@@ -320,7 +347,7 @@ const RelativePageContainer = styled(PageContainer)`
 // utils/dailyChallenge.js — shared with the games that mark completion.
 
 export default function Home() {
-  const { language, setLanguage } = useLanguage();
+  const { language } = useLanguage();
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const hasSearchParam = Boolean(queryParams.get("s"));
@@ -460,7 +487,7 @@ export default function Home() {
       toggleMood: "Mood of the Day",
       toggleFortune: "Words of Sol",
       instagram: "Follow on Instagram",
-      gamesTitle: "🎮 Ready to play with Sol?",
+      gamesTitle: "Ready to play with Sol?",
       gamesText: "Explore mini-games inspired by her travels!",
       gamesCTA: "Play the Games",
       live: "LIVE",
@@ -488,7 +515,7 @@ export default function Home() {
       toggleMood: "Διάθεση Ημέρας",
       toggleFortune: "Λόγια της Sol",
       instagram: "Ακολούθησε στο Instagram",
-      gamesTitle: "🎮 Παίξε με τη Sol!",
+      gamesTitle: "Παίξε με τη Sol!",
       gamesText: "Ανακάλυψε mini-games...",
       gamesCTA: "Παίξε Παιχνίδια",
       live: "ΖΩΝΤΑΝΑ",
@@ -533,16 +560,6 @@ export default function Home() {
             </LiveBadge>
           </LiveBadgeLink>
         )}
-
-        {/* LANGUAGE */}
-        <LanguageToggle>
-          <ToggleButton onClick={() => setLanguage("en")} $active={language === "en"}>
-            🇬🇧 English
-          </ToggleButton>
-          <ToggleButton onClick={() => setLanguage("el")} $active={language === "el"}>
-            🇬🇷 Ελληνικά
-          </ToggleButton>
-        </LanguageToggle>
 
         {/* Hero v2 — Warm Editorial. Portrait photo with cozy golden-hour
             lighting; pairs with the cream/sun/ink palette. */}
