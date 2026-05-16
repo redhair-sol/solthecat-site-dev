@@ -164,7 +164,12 @@ export default function WhoIsSol() {
         <link rel="canonical" href="https://solthecat.com/whoissol" />
       </Helmet>
 
-      <WatermarkedContainer alignTop>
+      <WatermarkedContainer
+        alignTop
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
         <Content>
           <Title>{t.title}</Title>
           <IntroText>{t.intro1}</IntroText>
