@@ -34,8 +34,10 @@ const LEVELS = [
 ];
 
 const Title = styled.h1`
-  font-size: 2rem;
-  color: #1a1614;
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  line-height: 1.05;
+  color: var(--sol-ink);
   margin-bottom: 0.5rem;
 
   @media (max-width: 480px) {

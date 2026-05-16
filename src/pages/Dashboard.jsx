@@ -10,9 +10,10 @@ const PageContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: #8b6b8e;
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  line-height: 1.05;
+  color: var(--sol-ink);
   margin-bottom: 1rem;
 `;
 
