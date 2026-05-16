@@ -120,7 +120,7 @@ export default function Games() {
     en: {
       pageTitle: "Sol’s Game Room – SolTheCat",
       metaDescription:
-        "12 free Sol the Cat mini-games — quizzes, memory, puzzles, reaction challenges. Climb the leaderboard and beat today's daily challenge.",
+        "12 free Sol the Cat mini-games, quizzes, memory, puzzles, reaction challenges. Climb the leaderboard and beat today's daily challenge.",
       heading: <>Sol’s <TitleEm>Games</TitleEm></>,
       subtitle: "Pick your royal challenge",
       playText: "Play",
@@ -192,7 +192,7 @@ export default function Games() {
           id: 10,
           emoji: "⚡",
           name: "Quick Paws",
-          description: "Tap the cats before they vanish — speed reaction game.",
+          description: "Tap the cats before they vanish, speed reaction game.",
           route: "/games/quick-paws"
         },
         {
@@ -214,7 +214,7 @@ export default function Games() {
     el: {
       pageTitle: "Αίθουσα Παιχνιδιών της Sol – SolTheCat",
       metaDescription:
-        "12 δωρεάν mini-games της Sol the Cat — quizzes, μνήμη, παζλ, αντανακλαστικά. Σκαρφάλωσε στη βαθμολογία και νίκα τη σημερινή πρόκληση.",
+        "12 δωρεάν mini-games της Sol the Cat, quizzes, μνήμη, παζλ, αντανακλαστικά. Σκαρφάλωσε στη βαθμολογία και νίκα τη σημερινή πρόκληση.",
       heading: <>Παιχνίδια της <TitleEm>Sol</TitleEm></>,
       subtitle: "Διάλεξε τη βασιλική σου πρόκληση",
       playText: "Παίξε",
@@ -286,7 +286,7 @@ export default function Games() {
           id: 10,
           emoji: "⚡",
           name: "Γρήγορες Πατούσες",
-          description: "Πάτα τις γάτες πριν εξαφανιστούν — παιχνίδι αντανακλαστικών.",
+          description: "Πάτα τις γάτες πριν εξαφανιστούν, παιχνίδι αντανακλαστικών.",
           route: "/games/quick-paws"
         },
         {

@@ -20,8 +20,10 @@ const Title = styled.h1`
 `;
 
 const Subtitle = styled.p`
-  font-size: 1rem;
-  color: #4a3f37;
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--sol-ink-soft);
   margin-bottom: 1rem;
 `;
 
@@ -96,7 +98,7 @@ export default function SolsTreasureHunt() {
   const areaRef = useRef();
 
   // Auto-scroll to the success message + Play Again button when all treasures
-  // are found — they sit below a tall treasure area on mobile.
+  // are found, they sit below a tall treasure area on mobile.
   const doneRef = useRef(null);
 
   const t = {
@@ -166,7 +168,7 @@ export default function SolsTreasureHunt() {
     setFound((prev) => prev + 1);
   };
 
-  // Win effect — runs once whenever `found` lands on 3.
+  // Win effect, runs once whenever `found` lands on 3.
   // (Side effects inside state updaters fire twice in React 18 dev/strict mode.)
   useEffect(() => {
     if (found === 3) {

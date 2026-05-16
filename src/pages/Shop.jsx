@@ -167,7 +167,7 @@ export default function Shop() {
     en: {
       pageTitle: "SOLicious Delights – SolTheCat",
       metaDescription:
-        "Sol the Cat's shop — SOLicious treats and royal goodies inspired by her travels. Coming soon.",
+        "Sol the Cat's shop, SOLicious treats and royal goodies inspired by her travels. Coming soon.",
       heading: <>Sol’s <TitleEm>Shop</TitleEm></>,
       subtitle: "Every feline deserves treats",
       ribbon: "Soon",
@@ -181,7 +181,7 @@ export default function Shop() {
     el: {
       pageTitle: "Επιλογές SOL – SolTheCat",
       metaDescription:
-        "Το κατάστημα της Sol the Cat — SOLicious λιχουδιές και βασιλικά treats εμπνευσμένα από τα ταξίδια της. Έρχεται σύντομα.",
+        "Το κατάστημα της Sol the Cat, SOLicious λιχουδιές και βασιλικά treats εμπνευσμένα από τα ταξίδια της. Έρχεται σύντομα.",
       heading: <>Το Κατάστημα της <TitleEm>Sol</TitleEm></>,
       subtitle: "Κάθε γάτα αξίζει λιχουδιές",
       ribbon: "Σύντομα",

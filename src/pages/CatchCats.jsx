@@ -1,6 +1,6 @@
 // src/pages/CatchCats.jsx
 //
-// "Catch the Cats" — falling-objects game. Cats drop from the top of the
+// "Catch the Cats", falling-objects game. Cats drop from the top of the
 // play area; player drags a basket left/right to catch them. Each missed
 // cat costs a life. 30-second round, 3 difficulty levels.
 //
@@ -18,7 +18,7 @@
 //   - Touch / pointer drag (mobile + desktop): move basket horizontally.
 //   - Arrow Left/Right (desktop): step the basket.
 //
-// Zero new assets — uses cat emoji + a basket emoji.
+// Zero new assets, uses cat emoji + a basket emoji.
 
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
@@ -31,11 +31,11 @@ import { celebrate } from "../utils/celebrate.js";
 import { markDailyDoneIfMatches } from "../utils/dailyChallenge.js";
 
 const ROUND_SECONDS = 30;
-const BASKET_HALF_WIDTH_PCT = 11; // collision tolerance — slightly forgiving
+const BASKET_HALF_WIDTH_PCT = 11; // collision tolerance, slightly forgiving
 const KEY_STEP_PCT = 6;
 // Three collision check moments during the basket-overlap window.
 // At fallSec * 0.80 the cat visually reaches the basket top; by 0.88 it
-// is at the middle. Any hit in this window counts — gives the player a
+// is at the middle. Any hit in this window counts, gives the player a
 // proper window to catch instead of one strict snapshot.
 const HIT_CHECK_FRACTIONS = [0.80, 0.84, 0.88];
 
@@ -62,8 +62,10 @@ const Title = styled.h1`
 `;
 
 const Subtitle = styled.p`
-  font-size: 1rem;
-  color: #4a3f37;
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--sol-ink-soft);
   margin-bottom: 1rem;
   max-width: 600px;
   text-align: center;
@@ -133,7 +135,7 @@ const BasketWrap = styled.div`
   pointer-events: none;
   filter: drop-shadow(0 -1px 3px rgba(0, 0, 0, 0.15));
   transform-origin: 50% 100%;
-  /* No CSS transition on left — direct DOM updates from pointer events
+  /* No CSS transition on left, direct DOM updates from pointer events
      should be instant. Any easing here adds perceptible latency on touch. */
 
   &.bounce {
@@ -408,7 +410,7 @@ export default function CatchCats() {
       personalBest: (s) => `🏆 Your best: ${s}`,
       noBest: "🏆 No personal record yet",
       top3Title: "🏆 Top 5",
-      top3Empty: "No scores yet — be the first!",
+      top3Empty: "No scores yet, be the first!",
       newRecord: "🎉 NEW PERSONAL BEST!",
       qualifies: "🌟 You made the leaderboard!",
       enterName: "Enter your name:",
@@ -440,7 +442,7 @@ export default function CatchCats() {
       personalBest: (s) => `🏆 Καλύτερο σου: ${s}`,
       noBest: "🏆 Κανένα ρεκόρ ακόμη",
       top3Title: "🏆 Top 5",
-      top3Empty: "Κανένα σκορ ακόμη — γίνε ο πρώτος!",
+      top3Empty: "Κανένα σκορ ακόμη, γίνε ο πρώτος!",
       newRecord: "🎉 ΝΕΟ ΠΡΟΣΩΠΙΚΟ ΡΕΚΟΡ!",
       qualifies: "🌟 Μπήκες στη βαθμολογία!",
       enterName: "Όνομα:",
@@ -463,7 +465,7 @@ export default function CatchCats() {
         setEpisodes(data.filter((ep) => ep.visible));
       })
       .catch(() => {
-        // Non-fatal — game still works, just falls back to gradient bg.
+        // Non-fatal, game still works, just falls back to gradient bg.
       });
   }, []);
 
@@ -573,7 +575,7 @@ export default function CatchCats() {
 
   // Lightweight beep/boop SFX via Web Audio API. Created lazily on first
   // interaction (mobile browsers block AudioContext until a user gesture).
-  // Zero asset cost — synthesised tones, no audio files.
+  // Zero asset cost, synthesised tones, no audio files.
   const getAudioCtx = () => {
     if (audioCtxRef.current) return audioCtxRef.current;
     const Ctx = window.AudioContext || window.webkitAudioContext;
@@ -703,7 +705,7 @@ export default function CatchCats() {
             sfxCatch(cat.isCrown);
             // Mark the cat as caught instead of removing it. The render
             // switches its animate target (snap to basket level, scale
-            // down, fade) with a fast transition — prevents the cat from
+            // down, fade) with a fast transition, prevents the cat from
             // continuing the long fall animation during AnimatePresence
             // exit (which had inherited the multi-second fall transition).
             setCats((prev) =>
@@ -912,7 +914,7 @@ export default function CatchCats() {
               </PersonalBestText>
             )}
 
-            {/* Leaderboard submission UI — only if score qualifies and user
+            {/* Leaderboard submission UI, only if score qualifies and user
                 hasn't already submitted/skipped. */}
             {qualifiesForLeaderboard() && submitState === "idle" && (
               <>

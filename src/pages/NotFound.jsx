@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+// motion is referenced as <motion.div> in JSX below, eslint without
+// eslint-plugin-react cannot track JSX-only identifiers as "used".
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext.jsx";
 
 export default function NotFound() {
@@ -7,11 +11,11 @@ export default function NotFound() {
 
   const t = {
     en: {
-      message: "This corner of the world hasn’t been explored yet — not even by Sol.",
+      message: "This corner of the world hasn’t been explored yet. Not even by Sol.",
       back: "Back to safety",
     },
     el: {
-      message: "Αυτή η γωνιά του κόσμου δεν έχει εξερευνηθεί ακόμη — ούτε από τη Sol.",
+      message: "Αυτή η γωνιά του κόσμου δεν έχει εξερευνηθεί ακόμη. Ούτε από τη Sol.",
       back: "Επιστροφή στην ασφάλεια",
     },
   }[language];
@@ -22,7 +26,10 @@ export default function NotFound() {
         <title>404 – SolTheCat</title>
         <meta name="robots" content="noindex" />
       </Helmet>
-      <div
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
         className="w-full min-h-screen relative bg-[#ede4d3]"
         style={{
           backgroundImage: "url('/images/404.webp')",
@@ -54,7 +61,7 @@ export default function NotFound() {
             {t.back}
           </Link>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

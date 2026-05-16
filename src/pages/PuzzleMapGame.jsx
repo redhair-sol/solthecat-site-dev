@@ -19,8 +19,10 @@ const Title = styled.h1`
 `;
 
 const Subtitle = styled.p`
-  font-size: 1rem;
-  color: #4a3f37;
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--sol-ink-soft);
   margin-bottom: 2rem;
 `;
 
@@ -253,7 +255,7 @@ export default function PuzzleMapGame() {
       personalBest: (s) => `🏆 Your best: ${s} pts`,
       noBest: "🏆 No personal record yet",
       top3Title: "🏆 Top 5",
-      top3Empty: "No scores yet — be the first!",
+      top3Empty: "No scores yet, be the first!",
       newRecord: "🎉 NEW PERSONAL BEST!",
       qualifies: "🌟 You made the leaderboard!",
       enterName: "Enter your name:",
@@ -276,7 +278,7 @@ export default function PuzzleMapGame() {
       personalBest: (s) => `🏆 Καλύτερο σου: ${s} πόντοι`,
       noBest: "🏆 Κανένα ρεκόρ ακόμη",
       top3Title: "🏆 Top 5",
-      top3Empty: "Κανένα σκορ ακόμη — γίνε ο πρώτος!",
+      top3Empty: "Κανένα σκορ ακόμη, γίνε ο πρώτος!",
       newRecord: "🎉 ΝΕΟ ΠΡΟΣΩΠΙΚΟ ΡΕΚΟΡ!",
       qualifies: "🌟 Μπήκες στη βαθμολογία!",
       enterName: "Όνομα:",
@@ -310,7 +312,7 @@ export default function PuzzleMapGame() {
 
   // Slice the selected episode image into 9 canvas tiles. This runs whenever
   // the user picks a different episode. The puzzle stays in "not started"
-  // state until the user explicitly presses the Start button — that way the
+  // state until the user explicitly presses the Start button, that way the
   // timer doesn't run while the user is still deciding which episode to play.
   useEffect(() => {
     if (!imagePath) return;
@@ -332,7 +334,7 @@ export default function PuzzleMapGame() {
         }
       }
       setSlices(tmp);
-      // Switching episodes resets play state — user must press Start again
+      // Switching episodes resets play state, user must press Start again
       // before the timer can resume. Also covers the page-load case where
       // the first episode auto-selects.
       setHasStarted(false);
@@ -344,7 +346,7 @@ export default function PuzzleMapGame() {
   }, [imagePath]);
 
   // Shuffle the tiles and kick off the timer. Used by both the initial Start
-  // button and Play Again — same flow, no image reload required.
+  // button and Play Again, same flow, no image reload required.
   const startPuzzle = () => {
     if (slices.length !== 9) return;
     let arr = [...initialArr];

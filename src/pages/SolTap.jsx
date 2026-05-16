@@ -1,10 +1,10 @@
 // src/pages/SolTap.jsx
 //
-// "Quick Paws" — speed/reaction game. Cats appear randomly in a 3×4 grid,
+// "Quick Paws", speed/reaction game. Cats appear randomly in a 3×4 grid,
 // stay visible for 1.5s (or 0.7s for "quick" bonus cats), tap before they
 // vanish. 30-second round, points scale with cat type.
 //
-// Zero new assets — uses standard cat emoji.
+// Zero new assets, uses standard cat emoji.
 
 import { useEffect, useRef, useState, useCallback } from "react";
 import { Link } from "react-router-dom";
@@ -41,8 +41,10 @@ const Title = styled.h1`
 `;
 
 const Subtitle = styled.p`
-  font-size: 1rem;
-  color: #4a3f37;
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--sol-ink-soft);
   margin-bottom: 1rem;
   max-width: 600px;
   text-align: center;
@@ -274,7 +276,7 @@ export default function SolTap() {
   const [timeLeft, setTimeLeft] = useState(ROUND_SECONDS);
   const [cells, setCells] = useState(() => Array(TOTAL_CELLS).fill(null));
 
-  // Leaderboard state — single board (no levels), so level="default".
+  // Leaderboard state, single board (no levels), so level="default".
   const [topEntries, setTopEntries] = useState([]);
   const [personalBest, setPersonalBest] = useState(0);
   const [submitName, setSubmitName] = useState("");
@@ -292,7 +294,7 @@ export default function SolTap() {
     en: {
       pageTitle: "Quick Paws – SolTheCat",
       title: "Quick Paws 🐾",
-      subtitle: `Tap the cats before they vanish! ${ROUND_SECONDS} seconds — quick cats are worth more, golden ones even more.`,
+      subtitle: `Tap the cats before they vanish! ${ROUND_SECONDS} seconds, quick cats are worth more, golden ones even more.`,
       start: "🐾 Start round",
       score: "Score",
       time: "Time",
@@ -305,7 +307,7 @@ export default function SolTap() {
       personalBest: (s) => `🏆 Your best: ${s}`,
       noBest: "🏆 No personal record yet",
       top3Title: "🏆 Top 5",
-      top3Empty: "No scores yet — be the first!",
+      top3Empty: "No scores yet, be the first!",
       newRecord: "🎉 NEW PERSONAL BEST!",
       qualifies: "🌟 You made the leaderboard!",
       enterName: "Enter your name:",
@@ -316,7 +318,7 @@ export default function SolTap() {
     el: {
       pageTitle: "Γρήγορες Πατούσες – SolTheCat",
       title: "Γρήγορες Πατούσες 🐾",
-      subtitle: `Πάτα τις γάτες πριν εξαφανιστούν! ${ROUND_SECONDS} δευτερόλεπτα — οι γρήγορες δίνουν παραπάνω, οι χρυσές ακόμη περισσότερα.`,
+      subtitle: `Πάτα τις γάτες πριν εξαφανιστούν! ${ROUND_SECONDS} δευτερόλεπτα, οι γρήγορες δίνουν παραπάνω, οι χρυσές ακόμη περισσότερα.`,
       start: "🐾 Ξεκίνα τον γύρο",
       score: "Σκορ",
       time: "Χρόνος",
@@ -329,7 +331,7 @@ export default function SolTap() {
       personalBest: (s) => `🏆 Καλύτερο σου: ${s}`,
       noBest: "🏆 Κανένα ρεκόρ ακόμη",
       top3Title: "🏆 Top 5",
-      top3Empty: "Κανένα σκορ ακόμη — γίνε ο πρώτος!",
+      top3Empty: "Κανένα σκορ ακόμη, γίνε ο πρώτος!",
       newRecord: "🎉 ΝΕΟ ΠΡΟΣΩΠΙΚΟ ΡΕΚΟΡ!",
       qualifies: "🌟 Μπήκες στη βαθμολογία!",
       enterName: "Όνομα:",

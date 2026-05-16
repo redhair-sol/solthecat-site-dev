@@ -346,7 +346,7 @@ const RelativePageContainer = styled(PageContainer)`
 `;
 
 // Daily Challenge state (rotation pool, picker, streak helpers) lives in
-// utils/dailyChallenge.js — shared with the games that mark completion.
+// utils/dailyChallenge.js, shared with the games that mark completion.
 
 export default function Home() {
   const { language, setLanguage } = useLanguage();
@@ -358,7 +358,7 @@ export default function Home() {
   const [mode, setMode] = useState("mood");
   const [isLive, setIsLive] = useState(false);
 
-  // Daily challenge — picked from today's date, then top 3 fetched live.
+  // Daily challenge, picked from today's date, then top 3 fetched live.
   const dailyChallenge = getTodayChallenge();
   const [challengeTop3, setChallengeTop3] = useState([]);
   const [challengePB, setChallengePB] = useState(0);
@@ -413,7 +413,7 @@ export default function Home() {
       try {
         return JSON.parse(cached);
       } catch {
-        // Corrupt cache (e.g. legacy "undefined" entry) — fall through and re-pick.
+        // Corrupt cache (e.g. legacy "undefined" entry), fall through and re-pick.
       }
     }
 
@@ -425,7 +425,7 @@ export default function Home() {
   useEffect(() => {
     const today = new Date();
     const isoDate = today.toISOString().slice(0, 10); // 2026-05-06
-    const monthDay = isoDate.slice(5);                // 05-06 — recurring annual key
+    const monthDay = isoDate.slice(5);                // 05-06, recurring annual key
     const dayOfWeek = today
       .toLocaleDateString("en-US", { weekday: "long" })
       .toLowerCase();
@@ -481,7 +481,7 @@ export default function Home() {
   const content = {
     en: {
       metaDescription:
-        "Follow Sol the Cat across 50+ cities — from Athens to Petra. Read travel stories, play 12 free mini-games, and beat the daily challenge.",
+        "Follow Sol the Cat across 50+ cities, from Athens to Petra. Read travel stories, play 12 free mini-games, and beat the daily challenge.",
       quoteTitle:
         mode === "fortune"
           ? "Royal Fortune of the Day"
@@ -494,11 +494,11 @@ export default function Home() {
       gamesCTA: "Play the Games",
       live: "LIVE",
       challengeKicker: "Daily Challenge",
-      challengeSubtitle: "Today's pick — beat the board!",
+      challengeSubtitle: "Today's pick, beat the board!",
       challengeCTA: "Play today's challenge",
       challengeCTADone: "Play again today",
       challengeTop3: "🏆 Today's leaderboard",
-      challengeTop3Empty: "No scores yet — be the first!",
+      challengeTop3Empty: "No scores yet, be the first!",
       challengePB: (s) => `🎯 Your best on this: ${s}`,
       challengeDone: "✅ Played today's challenge!",
       challengeStreak: (n) => `🔥 ${n}-day streak`,
@@ -509,7 +509,7 @@ export default function Home() {
     },
     el: {
       metaDescription:
-        "Ακολούθα τη Sol the Cat σε 50+ πόλεις — από την Αθήνα μέχρι την Πέτρα. Διάβασε ταξιδιωτικές ιστορίες, παίξε 12 δωρεάν mini-games και νίκα την καθημερινή πρόκληση.",
+        "Ακολούθα τη Sol the Cat σε 50+ πόλεις, από την Αθήνα μέχρι την Πέτρα. Διάβασε ταξιδιωτικές ιστορίες, παίξε 12 δωρεάν mini-games και νίκα την καθημερινή πρόκληση.",
       quoteTitle:
         mode === "fortune"
           ? "Η Πατουσένια Συμβουλή της Ημέρας"
@@ -522,11 +522,11 @@ export default function Home() {
       gamesCTA: "Παίξε Παιχνίδια",
       live: "ΖΩΝΤΑΝΑ",
       challengeKicker: "Πρόκληση Ημέρας",
-      challengeSubtitle: "Η σημερινή επιλογή — νίκα τον πίνακα!",
+      challengeSubtitle: "Η σημερινή επιλογή, νίκα τον πίνακα!",
       challengeCTA: "Παίξε τη σημερινή πρόκληση",
       challengeCTADone: "Παίξε ξανά σήμερα",
       challengeTop3: "🏆 Σημερινή βαθμολογία",
-      challengeTop3Empty: "Κανένα σκορ ακόμη — γίνε ο πρώτος!",
+      challengeTop3Empty: "Κανένα σκορ ακόμη, γίνε ο πρώτος!",
       challengePB: (s) => `🎯 Το καλύτερο σου εδώ: ${s}`,
       challengeDone: "✅ Έπαιξες τη σημερινή πρόκληση!",
       challengeStreak: (n) => `🔥 Σερί ${n} ημερών`,
@@ -573,7 +573,7 @@ export default function Home() {
           </ToggleButton>
         </LanguageToggle>
 
-        {/* Hero v2 — Warm Editorial. Portrait photo with cozy golden-hour
+        {/* Hero v2, Warm Editorial. Portrait photo with cozy golden-hour
             lighting; pairs with the cream/sun/ink palette. */}
         <Hero photo="/images/sol-hero.webp" />
 
@@ -630,7 +630,7 @@ export default function Home() {
           </BadgeBox>
         )}
 
-        {/* DAILY CHALLENGE — sits right above the general Games card so the
+        {/* DAILY CHALLENGE, sits right above the general Games card so the
             two "play" surfaces cluster together (hot-now vs browse-all). */}
         <ChallengeCard
           initial={{ opacity: 0, y: 20 }}

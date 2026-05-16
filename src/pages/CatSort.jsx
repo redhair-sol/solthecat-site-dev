@@ -1,6 +1,6 @@
 // src/pages/CatSort.jsx
 //
-// "Cat Sort" — simplified version of the cat-sort puzzle from the IG ad.
+// "Cat Sort", simplified version of the cat-sort puzzle from the IG ad.
 // Cats wait in a top row; tap one to send it to the nest. Two matching cats
 // in the nest auto-rescue. Win when grid + nest are empty. Lose if the nest
 // fills with 4 different cats (no pair available to clear).
@@ -22,15 +22,15 @@ const NEST_SIZE = 4;
 // Pool of cat emoji for puzzle variety.
 const CAT_POOL = ["🐱", "😺", "😸", "😻", "😼", "🙀"];
 
-// Level definitions: { topCount, types } — cells in top row + how many
+// Level definitions: { topCount, types }, cells in top row + how many
 // distinct emoji to draw from. Counts are even per emoji so puzzles are
 // always solvable in principle (never start in a guaranteed-lose state).
 const LEVELS = [
-  { topCount: 6, types: 2 }, // 1 — 3 pairs of 2 types each
-  { topCount: 6, types: 3 }, // 2 — 2 pairs of 3 types
-  { topCount: 8, types: 3 }, // 3 — mixed (4+2+2)
-  { topCount: 8, types: 4 }, // 4 — 2 pairs each
-  { topCount: 10, types: 5 }, // 5 — 2 pairs each, max variety
+  { topCount: 6, types: 2 }, // 1, 3 pairs of 2 types each
+  { topCount: 6, types: 3 }, // 2, 2 pairs of 3 types
+  { topCount: 8, types: 3 }, // 3, mixed (4+2+2)
+  { topCount: 8, types: 4 }, // 4, 2 pairs each
+  { topCount: 10, types: 5 }, // 5, 2 pairs each, max variety
 ];
 
 const Title = styled.h1`
@@ -46,8 +46,10 @@ const Title = styled.h1`
 `;
 
 const Subtitle = styled.p`
-  font-size: 1rem;
-  color: #4a3f37;
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--sol-ink-soft);
   margin-bottom: 1rem;
   max-width: 600px;
   text-align: center;
@@ -323,7 +325,7 @@ export default function CatSort() {
   const [elapsed, setElapsed] = useState(0);
   const [levelMoves, setLevelMoves] = useState(0);
 
-  // Leaderboard state — single board, level="default".
+  // Leaderboard state, single board, level="default".
   const [winScore, setWinScore] = useState(0);
   const [topEntries, setTopEntries] = useState([]);
   const [personalBest, setPersonalBest] = useState(0);
@@ -359,7 +361,7 @@ export default function CatSort() {
       personalBest: (s) => `🏆 Your best: ${s} pts`,
       noBest: "🏆 No personal record yet",
       top3Title: "🏆 Top 5",
-      top3Empty: "No scores yet — be the first!",
+      top3Empty: "No scores yet, be the first!",
       newRecord: "🎉 NEW PERSONAL BEST!",
       qualifies: "🌟 You made the leaderboard!",
       enterName: "Enter your name:",
@@ -394,7 +396,7 @@ export default function CatSort() {
       personalBest: (s) => `🏆 Καλύτερο σου: ${s} πόντοι`,
       noBest: "🏆 Κανένα ρεκόρ ακόμη",
       top3Title: "🏆 Top 5",
-      top3Empty: "Κανένα σκορ ακόμη — γίνε ο πρώτος!",
+      top3Empty: "Κανένα σκορ ακόμη, γίνε ο πρώτος!",
       newRecord: "🎉 ΝΕΟ ΠΡΟΣΩΠΙΚΟ ΡΕΚΟΡ!",
       qualifies: "🌟 Μπήκες στη βαθμολογία!",
       enterName: "Όνομα:",
@@ -494,7 +496,7 @@ export default function CatSort() {
     startLevel(0);
   };
 
-  // Cumulative timer — ticks while not on intro/done/lost. Keeps running
+  // Cumulative timer, ticks while not on intro/done/lost. Keeps running
   // across won → playing transitions and across level retries (penalising
   // mistakes via wall-clock time).
   useEffect(() => {
@@ -520,12 +522,12 @@ export default function CatSort() {
     setNest((prev) => {
       const matchIdx = prev.findIndex((n) => n && n.emoji === cat.emoji);
       if (matchIdx !== -1) {
-        // Pair found — both cats rescued.
+        // Pair found, both cats rescued.
         const next = [...prev];
         next[matchIdx] = null;
         return next;
       }
-      // No match — drop into first empty slot.
+      // No match, drop into first empty slot.
       const emptyIdx = prev.findIndex((n) => n === null);
       if (emptyIdx === -1) return prev; // shouldn't happen (lose check below)
       const next = [...prev];
@@ -537,7 +539,7 @@ export default function CatSort() {
   // Win/lose detection runs after every state update.
   // Strict lost-check: nest full with 4 unique emojis = game over, regardless
   // of whether the top row contains a matching cat. This is what makes the
-  // game a real puzzle — random play can fill the nest before you clear it.
+  // game a real puzzle, random play can fill the nest before you clear it.
   useEffect(() => {
     if (phase !== "playing") return;
     const topRemaining = topRow.filter(Boolean).length;

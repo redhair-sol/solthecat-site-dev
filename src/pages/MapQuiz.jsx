@@ -35,8 +35,10 @@ const Title = styled.h1`
 `;
 
 const Subtitle = styled.p`
-  font-size: 1rem;
-  color: #4a3f37;
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--sol-ink-soft);
   margin-bottom: 1rem;
   max-width: 600px;
   text-align: center;
@@ -353,7 +355,7 @@ export default function MapQuiz() {
   const [userPick, setUserPick] = useState(null);
   const [roundResult, setRoundResult] = useState(null);
 
-  // Leaderboard state — single board, level="default".
+  // Leaderboard state, single board, level="default".
   const [topEntries, setTopEntries] = useState([]);
   const [personalBest, setPersonalBest] = useState(0);
   const [submitName, setSubmitName] = useState("");
@@ -398,7 +400,7 @@ export default function MapQuiz() {
       personalBest: (s) => `🏆 Your best: ${s}`,
       noBest: "🏆 No personal record yet",
       top3Title: "🏆 Top 5",
-      top3Empty: "No scores yet — be the first!",
+      top3Empty: "No scores yet, be the first!",
       newRecord: "🎉 NEW PERSONAL BEST!",
       qualifies: "🌟 You made the leaderboard!",
       enterName: "Enter your name:",
@@ -435,7 +437,7 @@ export default function MapQuiz() {
       personalBest: (s) => `🏆 Καλύτερο σου: ${s}`,
       noBest: "🏆 Κανένα ρεκόρ ακόμη",
       top3Title: "🏆 Top 5",
-      top3Empty: "Κανένα σκορ ακόμη — γίνε ο πρώτος!",
+      top3Empty: "Κανένα σκορ ακόμη, γίνε ο πρώτος!",
       newRecord: "🎉 ΝΕΟ ΠΡΟΣΩΠΙΚΟ ΡΕΚΟΡ!",
       qualifies: "🌟 Μπήκες στη βαθμολογία!",
       enterName: "Όνομα:",

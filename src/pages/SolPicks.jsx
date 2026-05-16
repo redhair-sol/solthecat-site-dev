@@ -22,8 +22,10 @@ const Title = styled.h1`
 `;
 
 const Subtitle = styled.p`
-  font-size: 1rem;
-  color: #4a3f37;
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--sol-ink-soft);
   margin-bottom: 2rem;
   max-width: 600px;
   text-align: center;
@@ -209,7 +211,7 @@ export default function SolPicks() {
   const [phase, setPhase] = useState("intro"); // "intro" | "loading" | "reveal"
   const [currentPick, setCurrentPick] = useState(null);
 
-  // Auto-scroll the reveal card into view when Sol picks an episode — the
+  // Auto-scroll the reveal card into view when Sol picks an episode, the
   // card is large and lands below the fold on mobile after the loading delay.
   const revealRef = useRef(null);
   useEffect(() => {

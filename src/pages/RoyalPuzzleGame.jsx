@@ -23,8 +23,10 @@ const Title = styled.h1`
 `;
 
 const Subtitle = styled.p`
-  font-size: 1rem;
-  color: #4a3f37;
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--sol-ink-soft);
   margin-bottom: 1rem;
 `;
 
@@ -196,13 +198,13 @@ export default function RoyalPuzzleGame() {
   const [loadError, setLoadError] = useState(false);
   const areaRef = useRef();
 
-  // Explicit start gate — pieces are previewed (scattered) the moment a
+  // Explicit start gate, pieces are previewed (scattered) the moment a
   // level is picked, but the timer waits until the user presses Start.
   // Same intent as PuzzleMap: don't penalise the user for the time spent
   // picking which episode they actually want to play.
   const [hasStarted, setHasStarted] = useState(false);
 
-  // Leaderboard state — single board across all difficulties (per user
+  // Leaderboard state, single board across all difficulties (per user
   // decision). Score formula = max(0, CAP - elapsed) so faster solves rank
   // higher on the board's "highest score wins" sort.
   const [winScore, setWinScore] = useState(0);
@@ -238,14 +240,14 @@ export default function RoyalPuzzleGame() {
       solvedMessage: "🎉 Royal Puzzle Solved!",
       playAgain: "🔁 Play Again",
       startPuzzle: "🐾 Start puzzle",
-      readyHint: "Ready when you are — press Start to begin the timer.",
+      readyHint: "Ready when you are, press Start to begin the timer.",
       levels: { easy: "Easy", medium: "Medium", hard: "Hard" },
       loadFail: "Couldn't load episodes. Please try refreshing the page.",
       finalScore: (s) => `⏱️ Solved in ${s}s!`,
       personalBest: (s) => `🏆 Your best: ${s} pts`,
       noBest: "🏆 No personal record yet",
       top3Title: "🏆 Top 5",
-      top3Empty: "No scores yet — be the first!",
+      top3Empty: "No scores yet, be the first!",
       newRecord: "🎉 NEW PERSONAL BEST!",
       qualifies: "🌟 You made the leaderboard!",
       enterName: "Enter your name:",
@@ -271,7 +273,7 @@ export default function RoyalPuzzleGame() {
       personalBest: (s) => `🏆 Καλύτερο σου: ${s} πόντοι`,
       noBest: "🏆 Κανένα ρεκόρ ακόμη",
       top3Title: "🏆 Top 5",
-      top3Empty: "Κανένα σκορ ακόμη — γίνε ο πρώτος!",
+      top3Empty: "Κανένα σκορ ακόμη, γίνε ο πρώτος!",
       newRecord: "🎉 ΝΕΟ ΠΡΟΣΩΠΙΚΟ ΡΕΚΟΡ!",
       qualifies: "🌟 Μπήκες στη βαθμολογία!",
       enterName: "Όνομα:",
@@ -367,7 +369,7 @@ export default function RoyalPuzzleGame() {
     };
   }, [imagePath, level]);
 
-  // Engages the timer. Used by both initial Start and Play Again — pieces
+  // Engages the timer. Used by both initial Start and Play Again, pieces
   // are already scattered, this just flips the gate and records start time.
   const startPuzzle = () => {
     if (pieces.length === 0) return;
@@ -575,7 +577,7 @@ export default function RoyalPuzzleGame() {
           </PuzzleArea>
         )}
 
-        {level && hasStarted && <Info>⏱️ {elapsed}s {best && ` — ${t.best} ${best}s`}</Info>}
+        {level && hasStarted && <Info>⏱️ {elapsed}s {best && `, ${t.best} ${best}s`}</Info>}
 
         {solved && (
           <div ref={solvedRef}>

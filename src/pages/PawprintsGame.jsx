@@ -18,8 +18,10 @@ const Title = styled.h1`
 `;
 
 const Subtitle = styled.p`
-  font-size: 1rem;
-  color: #4a3f37;
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--sol-ink-soft);
   margin-bottom: 2rem;
 `;
 
@@ -258,7 +260,7 @@ export default function PawprintsGame() {
   const [gameOver, setGameOver] = useState(false);
   const [gameStarted, setGameStarted] = useState(false);
   const [isPeeking, setIsPeeking] = useState(false);
-  // Default to Medium (idx=1) — same layout as the original single-level
+  // Default to Medium (idx=1), same layout as the original single-level
   // game, so returning players land on familiar ground.
   const [levelIdx, setLevelIdx] = useState(1);
   const { language } = useLanguage();
@@ -287,7 +289,7 @@ export default function PawprintsGame() {
       personalBest: (s) => `🏆 Your best: ${s}s left`,
       noBest: "🏆 No personal record yet",
       top3Title: "🏆 Top 5 (seconds left)",
-      top3Empty: "No scores yet — be the first!",
+      top3Empty: "No scores yet, be the first!",
       newRecord: "🎉 NEW PERSONAL BEST!",
       qualifies: "🌟 You made the leaderboard!",
       enterName: "Enter your name:",
@@ -315,7 +317,7 @@ export default function PawprintsGame() {
       personalBest: (s) => `🏆 Καλύτερό σου: ${s}δ που έμειναν`,
       noBest: "🏆 Κανένα ρεκόρ ακόμη",
       top3Title: "🏆 Top 5 (δευτερόλεπτα που έμειναν)",
-      top3Empty: "Κανένα σκορ ακόμη — γίνε ο πρώτος!",
+      top3Empty: "Κανένα σκορ ακόμη, γίνε ο πρώτος!",
       newRecord: "🎉 ΝΕΟ ΠΡΟΣΩΠΙΚΟ ΡΕΚΟΡ!",
       qualifies: "🌟 Μπήκες στη βαθμολογία!",
       enterName: "Όνομα:",
@@ -354,7 +356,7 @@ export default function PawprintsGame() {
   };
 
   useEffect(() => {
-    // Don't tick during the peek — the visible cards aren't playable yet.
+    // Don't tick during the peek, the visible cards aren't playable yet.
     if (!gameStarted || won || gameOver || isPeeking) return;
 
     const timer = setInterval(() => {

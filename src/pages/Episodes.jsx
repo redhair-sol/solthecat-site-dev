@@ -11,7 +11,7 @@ import { detectRegion } from "../utils/region.js";
 
 // Pulls the human-friendly city name out of the episode title so the
 // per-card quiz CTA reads "Play the Athens quiz" etc. Titles follow the
-// pattern "SOLadventure #N – CityName, rest…" — we grab whatever sits
+// pattern "SOLadventure #N – CityName, rest…", we grab whatever sits
 // between " – " and the first comma. Falls back to a title-cased slug.
 function extractCityName(ep, lang) {
   const title =
@@ -104,7 +104,7 @@ export default function Episodes() {
       loadFail: "Couldn't load episodes. Please try refreshing the page.",
       quizCTA: (city) => `Play the ${city} quiz →`,
       metaDescription:
-        "All 52 SOLadventures — short travel stories from Athens, Rome, Paris, Marrakech, Petra and beyond. Each city, a queen's-eye view.",
+        "All 52 SOLadventures, short travel stories from Athens, Rome, Paris, Marrakech, Petra and beyond. Each city, a queen's-eye view.",
       regions: {
         all: "All",
         europe: "Europe",
@@ -127,7 +127,7 @@ export default function Episodes() {
       loadFail: "Δεν φόρτωσαν τα επεισόδια. Παρακαλώ δοκίμασε refresh.",
       quizCTA: (city) => `Παίξε το quiz της ${city} →`,
       metaDescription:
-        "Όλα τα 52 SOLadventures — μικρές ταξιδιωτικές ιστορίες από Αθήνα, Ρώμη, Παρίσι, Μαρακές, Πέτρα και ακόμη πιο πέρα. Κάθε πόλη, μια βασιλική ματιά.",
+        "Όλα τα 52 SOLadventures, μικρές ταξιδιωτικές ιστορίες από Αθήνα, Ρώμη, Παρίσι, Μαρακές, Πέτρα και ακόμη πιο πέρα. Κάθε πόλη, μια βασιλική ματιά.",
       regions: {
         all: "Όλα",
         europe: "Ευρώπη",

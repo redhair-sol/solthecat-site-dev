@@ -22,8 +22,10 @@ const Title = styled.h1`
 `;
 
 const Subtitle = styled.p`
-  font-size: 1rem;
-  color: #4a3f37;
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--sol-ink-soft);
   margin-bottom: 2rem;
 `;
 
@@ -236,7 +238,7 @@ export default function QuizPlayer() {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const { language } = useLanguage();
 
-  // Leaderboard state — per-episode board, level = city slug.
+  // Leaderboard state, per-episode board, level = city slug.
   const [topEntries, setTopEntries] = useState([]);
   const [personalBest, setPersonalBest] = useState(0);
   const [submitName, setSubmitName] = useState("");
@@ -245,7 +247,7 @@ export default function QuizPlayer() {
   const [submitError, setSubmitError] = useState(null);
 
   // Timer + composite score. 8/8 is reachable enough that ties dominate
-  // without a tiebreaker — score = correct * 10000 - totalSeconds, decoded
+  // without a tiebreaker, score = correct * 10000 - totalSeconds, decoded
   // for display by formatScore("quiz", ...).
   const [startTime, setStartTime] = useState(null);
   const [totalSeconds, setTotalSeconds] = useState(0);
@@ -268,7 +270,7 @@ export default function QuizPlayer() {
       personalBest: (s) => `🏆 Your best: ${s}`,
       noBest: "🏆 No personal record yet",
       top3Title: "🏆 Top 5 (this quiz)",
-      top3Empty: "No scores yet — be the first!",
+      top3Empty: "No scores yet, be the first!",
       newRecord: "🎉 NEW PERSONAL BEST!",
       qualifies: "🌟 You made the leaderboard!",
       enterName: "Enter your name:",
@@ -292,7 +294,7 @@ export default function QuizPlayer() {
       personalBest: (s) => `🏆 Καλύτερο σου: ${s}`,
       noBest: "🏆 Κανένα ρεκόρ ακόμη",
       top3Title: "🏆 Top 5 (αυτό το quiz)",
-      top3Empty: "Κανένα σκορ ακόμη — γίνε ο πρώτος!",
+      top3Empty: "Κανένα σκορ ακόμη, γίνε ο πρώτος!",
       newRecord: "🎉 ΝΕΟ ΠΡΟΣΩΠΙΚΟ ΡΕΚΟΡ!",
       qualifies: "🌟 Μπήκες στη βαθμολογία!",
       enterName: "Όνομα:",
@@ -418,10 +420,10 @@ export default function QuizPlayer() {
         let recent = [];
         try {
           recent = JSON.parse(localStorage.getItem(recentKey) || "[]");
-        } catch { /* corrupt — ignore */ }
+        } catch { /* corrupt, ignore */ }
 
         let pool = withIds.filter((q) => !recent.includes(q._qid));
-        if (pool.length < 8) pool = withIds; // not enough fresh — reset
+        if (pool.length < 8) pool = withIds; // not enough fresh, reset
 
         const shuffled = shuffleArray(pool);
         // Also shuffle the answer order inside each question so a repeated
@@ -439,7 +441,7 @@ export default function QuizPlayer() {
         ].slice(0, 16);
         try {
           localStorage.setItem(recentKey, JSON.stringify(newRecent));
-        } catch { /* quota / private-mode — non-fatal */ }
+        } catch { /* quota / private-mode, non-fatal */ }
 
         setQuestions(eightQuestions);
         setCurrent(0);

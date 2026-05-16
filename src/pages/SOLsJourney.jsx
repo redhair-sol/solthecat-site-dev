@@ -64,8 +64,10 @@ const Heading = styled.h1`
 `;
 
 const Subheading = styled.p`
-  font-size: 1rem;
-  color: #4a3f37;
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--sol-ink-soft);
   margin-bottom: 1.5rem;
 `;
 
@@ -163,7 +165,7 @@ function AnimatedMarker({ route, delay = 3000, onUpdateIndex, onComplete }) {
   // Refs hold latest values so the animation effect can run with stable deps.
   // Without this, parent re-renders (e.g. on currentIndex update) recreate
   // `route`/`onComplete` references, retriggering the effect, cancelling the
-  // setTimeout, and flying back to the first city — animation never advances.
+  // setTimeout, and flying back to the first city, animation never advances.
   const routeRef = useRef(route);
   const onUpdateIndexRef = useRef(onUpdateIndex);
   const onCompleteRef = useRef(onComplete);
@@ -214,7 +216,7 @@ function AnimatedMarker({ route, delay = 3000, onUpdateIndex, onComplete }) {
   // Note: we deliberately don't render a `<Marker>` per traveled city here.
   // Each city already has a permanent `pawIcon` marker (rendered outside this
   // component, with tooltips), so traveled markers would be visually redundant
-  // AND — without an `icon` prop — fall back to Leaflet's default blue pin,
+  // AND, without an `icon` prop, fall back to Leaflet's default blue pin,
   // which would overlap the paw icons and look broken.
   return (
     <>
@@ -256,7 +258,7 @@ export default function SOLsJourneyAnimated() {
     en: {
       pageTitle: "Sol's Journey – SolTheCat",
       metaDescription:
-        "Interactive world map of Sol the Cat's travels — 50+ city pins from Athens to Petra. Click any pin to explore that SOLadventure.",
+        "Interactive world map of Sol the Cat's travels, 50+ city pins from Athens to Petra. Click any pin to explore that SOLadventure.",
       heading: <>Sol's <TitleEm>Journey</TitleEm></>,
       currentLocation: "📍 Current Location: ",
       showJourney: "▶️ Show Journey",
@@ -265,7 +267,7 @@ export default function SOLsJourneyAnimated() {
     el: {
       pageTitle: "Το Ταξίδι της Sol – SolTheCat",
       metaDescription:
-        "Διαδραστικός παγκόσμιος χάρτης των ταξιδιών της Sol the Cat — 50+ πόλεις από την Αθήνα μέχρι την Πέτρα. Κλικ σε κάθε pin για το αντίστοιχο SOLadventure.",
+        "Διαδραστικός παγκόσμιος χάρτης των ταξιδιών της Sol the Cat, 50+ πόλεις από την Αθήνα μέχρι την Πέτρα. Κλικ σε κάθε pin για το αντίστοιχο SOLadventure.",
       heading: <>Το Ταξίδι της <TitleEm>Sol</TitleEm></>,
       currentLocation: "📍 Τρέχουσα Τοποθεσία: ",
       showJourney: "▶️ Δες το Ταξίδι",
@@ -333,7 +335,7 @@ export default function SOLsJourneyAnimated() {
 
             {episodes.map((ep, idx) => {
               // Phase-aware paw visibility:
-              //   idle     → only the last (current) city paw — dramatic reveal.
+              //   idle     → only the last (current) city paw, dramatic reveal.
               //   playing  → progressively, only paws Sol has reached so far.
               //              The AnimatedMarker handles the in-flight moving
               //              paw, so we render permanents only for idx STRICTLY
