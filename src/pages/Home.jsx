@@ -575,7 +575,7 @@ export default function Home() {
 
         {/* Hero v2 — Warm Editorial. Portrait photo with cozy golden-hour
             lighting; pairs with the cream/sun/ink palette. */}
-        <Hero photo="/images/sol-hero.jpg" />
+        <Hero photo="/images/sol-hero.webp" />
 
         {/* QUOTE TOGGLE */}
         <LanguageToggle style={{ marginTop: "2.4rem" }}>
