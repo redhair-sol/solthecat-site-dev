@@ -164,15 +164,21 @@ const Tile = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: var(--sol-cream-2);
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(26, 22, 20, 0.06);
+  background: var(--sol-cream);
+  padding: 8px 8px 10px;
+  border-radius: 4px;
+  box-shadow:
+    0 1px 2px rgba(26, 22, 20, 0.08),
+    0 8px 20px -8px rgba(26, 22, 20, 0.18);
   overflow: hidden;
   cursor: zoom-in;
 
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+  transition:
+    opacity 0.6s ease-in-out,
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
 
   &.visible {
     opacity: 1;
@@ -180,56 +186,56 @@ const Tile = styled.div`
   }
 
   &:hover {
-    transform: scale(1.02);
+    transform: translateY(-3px);
+    box-shadow:
+      0 2px 4px rgba(26, 22, 20, 0.1),
+      0 14px 28px -10px rgba(26, 22, 20, 0.25);
+  }
+
+  .tile-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 2px;
+  }
+
+  /* Cream multiply layer tames the neon palette of baked-in IG captions
+     so the grid reads as one cohesive collection instead of 60 fighting colors. */
+  .tile-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--sol-cream);
+    mix-blend-mode: multiply;
+    opacity: 0.12;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover .tile-image::after {
+    opacity: 0.04;
   }
 
   img {
     width: 100%;
-    height: auto;
-    aspect-ratio: 1 / 1;
+    height: 100%;
     object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease, filter 0.3s ease;
+    filter: saturate(0.92);
   }
 
-  .caption-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 1rem;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    text-align: center;
-    font-size: 0.9rem;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
+  &:hover img {
+    transform: scale(1.03);
+    filter: saturate(1);
   }
 
+  /* Hover/static caption overlays no longer needed: captions are baked
+     into the IG covers themselves. Kept as no-ops so JSX stays untouched. */
+  .caption-overlay,
   .caption-static {
     display: none;
-    margin-top: 0.5rem;
-    color: #444;
-    font-size: 0.9rem;
-    text-align: center;
-    padding: 0 0.5rem;
-  }
-
-  @media (hover: hover) {
-    &:hover .caption-overlay {
-      opacity: 1;
-    }
-    .caption-static {
-      display: none;
-    }
-  }
-
-  @media (hover: none) {
-    .caption-overlay {
-      display: none;
-    }
-    .caption-static {
-      display: block;
-    }
   }
 `;
 
@@ -475,15 +481,17 @@ export default function GalleryPage() {
                   setOpen(true);
                 }}
               >
-                <img
-                  src={`/${ep.image}`}
-                  alt={titleText}
-                  width="800"
-                  height="800"
-                  loading={i === 0 ? "eager" : "lazy"}
-                  fetchpriority={i === 0 ? "high" : "auto"}
-                  decoding="async"
-                />
+                <div className="tile-image">
+                  <img
+                    src={`/${ep.image}`}
+                    alt={titleText}
+                    width="800"
+                    height="800"
+                    loading={i === 0 ? "eager" : "lazy"}
+                    fetchpriority={i === 0 ? "high" : "auto"}
+                    decoding="async"
+                  />
+                </div>
                 <div className="caption-overlay">{cleanCaption(captionText)}</div>
                 <div className="caption-static">{cleanCaption(captionText)}</div>
               </Tile>
