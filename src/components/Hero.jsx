@@ -8,7 +8,7 @@ const TEXT = {
     photoAlt: "Sol the cat",
     livePill: "LIVE · Chasing a dust mote",
     lede:
-      "A royal travel diary from 47 countries. Mini-games, a daily challenge, and a live cam from the throne.",
+      "A royal travel diary from 47 countries. Mini-games, daily challenges, and a live cam from the throne.",
     ctaPrimary: "Read episodes",
     ctaGhost: "See photos →",
     statEpisodes: "episodes",
@@ -23,7 +23,7 @@ const TEXT = {
     photoAlt: "Η γάτα Sol",
     livePill: "LIVE · Κυνηγά σκόνη",
     lede:
-      "Ένα βασιλικό ταξιδιωτικό ημερολόγιο από 47 χώρες. Παιχνίδια, καθημερινή πρόκληση και ζωντανή κάμερα από τον θρόνο.",
+      "Ένα βασιλικό ταξιδιωτικό ημερολόγιο από 47 χώρες. Παιχνίδια, καθημερινές προκλήσεις και ζωντανή κάμερα από τον θρόνο.",
     ctaPrimary: "Δες τα επεισόδια",
     ctaGhost: "Φωτογραφίες →",
     statEpisodes: "επεισόδια",
