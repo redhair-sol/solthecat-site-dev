@@ -37,7 +37,7 @@ export default function Hero({ photo = '/sol-hero.jpg' }) {
   const t = TEXT[language];
 
   return (
-    <section className="sol-hero">
+    <section className="sol-hero" lang={language}>
       <div className="sol-hero__inner">
         {/* LEFT — photo */}
         <div className="sol-hero__media">
