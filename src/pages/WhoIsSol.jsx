@@ -44,6 +44,14 @@ const Title = styled.h1`
   font-weight: 400;
 `;
 
+const Subtitle = styled.p`
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--sol-ink-soft);
+  margin-bottom: 2rem;
+`;
+
 const IntroText = styled.p`
   font-size: 1rem;
   color: var(--sol-ink-soft);
@@ -101,6 +109,7 @@ export default function WhoIsSol() {
   const content = {
     en: {
       title: <>Sol’s <TitleEm>Story</TitleEm></>,
+      subtitle: "The tale behind the stare",
       intro1:
         "Sol, known online as solthecat, wasn’t born to go unnoticed. She has the stillness that speaks louder than words, the grace of a queen without a crown, and the step of a cat who knows everything belongs to her. She’s the soul of SOLadventures — a storyteller with paws full of tales, wandering from Athens' marble to the pages of imagination… and then, to Instagram.",
       intro2:
@@ -122,6 +131,7 @@ export default function WhoIsSol() {
     },
     el: {
       title: <>Η Ιστορία της <TitleEm>Sol</TitleEm></>,
+      subtitle: "Η ιστορία πίσω από το βλέμμα",
       intro1:
         "Η Sol, γνωστή στο διαδίκτυο ως solthecat, δεν γεννήθηκε για να περάσει απαρατήρητη. Έχει το βλέμμα της σιωπής που σε καθηλώνει, τη χάρη μιας βασίλισσας που δε χρειάζεται στέμμα και το βήμα μιας γάτας που ξέρει πως όλα της ανήκουν. Είναι η ψυχή των SOLadventures — μια αφηγήτρια με πατούσες γεμάτες ιστορίες, που περιπλανιούνται από τα μάρμαρα της Αθήνας ώς τις σελίδες της φαντασίας… κι από εκεί, στο Instagram.",
       intro2:
@@ -172,6 +182,7 @@ export default function WhoIsSol() {
       >
         <Content>
           <Title>{t.title}</Title>
+          <Subtitle>{t.subtitle}</Subtitle>
           <IntroText>{t.intro1}</IntroText>
           <IntroText>{t.intro2}</IntroText>
           <FunFactsTitle>{t.funFactsTitle}</FunFactsTitle>
