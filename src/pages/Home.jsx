@@ -185,17 +185,18 @@ const GamesText = styled.p`
 
 const GamesCTA = styled(Link)`
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: var(--sol-ink);
+  padding: 0.6rem 1.4rem;
+  background-color: var(--sol-plum);
   color: var(--sol-cream);
   text-decoration: none;
   border-radius: 999px;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.95rem;
+  box-shadow: 0 2px 8px rgba(26, 22, 20, 0.12);
   transition: transform 0.2s, background-color 0.2s;
 
   &:hover {
-    background-color: #2a221d;
+    background-color: var(--sol-mauve);
     transform: translateY(-1px);
   }
 `;
@@ -275,17 +276,18 @@ const ChallengeTop3Empty = styled.p`
 
 const ChallengeCTA = styled(Link)`
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: var(--sol-ink);
+  padding: 0.6rem 1.4rem;
+  background-color: var(--sol-plum);
   color: var(--sol-cream);
   text-decoration: none;
   border-radius: 999px;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.95rem;
+  box-shadow: 0 2px 8px rgba(26, 22, 20, 0.12);
   transition: transform 0.2s, background-color 0.2s;
 
   &:hover {
-    background-color: #2a221d;
+    background-color: var(--sol-mauve);
     transform: translateY(-1px);
   }
 `;
@@ -347,7 +349,7 @@ const RelativePageContainer = styled(PageContainer)`
 // utils/dailyChallenge.js — shared with the games that mark completion.
 
 export default function Home() {
-  const { language } = useLanguage();
+  const { language, setLanguage } = useLanguage();
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const hasSearchParam = Boolean(queryParams.get("s"));
@@ -560,6 +562,16 @@ export default function Home() {
             </LiveBadge>
           </LiveBadgeLink>
         )}
+
+        {/* LANGUAGE */}
+        <LanguageToggle>
+          <ToggleButton onClick={() => setLanguage("en")} $active={language === "en"}>
+            🇬🇧 English
+          </ToggleButton>
+          <ToggleButton onClick={() => setLanguage("el")} $active={language === "el"}>
+            🇬🇷 Ελληνικά
+          </ToggleButton>
+        </LanguageToggle>
 
         {/* Hero v2 — Warm Editorial. Portrait photo with cozy golden-hour
             lighting; pairs with the cream/sun/ink palette. */}
