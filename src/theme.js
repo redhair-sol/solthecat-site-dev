@@ -27,8 +27,13 @@ export const colors = {
 };
 
 // Shared gradient used as the default page background.
+// Now `transparent` so every PageContainer shows the body cream uniformly,
+// no matter how short or long the page content is. The old cream → cream-2
+// gradient created a visible seam at the bottom of short pages (Contact,
+// SolCam, etc.) where the gradient ended and the solid body cream began.
+// `noBg` on PageContainer is now redundant but kept for backwards compat.
 export const gradients = {
-  pageBg: `linear-gradient(to bottom, ${colors.pinkBgFrom}, ${colors.pinkBgTo})`,
+  pageBg: "transparent",
 };
 
 // Common box shadows.
