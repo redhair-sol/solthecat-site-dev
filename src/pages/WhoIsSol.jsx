@@ -31,7 +31,6 @@ const Content = styled.div`
   z-index: 1;
   max-width: 768px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 `;
 
