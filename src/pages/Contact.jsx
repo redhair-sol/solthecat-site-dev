@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Helmet } from "react-helmet-async";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import PageContainer from "../components/PageContainer.jsx";
+import TitleEm from "../components/TitleEm.jsx";
 import { CONTACT_FORM_URL } from "../config.js";
 
 const Heading = styled.h1`
@@ -60,8 +61,8 @@ export default function Contact() {
   const { language, setLanguage } = useLanguage();
 
   const subtitles = {
-    en: "Sol personally reviews every message you send – or so she claims.",
-    el: "Η Sol λαμβάνει προσωπικά κάθε μήνυμα που της στέλνεις – ή τουλάχιστον έτσι θέλει να πιστεύεις.",
+    en: "Sol personally reviews every message you send, or so she claims.",
+    el: "Η Sol λαμβάνει προσωπικά κάθε μήνυμα που της στέλνεις, ή τουλάχιστον έτσι θέλει να πιστεύεις.",
   };
 
   const forms = CONTACT_FORM_URL;
@@ -90,7 +91,9 @@ export default function Contact() {
       transition={{ duration: 0.8 }}
     >
       <Heading>
-        {language === "el" ? "Επικοινώνησε με τη Sol 📬" : "Contact Sol the Cat 📬"}
+        {language === "el"
+          ? <>Επικοινώνησε με τη <TitleEm>Sol</TitleEm> 📬</>
+          : <>Contact <TitleEm>Sol</TitleEm> the Cat 📬</>}
       </Heading>
 
       <LanguageToggle>

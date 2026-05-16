@@ -1,6 +1,7 @@
 // src/pages/SolCam.jsx
 import { useEffect, useRef, useState } from "react";
 import PageContainer from "../components/PageContainer.jsx";
+import TitleEm from "../components/TitleEm.jsx";
 import styled from "styled-components";
 import Hls from "hls.js";
 import { Helmet } from "react-helmet-async";
@@ -108,13 +109,13 @@ export default function SolCam() {
 
   const text = {
     en: {
-      title: "SolCam Live 🎥",
+      title: <><TitleEm>SolCam</TitleEm> Live 🎥</>,
       subtitle: "Live view of Queen Sol.",
       offline: "SolCam currently offline",
       live: "LIVE",
     },
     el: {
-      title: "SolCam Live 🎥",
+      title: <><TitleEm>SolCam</TitleEm> Live 🎥</>,
       subtitle: "Ζωντανή μετάδοση της Sol.",
       offline: "Η SolCam είναι εκτός λειτουργίας",
       live: "ΖΩΝΤΑΝΑ",

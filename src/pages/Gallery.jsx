@@ -7,6 +7,7 @@ import { Helmet } from "react-helmet-async";
 import { Search, X } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import PageContainer from "../components/PageContainer.jsx";
+import TitleEm from "../components/TitleEm.jsx";
 import { detectRegion } from "../utils/region.js";
 
 const REGION_KEYS = [
@@ -268,7 +269,7 @@ export default function GalleryPage() {
 
   const t = {
     en: {
-      title: "Sol’s Gallery 🖼️",
+      title: <>Sol’s <TitleEm>Gallery</TitleEm> 🖼️</>,
       subheading: "A glimpse from every royal stop",
       placeholder: "Search by city or keyword...",
       noResults: (q) => `No photos found for "${q}". Try another keyword.`,
@@ -286,7 +287,7 @@ export default function GalleryPage() {
       },
     },
     el: {
-      title: "Φωτογραφίες της Sol 🖼️",
+      title: <>Φωτογραφίες της <TitleEm>Sol</TitleEm> 🖼️</>,
       subheading: "Μια ματιά από κάθε της στάση",
       placeholder: "Αναζήτηση με πόλη ή λέξη-κλειδί...",
       noResults: (q) => `Δεν βρέθηκαν φωτογραφίες για "${q}". Δοκίμασε άλλη λέξη.`,

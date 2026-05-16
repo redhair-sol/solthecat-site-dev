@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { Helmet } from "react-helmet-async";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import PageContainer from "../components/PageContainer.jsx";
+import TitleEm from "../components/TitleEm.jsx";
 import { upperLocal } from "../utils/greekUpper.js";
 
 const Heading = styled.h1`
@@ -167,7 +168,7 @@ export default function Shop() {
       pageTitle: "SOLicious Delights – SolTheCat",
       metaDescription:
         "Sol the Cat's shop — SOLicious treats and royal goodies inspired by her travels. Coming soon.",
-      heading: "Sol’s Shop 🛍️",
+      heading: <>Sol’s <TitleEm>Shop</TitleEm> 🛍️</>,
       subtitle: "Every feline deserves treats",
       ribbon: "Soon",
       status: {
@@ -181,7 +182,7 @@ export default function Shop() {
       pageTitle: "Επιλογές SOL – SolTheCat",
       metaDescription:
         "Το κατάστημα της Sol the Cat — SOLicious λιχουδιές και βασιλικά treats εμπνευσμένα από τα ταξίδια της. Έρχεται σύντομα.",
-      heading: "Το Κατάστημα της Sol 🛍️",
+      heading: <>Το Κατάστημα της <TitleEm>Sol</TitleEm> 🛍️</>,
       subtitle: "Κάθε γάτα αξίζει λιχουδιές",
       ribbon: "Σύντομα",
       status: {

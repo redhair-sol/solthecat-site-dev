@@ -3,39 +3,43 @@ import styled from "styled-components";
 import { Helmet } from "react-helmet-async";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import PageContainer from "../components/PageContainer.jsx";
+import TitleEm from "../components/TitleEm.jsx";
 
 // ✅ ΙΔΙΟ BUTTON ΠΑΝΤΟΥ
 const SolButton = styled(Link)`
-  padding: 0.8rem 1.5rem;
-  background-color: #8b6b8e;
-  color: white;
+  padding: 0.7rem 1.4rem;
+  background-color: var(--sol-plum);
+  color: var(--sol-cream);
   text-decoration: none;
-  border-radius: 16px;
-  font-weight: bold;
+  border-radius: 999px;
+  font-weight: 600;
   display: inline-block;
-  box-shadow: 0 4px 10px rgba(26, 22, 20, 0.3);
-  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 2px 8px rgba(26, 22, 20, 0.18);
+  transition: background 0.2s ease, transform 0.2s ease;
   margin-top: 1rem;
   align-self: center;
 
   &:hover {
-    transform: scale(1.05);
+    background-color: var(--sol-mauve);
+    transform: scale(1.03);
   }
 `;
 
 const Heading = styled.h1`
-  font-size: 2rem;
-  color: #1a1614;
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  line-height: 1.05;
+  color: var(--sol-ink);
   margin-bottom: 0.5rem;
-  font-family: 'Poppins', sans-serif;
   font-weight: 400;
 `;
 
 const Subheading = styled.p`
-  font-size: 1rem;
-  color: #4a3f37;
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--sol-ink-soft);
   margin-bottom: 2rem;
-  font-family: 'Poppins', sans-serif;
 `;
 
 const GamesGrid = styled.div`
@@ -59,10 +63,11 @@ const GamesGrid = styled.div`
 `;
 
 const GameCard = styled.div`
-  background: white;
+  background: var(--sol-cream-2);
+  border: 1px solid var(--sol-line);
   border-radius: 1.5rem;
   padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 12px rgba(26, 22, 20, 0.06);
   text-align: center;
   transition: transform 0.2s ease-in-out;
 
@@ -88,18 +93,19 @@ const GameEmoji = styled.div`
 `;
 
 const GameTitle = styled.h2`
-  font-size: 1.2rem;
-  color: #7a5a7c;
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.4rem;
+  color: var(--sol-ink);
   margin-bottom: 0.5rem;
 
   @media (max-width: 480px) {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 `;
 
 const GameDescription = styled.p`
   font-size: 0.95rem;
-  color: #555;
+  color: var(--sol-ink-soft);
   margin-bottom: auto;
 
   @media (max-width: 480px) {
@@ -115,7 +121,7 @@ export default function Games() {
       pageTitle: "Sol’s Game Room – SolTheCat",
       metaDescription:
         "12 free Sol the Cat mini-games — quizzes, memory, puzzles, reaction challenges. Climb the leaderboard and beat today's daily challenge.",
-      heading: "Sol’s Games 🎮",
+      heading: <>Sol’s <TitleEm>Games</TitleEm> 🎮</>,
       subtitle: "Pick your royal challenge",
       playText: "Play",
       games: [
@@ -209,7 +215,7 @@ export default function Games() {
       pageTitle: "Αίθουσα Παιχνιδιών της Sol – SolTheCat",
       metaDescription:
         "12 δωρεάν mini-games της Sol the Cat — quizzes, μνήμη, παζλ, αντανακλαστικά. Σκαρφάλωσε στη βαθμολογία και νίκα τη σημερινή πρόκληση.",
-      heading: "Παιχνίδια της Sol 🎮",
+      heading: <>Παιχνίδια της <TitleEm>Sol</TitleEm> 🎮</>,
       subtitle: "Διάλεξε τη βασιλική σου πρόκληση",
       playText: "Παίξε",
       games: [
