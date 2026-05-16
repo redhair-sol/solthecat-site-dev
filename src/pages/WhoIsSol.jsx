@@ -17,9 +17,11 @@ const WatermarkedContainer = styled(PageContainer)`
     inset: 0;
     background-image: url('/images/sol-watermark.webp');
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;  /* γεμίζει όλη την επιφάνεια */
-    opacity: 0.3;             /* πιο έντονο watermark */
+    background-position: center 8rem;
+    background-size: min(420px, 60%);
+    opacity: 0.08;
+    mix-blend-mode: multiply;
+    pointer-events: none;
     z-index: 0;
   }
 `;
