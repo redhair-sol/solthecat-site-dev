@@ -179,7 +179,7 @@ export default function MoreMenu({ isOpen, onClose }) {
             >
               <Instagram className="w-5 h-5" aria-hidden="true" />
               <span className={navSizeClass} style={navStyle}>
-                {language === "el" ? "Ακολούθα στο Instagram" : "Follow on Instagram"}
+                {language === "el" ? "Ακολούθησε στο Instagram" : "Follow on Instagram"}
               </span>
             </a>
           </div>
