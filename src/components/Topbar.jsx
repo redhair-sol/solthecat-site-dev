@@ -4,7 +4,7 @@ import { fonts } from "../theme.js";
 import { useLanguage } from "../context/LanguageContext.jsx";
 
 export default function Topbar() {
-  const { language } = useLanguage();
+  const { language, setLanguage } = useLanguage();
 
   const labels = {
     en: {
@@ -66,6 +66,41 @@ export default function Topbar() {
           >
             sol <span style={{ color: "var(--sol-sun)", fontStyle: "italic" }}>the</span> cat
           </Link>
+
+          {/* Language toggle — top-right corner of the logo bar so it is
+              available on every viewport (mobile + desktop). EN | GR text
+              toggle, no flags: only two languages, dropdown would be overkill
+              and flags carry geography baggage. */}
+          <div
+            className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 flex items-center gap-1.5 text-[0.8rem] sm:text-sm select-none"
+            aria-label="Language"
+          >
+            <button
+              type="button"
+              onClick={() => setLanguage("en")}
+              aria-pressed={language === "en"}
+              className={`transition-colors px-1 ${
+                language === "en"
+                  ? "text-[var(--sol-ink)] font-medium"
+                  : "text-[var(--sol-ink-soft)] hover:text-[var(--sol-ink)]"
+              }`}
+            >
+              EN
+            </button>
+            <span className="text-[var(--sol-ink-soft)] opacity-40">|</span>
+            <button
+              type="button"
+              onClick={() => setLanguage("el")}
+              aria-pressed={language === "el"}
+              className={`transition-colors px-1 ${
+                language === "el"
+                  ? "text-[var(--sol-ink)] font-medium"
+                  : "text-[var(--sol-ink-soft)] hover:text-[var(--sol-ink)]"
+              }`}
+            >
+              GR
+            </button>
+          </div>
         </div>
       </div>
 

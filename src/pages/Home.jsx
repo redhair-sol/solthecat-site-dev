@@ -329,7 +329,7 @@ const RelativePageContainer = styled(PageContainer)`
 // utils/dailyChallenge.js, shared with the games that mark completion.
 
 export default function Home() {
-  const { language, setLanguage } = useLanguage();
+  const { language } = useLanguage();
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const hasSearchParam = Boolean(queryParams.get("s"));
@@ -543,16 +543,6 @@ export default function Home() {
             </LiveBadge>
           </LiveBadgeLink>
         )}
-
-        {/* LANGUAGE */}
-        <LanguageToggle>
-          <ToggleButton onClick={() => setLanguage("en")} $active={language === "en"}>
-            🇬🇧 English
-          </ToggleButton>
-          <ToggleButton onClick={() => setLanguage("el")} $active={language === "el"}>
-            🇬🇷 Ελληνικά
-          </ToggleButton>
-        </LanguageToggle>
 
         {/* Hero v2, Warm Editorial. Portrait photo with cozy golden-hour
             lighting; pairs with the cream/sun/ink palette. */}
