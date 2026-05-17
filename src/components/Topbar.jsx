@@ -71,7 +71,7 @@ export default function Topbar() {
                 color: "var(--sol-ink)",
                 fontSize: "0.65em",
                 marginLeft: "0.18em",
-                verticalAlign: "0.18em",
+                verticalAlign: "baseline",
                 opacity: 0.85,
               }}
             >
