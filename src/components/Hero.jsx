@@ -15,8 +15,8 @@ const TEXT = {
     eyebrow: "Athens, GR · reigning since 2021",
     photoAlt: "Sol the cat",
     livePill: "LIVE · Chasing a dust mote",
-    lede: (c) =>
-      `A royal travel diary from ${c} countries. Mini-games, daily challenges, and a live cam from the throne.`,
+    lede:
+      "A royal travel diary. Mini-games, daily challenges, and a live cam from the throne.",
     ctaPrimary: "Read adventures",
     ctaGhost: "See photos →",
     statEpisodes: "adventures",
@@ -30,8 +30,8 @@ const TEXT = {
     eyebrow: "ΑΘΗΝΑ, GR · ΒΑΣΙΛΕΥΕΙ ΑΠΟ ΤΟ 2021",
     photoAlt: "Η γάτα Sol",
     livePill: "LIVE · Κυνηγά σκόνη",
-    lede: (c) =>
-      `Ένα βασιλικό ταξιδιωτικό ημερολόγιο από ${c} χώρες. Παιχνίδια, καθημερινές προκλήσεις και ζωντανή κάμερα από τον θρόνο.`,
+    lede:
+      "Ένα βασιλικό ταξιδιωτικό ημερολόγιο. Παιχνίδια, καθημερινές προκλήσεις και ζωντανή κάμερα από τον θρόνο.",
     ctaPrimary: "Δες τις περιπέτειες",
     ctaGhost: "Φωτογραφίες →",
     statEpisodes: "περιπέτειες",
@@ -100,7 +100,7 @@ export default function Hero({ photo = '/sol-hero.jpg', isLive = false }) {
             )}
           </h1>
 
-          <p className="sol-hero__lede">{t.lede(stats.countries)}</p>
+          <p className="sol-hero__lede">{t.lede}</p>
 
           <div className="sol-hero__cta">
             <a href="/adventures" className="btn btn--primary">{t.ctaPrimary}</a>
