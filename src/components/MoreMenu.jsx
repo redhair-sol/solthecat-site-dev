@@ -29,7 +29,7 @@ const items = [
 ];
 
 export default function MoreMenu({ isOpen, onClose }) {
-  const { language } = useLanguage();
+  const { language, setLanguage } = useLanguage();
 
   const labels = {
     en: {
@@ -105,6 +105,43 @@ export default function MoreMenu({ isOpen, onClose }) {
             >
               <X className="w-5 h-5" />
             </button>
+          </div>
+
+          {/* Language toggle — first item, before nav links. Standard mobile
+              pattern: language switching lives in the same drawer as the
+              secondary nav so the user finds it where they already opened
+              for "more options". */}
+          <div className="px-6 pb-4 flex items-center gap-2 text-sm">
+            <span className="text-[#4a3f37] uppercase tracking-wider text-xs">
+              Language
+            </span>
+            <div className="flex items-center gap-1.5 ml-auto select-none">
+              <button
+                type="button"
+                onClick={() => setLanguage("en")}
+                aria-pressed={language === "en"}
+                className={`transition-colors px-1 ${
+                  language === "en"
+                    ? "text-[#1a1614] font-medium"
+                    : "text-[#4a3f37] hover:text-[#1a1614]"
+                }`}
+              >
+                EN
+              </button>
+              <span className="text-[#4a3f37] opacity-40">|</span>
+              <button
+                type="button"
+                onClick={() => setLanguage("el")}
+                aria-pressed={language === "el"}
+                className={`transition-colors px-1 ${
+                  language === "el"
+                    ? "text-[#1a1614] font-medium"
+                    : "text-[#4a3f37] hover:text-[#1a1614]"
+                }`}
+              >
+                GR
+              </button>
+            </div>
           </div>
 
           {/* Navigation items */}

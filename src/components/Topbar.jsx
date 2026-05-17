@@ -66,13 +66,41 @@ export default function Topbar() {
           >
             sol <span style={{ color: "var(--sol-sun)", fontStyle: "italic" }}>the</span> cat
           </Link>
+        </div>
+      </div>
 
-          {/* Language toggle — top-right corner of the logo bar so it is
-              available on every viewport (mobile + desktop). EN | GR text
-              toggle, no flags: only two languages, dropdown would be overkill
-              and flags carry geography baggage. */}
+      {/* Desktop navigation (≥1024px — tablets in portrait use bottom tab bar).
+          Solid bg + inline backgroundColor fallback for older browsers (e.g. MI
+          Browser) where `backdrop-blur` + opacity chain can render invisible.
+          space-x-3 at lg (1024-1279px) prevents 9 nav items from clipping
+          edges; restored to space-x-8 at xl: (1280px+). */}
+      <nav
+        className="hidden lg:block w-full bg-[var(--sol-cream)] border-b border-[var(--sol-line)] py-0.1"
+        style={{ backgroundColor: "#f5efe4" }}
+      >
+        <div className="max-w-screen-xl mx-auto px-4 relative">
           <div
-            className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 flex items-center gap-1.5 text-[0.8rem] sm:text-sm select-none"
+            className={`flex justify-center space-x-3 xl:space-x-8 ${navSizeClass} font-medium`}
+            style={navStyle}
+          >
+            <NavLink to="/" className={linkClasses} end>{t.home}</NavLink>
+            <NavLink to="/adventures" className={linkClasses}>{t.episodes}</NavLink>
+            <NavLink to="/map" className={linkClasses}>{t.map}</NavLink>
+            <NavLink to="/gallery" className={linkClasses}>{t.gallery}</NavLink>
+            <NavLink to="/games" className={linkClasses}>{t.games}</NavLink>
+            <NavLink to="/solcam" className={linkClasses}>{t.solcam}</NavLink>
+            <NavLink to="/whoissol" className={linkClasses}>{t.about}</NavLink>
+            <NavLink to="/shop" className={linkClasses}>{t.shop}</NavLink>
+            <NavLink to="/contact" className={linkClasses}>{t.contact}</NavLink>
+          </div>
+
+          {/* Language toggle — absolutely positioned to the right of the
+              centred nav so it sits at the far edge after "Contact" without
+              shifting the nav cluster off-centre. Sans for legibility (script
+              "EN" reads as junk). Active language is ink + medium weight,
+              inactive ink-soft with hover -> ink. */}
+          <div
+            className="absolute right-4 top-1/2 -translate-y-1/2 flex items-center gap-1.5 text-sm select-none"
             aria-label="Language"
           >
             <button
@@ -100,33 +128,6 @@ export default function Topbar() {
             >
               GR
             </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Desktop navigation (≥1024px — tablets in portrait use bottom tab bar).
-          Solid bg + inline backgroundColor fallback for older browsers (e.g. MI
-          Browser) where `backdrop-blur` + opacity chain can render invisible.
-          space-x-3 at lg (1024-1279px) prevents 9 nav items from clipping
-          edges; restored to space-x-8 at xl: (1280px+). */}
-      <nav
-        className="hidden lg:block w-full bg-[var(--sol-cream)] border-b border-[var(--sol-line)] py-0.1"
-        style={{ backgroundColor: "#f5efe4" }}
-      >
-        <div className="max-w-screen-xl mx-auto px-4">
-          <div
-            className={`flex justify-center space-x-3 xl:space-x-8 ${navSizeClass} font-medium`}
-            style={navStyle}
-          >
-            <NavLink to="/" className={linkClasses} end>{t.home}</NavLink>
-            <NavLink to="/adventures" className={linkClasses}>{t.episodes}</NavLink>
-            <NavLink to="/map" className={linkClasses}>{t.map}</NavLink>
-            <NavLink to="/gallery" className={linkClasses}>{t.gallery}</NavLink>
-            <NavLink to="/games" className={linkClasses}>{t.games}</NavLink>
-            <NavLink to="/solcam" className={linkClasses}>{t.solcam}</NavLink>
-            <NavLink to="/whoissol" className={linkClasses}>{t.about}</NavLink>
-            <NavLink to="/shop" className={linkClasses}>{t.shop}</NavLink>
-            <NavLink to="/contact" className={linkClasses}>{t.contact}</NavLink>
           </div>
         </div>
       </nav>
