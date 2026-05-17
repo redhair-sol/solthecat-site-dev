@@ -42,7 +42,7 @@ export default function Footer() {
 
   return (
     <footer className="w-full border-t border-[var(--sol-line)] bg-[var(--sol-cream)] mt-16">
-      <div className="max-w-screen-xl mx-auto px-4 py-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="max-w-6xl mx-auto px-4 py-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         <div>
           <Link
             to="/"
@@ -98,7 +98,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-[var(--sol-line)]">
-        <div className="max-w-screen-xl mx-auto px-4 py-5 text-xs text-[var(--sol-ink-soft)] flex flex-col items-center gap-2 text-center">
+        <div className="max-w-6xl mx-auto px-4 py-5 text-xs text-[var(--sol-ink-soft)] flex flex-col items-center gap-2 text-center">
           <span>© {year} sol the cat · {t.rights}</span>
           <span>{t.madeIn}</span>
         </div>
