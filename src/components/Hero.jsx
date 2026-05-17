@@ -110,7 +110,7 @@ export default function Hero({ photo = '/sol-hero.jpg', isLive = false }) {
           <ul className="sol-hero__stats">
             <li><strong>{stats.episodes}</strong><span>{t.statEpisodes}</span></li>
             <li><strong>{stats.countries}</strong><span>{t.statCountries}</span></li>
-            <li><strong>14h</strong><span>{t.statNapped}</span></li>
+            <li><strong>{language === "el" ? "14ω" : "14h"}</strong><span>{t.statNapped}</span></li>
           </ul>
         </div>
       </div>
