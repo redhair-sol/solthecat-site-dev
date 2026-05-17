@@ -42,7 +42,7 @@ export default function Footer() {
 
   return (
     <footer className="w-full border-t border-[var(--sol-line)] bg-[var(--sol-cream)] mt-6 sm:mt-10 lg:mt-16">
-      <div className="max-w-6xl mx-auto px-4 py-6 sm:py-8 lg:py-10 grid gap-5 sm:gap-6 lg:gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="max-w-6xl mx-auto px-4 py-8 sm:py-9 lg:py-10 grid gap-6 sm:gap-7 lg:gap-8 sm:grid-cols-2 lg:grid-cols-3">
         <div>
           <Link
             to="/"
