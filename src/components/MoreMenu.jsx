@@ -41,7 +41,10 @@ export default function MoreMenu({ isOpen, onClose }) {
       contact: "Contact",
     },
     el: {
-      language: "Γλώσσα",
+      // Pre-uppercased without accents — CSS text-transform: uppercase keeps
+      // the tonos, so we store the label in target case to honour the Greek
+      // typography rule that capitals drop their accents.
+      language: "ΓΛΩΣΣΑ",
       gallery: "Γκαλερί",
       solcam: "SolCam",
       about: "Σχετικά",

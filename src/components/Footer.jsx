@@ -20,7 +20,10 @@ const content = {
   },
   el: {
     tagline: "Το ταξίδι της αιλουροειδούς βασίλισσας ανά τον κόσμο.",
-    nav: "Εξερεύνηση",
+    // Pre-uppercased without accents — Greek typography rule: Greek capitals
+    // drop their tonos. CSS text-transform: uppercase does not strip the
+    // accent, so we store the section labels in their target case.
+    nav: "ΕΞΕΡΕΥΝΗΣΗ",
     links: [
       { to: "/adventures", label: "Περιπέτειες" },
       { to: "/map", label: "Χάρτης" },
@@ -30,7 +33,7 @@ const content = {
       { to: "/contact", label: "Επικοινωνία" },
     ],
     rights: "Με επιφύλαξη παντός δικαιώματος.",
-    follow: "Ακολούθησε τη Sol",
+    follow: "ΑΚΟΛΟΥΘΗΣΕ ΤΗ SOL",
     madeIn: "Φτιαγμένο με 🐾 στην Ελλάδα",
   },
 };
