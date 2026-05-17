@@ -70,10 +70,10 @@ export default function Topbar() {
               style={{
                 color: "var(--sol-sun)",
                 fontSize: "0.7em",
-                marginLeft: "0.32em",
+                marginLeft: "0.4em",
                 verticalAlign: "middle",
                 position: "relative",
-                top: "-0.05em",
+                top: "-0.2em",
               }}
             >
               ♛
