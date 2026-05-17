@@ -41,7 +41,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="w-full border-t border-[var(--sol-line)] bg-[var(--sol-cream)] mt-16">
+    <footer className="w-full border-t border-[var(--sol-line)] bg-[var(--sol-cream)] mt-8 sm:mt-12 lg:mt-16">
       <div className="max-w-6xl mx-auto px-4 py-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         <div>
           <Link

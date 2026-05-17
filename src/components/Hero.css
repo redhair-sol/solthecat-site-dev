@@ -120,6 +120,12 @@
   .sol-hero__lede { font-size: 17px; margin-bottom: 24px; }
   .sol-hero__cta { flex-direction: column; margin-bottom: 32px; }
   .sol-hero .btn { text-align: center; }
-  .sol-hero__stats { gap: 24px; flex-wrap: wrap; }
+  /* 3-column grid on mobile so all stats stay on one row (was flex-wrap,
+     which left "napped today" orphaned on a second row under 52 / 47). */
+  .sol-hero__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
   .sol-hero__stats strong { font-size: 26px; }
 }
