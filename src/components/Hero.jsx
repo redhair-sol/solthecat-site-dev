@@ -27,7 +27,7 @@ const TEXT = {
     // Pre-uppercased without accents — Greek typography rule: Greek capitals
     // drop their tonos. CSS text-transform: uppercase does not strip accents,
     // so we store the eyebrow in target case and the CSS rule becomes a no-op.
-    eyebrow: "ΑΘΗΝΑ, GR · ΒΑΣΙΛΕΥΕΙ ΑΠΟ ΤΟ 2021",
+    eyebrow: "ΑΘΗΝΑ, ΕΛΛΑΔΑ · ΒΑΣΙΛΕΥΕΙ ΑΠΟ ΤΟ 2021",
     photoAlt: "Η γάτα Sol",
     livePill: "LIVE · Κυνηγά σκόνη",
     lede:
