@@ -113,8 +113,12 @@
   .sol-hero__inner { grid-template-columns: 1fr; gap: 32px; }
   .sol-hero__media { aspect-ratio: 4/5; max-height: 60vh; }
   .sol-hero__title { font-size: clamp(40px, 11vw, 56px); }
-  .sol-hero__lede { font-size: 17px; }
-  .sol-hero__cta { flex-direction: column; }
+  /* Tighter vertical rhythm on mobile — desktop margins (32 / 28 / 36 / 56)
+     stack to 152px of pure margin; pulling them in saves ~56px of scroll
+     between eyebrow and stats without crowding the text. */
+  .sol-hero__eyebrow { margin-bottom: 20px; }
+  .sol-hero__lede { font-size: 17px; margin-bottom: 24px; }
+  .sol-hero__cta { flex-direction: column; margin-bottom: 32px; }
   .sol-hero .btn { text-align: center; }
   .sol-hero__stats { gap: 24px; flex-wrap: wrap; }
   .sol-hero__stats strong { font-size: 26px; }
