@@ -355,7 +355,7 @@ export default function SolPicks() {
               {currentPick.quote && <RevealQuote>{currentPick.quote}</RevealQuote>}
               <RevealCaption>{epCaption}</RevealCaption>
               <ButtonRow>
-                <PrimaryAction to="/episodes">{t.viewEpisode}</PrimaryAction>
+                <PrimaryAction to="/adventures">{t.viewEpisode}</PrimaryAction>
                 <SecondaryAction type="button" onClick={pickRandom}>
                   {t.pickAgain}
                 </SecondaryAction>

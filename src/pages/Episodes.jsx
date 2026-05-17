@@ -94,7 +94,7 @@ export default function Episodes() {
   const t = {
     en: {
       headingPrefix: "Sol’s ",
-      headingAccent: "Episodes",
+      headingAccent: "Adventures",
       subheading: "Follow the pawprints of royalty",
       placeholder: "Search by city or keyword…",
       noResults: (q) => `No episodes found for “${q}”. Try another keyword.`,
@@ -116,7 +116,7 @@ export default function Episodes() {
       },
     },
     el: {
-      headingPrefix: "Τα επεισόδια της ",
+      headingPrefix: "Οι περιπέτειες της ",
       headingAccent: "Sol",
       subheading: "Ακολούθησε τα πατουσάκια της βασίλισσας",
       placeholder: "Αναζήτηση με πόλη ή λέξη-κλειδί…",
@@ -231,13 +231,13 @@ export default function Episodes() {
     <>
       <Helmet>
         <title>
-          {language === "el" ? "Επεισόδια" : "Episodes"} – SolTheCat
+          {language === "el" ? "Περιπέτειες" : "Adventures"} – sol the cat
         </title>
         <meta name="description" content={t.metaDescription} />
-        <link rel="canonical" href="https://solthecat.com/episodes" />
-        <meta property="og:title" content={`${language === "el" ? "Επεισόδια" : "Episodes"} – SolTheCat`} />
+        <link rel="canonical" href="https://solthecat.com/adventures" />
+        <meta property="og:title" content={`${language === "el" ? "Περιπέτειες" : "Adventures"} – sol the cat`} />
         <meta property="og:description" content={t.metaDescription} />
-        <meta property="og:url" content="https://solthecat.com/episodes" />
+        <meta property="og:url" content="https://solthecat.com/adventures" />
       </Helmet>
 
       <PageContainer

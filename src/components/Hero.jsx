@@ -9,9 +9,9 @@ const TEXT = {
     livePill: "LIVE · Chasing a dust mote",
     lede:
       "A royal travel diary from 47 countries. Mini-games, daily challenges, and a live cam from the throne.",
-    ctaPrimary: "Read episodes",
+    ctaPrimary: "Read adventures",
     ctaGhost: "See photos →",
-    statEpisodes: "episodes",
+    statEpisodes: "adventures",
     statCountries: "countries visited",
     statNapped: "napped today",
   },
@@ -24,9 +24,9 @@ const TEXT = {
     livePill: "LIVE · Κυνηγά σκόνη",
     lede:
       "Ένα βασιλικό ταξιδιωτικό ημερολόγιο από 47 χώρες. Παιχνίδια, καθημερινές προκλήσεις και ζωντανή κάμερα από τον θρόνο.",
-    ctaPrimary: "Δες τα επεισόδια",
+    ctaPrimary: "Δες τις περιπέτειες",
     ctaGhost: "Φωτογραφίες →",
-    statEpisodes: "επεισόδια",
+    statEpisodes: "περιπέτειες",
     statCountries: "χώρες",
     statNapped: "κοιμήθηκε σήμερα",
   },
@@ -73,7 +73,7 @@ export default function Hero({ photo = '/sol-hero.jpg', isLive = false }) {
           <p className="sol-hero__lede">{t.lede}</p>
 
           <div className="sol-hero__cta">
-            <a href="/episodes" className="btn btn--primary">{t.ctaPrimary}</a>
+            <a href="/adventures" className="btn btn--primary">{t.ctaPrimary}</a>
             <a href="/gallery" className="btn btn--ghost">{t.ctaGhost}</a>
           </div>
 

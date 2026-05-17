@@ -9,7 +9,7 @@ export default function Topbar() {
   const labels = {
     en: {
       home: "Home",
-      episodes: "Episodes",
+      episodes: "Adventures",
       map: "Map",
       gallery: "Gallery",
       games: "Games",
@@ -20,7 +20,7 @@ export default function Topbar() {
     },
     el: {
       home: "Αρχική",
-      episodes: "Επεισόδια",
+      episodes: "Περιπέτειες",
       map: "Χάρτης",
       gallery: "Γκαλερί",
       games: "Παιχνίδια",
@@ -84,7 +84,7 @@ export default function Topbar() {
             style={navStyle}
           >
             <NavLink to="/" className={linkClasses} end>{t.home}</NavLink>
-            <NavLink to="/episodes" className={linkClasses}>{t.episodes}</NavLink>
+            <NavLink to="/adventures" className={linkClasses}>{t.episodes}</NavLink>
             <NavLink to="/map" className={linkClasses}>{t.map}</NavLink>
             <NavLink to="/gallery" className={linkClasses}>{t.gallery}</NavLink>
             <NavLink to="/games" className={linkClasses}>{t.games}</NavLink>

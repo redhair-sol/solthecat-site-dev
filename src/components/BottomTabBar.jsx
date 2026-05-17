@@ -21,7 +21,7 @@ import { useLanguage } from "../context/LanguageContext.jsx";
 
 const tabs = [
   { to: "/", key: "home", icon: Home, end: true },
-  { to: "/episodes", key: "episodes", icon: BookOpen },
+  { to: "/adventures", key: "episodes", icon: BookOpen },
   { to: "/map", key: "map", icon: Map },
   { to: "/games", key: "games", icon: Gamepad2 },
 ];
@@ -31,8 +31,8 @@ export default function BottomTabBar() {
   const { language } = useLanguage();
 
   const labels = {
-    en: { home: "Home", episodes: "Episodes", map: "Map", games: "Games", more: "More" },
-    el: { home: "Αρχική", episodes: "Επεισόδια", map: "Χάρτης", games: "Παιχνίδια", more: "Περισσότερα" },
+    en: { home: "Home", episodes: "Adventures", map: "Map", games: "Games", more: "More" },
+    el: { home: "Αρχική", episodes: "Περιπέτειες", map: "Χάρτης", games: "Παιχνίδια", more: "Περισσότερα" },
   };
   const t = labels[language];
 

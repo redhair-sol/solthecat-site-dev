@@ -7,7 +7,7 @@ const content = {
     tagline: "The feline queen's journey around the world.",
     nav: "Explore",
     links: [
-      { to: "/episodes", label: "Episodes" },
+      { to: "/adventures", label: "Adventures" },
       { to: "/map", label: "Map" },
       { to: "/gallery", label: "Gallery" },
       { to: "/games", label: "Games" },
@@ -22,7 +22,7 @@ const content = {
     tagline: "Το ταξίδι της αιλουροειδούς βασίλισσας ανά τον κόσμο.",
     nav: "Εξερεύνηση",
     links: [
-      { to: "/episodes", label: "Επεισόδια" },
+      { to: "/adventures", label: "Περιπέτειες" },
       { to: "/map", label: "Χάρτης" },
       { to: "/gallery", label: "Gallery" },
       { to: "/games", label: "Παιχνίδια" },
@@ -60,6 +60,9 @@ export default function Footer() {
           </Link>
           <p className="mt-3 text-sm text-[var(--sol-ink-soft)] max-w-xs">
             {t.tagline}
+          </p>
+          <p className="mt-2 text-xs text-[var(--sol-ink-soft)]">
+            #soladventures · @solthecat01
           </p>
         </div>
 

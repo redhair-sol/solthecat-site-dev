@@ -57,7 +57,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             <Routes>
               <Route path="/" element={<App />}>
                 <Route index element={<Home />} />
-                <Route path="episodes" element={<Episodes />} />
+                <Route path="adventures" element={<Episodes />} />
+                {/* Legacy URL — /episodes now lives as /adventures.
+                    Production also gets a 301 via public/_redirects. */}
+                <Route path="episodes" element={<Navigate to="/adventures" replace />} />
                 <Route path="map" element={<SOLsJourney />} />
                 <Route path="gallery" element={<Gallery />} />
                 {/* Legacy URL — redirect to /map (Cloudflare _redirects also serves a 301 in prod). */}
