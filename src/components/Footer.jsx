@@ -89,16 +89,17 @@ export default function Footer() {
             href="https://www.instagram.com/solthecat01/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-[var(--sol-ink)] hover:text-[var(--sol-mauve)] hover:underline underline-offset-4 transition-colors"
+            className="inline-flex items-center gap-2 text-sm text-[var(--sol-ink)] hover:text-[var(--sol-mauve)] hover:underline underline-offset-4 transition-colors"
           >
-            @solthecat01 · Instagram
+            <span aria-hidden="true">🐾</span>
+            <span>@solthecat01 on Instagram</span>
           </a>
         </div>
       </div>
 
       <div className="border-t border-[var(--sol-line)]">
-        <div className="max-w-screen-xl mx-auto px-4 py-4 text-xs text-[var(--sol-ink-soft)] flex flex-col sm:flex-row gap-2 sm:justify-between">
-          <span>© {year} sol the cat. {t.rights}</span>
+        <div className="max-w-screen-xl mx-auto px-4 py-5 text-xs text-[var(--sol-ink-soft)] flex flex-col items-center gap-2 text-center">
+          <span>© {year} sol the cat · {t.rights}</span>
           <span>{t.madeIn}</span>
         </div>
       </div>

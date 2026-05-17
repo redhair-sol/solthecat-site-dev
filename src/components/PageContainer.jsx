@@ -8,7 +8,10 @@ const PageContainer = styled(motion.div)`
   flex-direction: column;
   align-items: center;
   justify-content: ${({ alignTop }) => (alignTop ? 'flex-start' : 'center')};
-  min-height: 90vh;
+  /* Was 90vh — forced a tall reservation even for short pages, which left a
+     visible gap between content and the new Footer. 40vh keeps a minimum
+     breathing area without padding short pages out artificially. */
+  min-height: 40vh;
   padding: 2rem 2rem 1.5rem 2rem;
   text-align: center;
   font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;

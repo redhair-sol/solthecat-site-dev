@@ -321,26 +321,6 @@ const ChallengePill = styled.span`
       : "var(--sol-line)"};
 `;
 
-const InstagramLink = styled.a`
-  display: inline-flex;
-  align-items: center;
-  color: var(--sol-ink-soft);
-  margin-top: 1.6rem;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease;
-
-  &:hover {
-    color: var(--sol-rose);
-  }
-`;
-
-const InstagramIcon = styled.img`
-  width: 20px;
-  height: 20px;
-  margin-right: 0.4rem;
-`;
-
 const RelativePageContainer = styled(PageContainer)`
   position: relative;
 `;
@@ -488,7 +468,6 @@ export default function Home() {
           : "Royal Mood of the Day",
       toggleMood: "Mood of the Day",
       toggleFortune: "Words of Sol",
-      instagram: "Follow on Instagram",
       gamesTitle: "Ready to play with Sol?",
       gamesText: "Explore mini-games inspired by her travels!",
       gamesCTA: "Play the Games",
@@ -516,7 +495,6 @@ export default function Home() {
           : "Η Πατουσένια Στιγμή της Ημέρας",
       toggleMood: "Διάθεση Ημέρας",
       toggleFortune: "Λόγια της Sol",
-      instagram: "Ακολούθησε στο Instagram",
       gamesTitle: "Παίξε με τη Sol!",
       gamesText: "Ανακάλυψε mini-games...",
       gamesCTA: "Παίξε Παιχνίδια",
@@ -697,20 +675,6 @@ export default function Home() {
           <GamesCTA to="/games">{t.gamesCTA}</GamesCTA>
         </GamesCard>
 
-        {/* INSTAGRAM */}
-        <InstagramLink
-          href="https://www.instagram.com/solthecat01/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <InstagramIcon
-            src="/icons/instagram-icon.webp"
-            alt="Instagram"
-            width="20"
-            height="20"
-          />
-          {t.instagram}
-        </InstagramLink>
       </RelativePageContainer>
     </>
   );
