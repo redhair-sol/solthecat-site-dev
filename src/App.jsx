@@ -2,6 +2,7 @@ import React from "react";
 import GlobalStyle from "./styles/GlobalStyle.js";
 import ScrollToTop from "./components/ScrollToTop";
 import Topbar from "./components/Topbar";
+import Footer from "./components/Footer";
 import BottomTabBar from "./components/BottomTabBar"; // mobile-only bottom nav (revertable — see component header)
 import InstallPrompt from "./components/InstallPrompt"; // PWA install banner (Chromium-based browsers only)
 import { Outlet } from "react-router-dom";
@@ -21,6 +22,8 @@ function App() {
           </main>
         </div>
       </div>
+
+      <Footer />
 
       {/* Bottom tab bar — mobile only.
           Instagram link now lives inside MoreMenu drawer, no longer a floating FAB. */}

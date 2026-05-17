@@ -100,6 +100,16 @@ export default function Contact() {
           }
         />
         <link rel="canonical" href="https://solthecat.com/contact" />
+        <meta property="og:title" content={`${language === "el" ? "Επικοινωνία" : "Contact"} – SolTheCat`} />
+        <meta
+          property="og:description"
+          content={
+            language === "el"
+              ? "Επικοινώνησε με τη Sol the Cat, προτάσεις, συνεργασίες, ή απλά για να πεις γεια στη βασίλισσα."
+              : "Get in touch with Sol the Cat, suggestions, collaborations, or just say hi to the queen."
+          }
+        />
+        <meta property="og:url" content="https://solthecat.com/contact" />
       </Helmet>
 
       <PageContainer

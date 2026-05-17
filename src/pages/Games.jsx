@@ -315,6 +315,9 @@ export default function Games() {
         <title>{t.pageTitle}</title>
         <meta name="description" content={t.metaDescription} />
         <link rel="canonical" href="https://solthecat.com/games" />
+        <meta property="og:title" content={t.pageTitle} />
+        <meta property="og:description" content={t.metaDescription} />
+        <meta property="og:url" content="https://solthecat.com/games" />
       </Helmet>
 
       <PageContainer

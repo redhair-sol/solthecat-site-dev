@@ -206,7 +206,25 @@ export default function SolCam() {
     <>
       <Helmet>
         <title>SolCam Live – SolTheCat</title>
+        <meta
+          name="description"
+          content={
+            language === "el"
+              ? "Ζωντανή μετάδοση από τη Sol the Cat, η βασίλισσα στον θρόνο της."
+              : "Live view of Sol the Cat, the queen on her throne."
+          }
+        />
         <link rel="canonical" href="https://solthecat.com/solcam" />
+        <meta property="og:title" content="SolCam Live – SolTheCat" />
+        <meta
+          property="og:description"
+          content={
+            language === "el"
+              ? "Ζωντανή μετάδοση από τη Sol the Cat, η βασίλισσα στον θρόνο της."
+              : "Live view of Sol the Cat, the queen on her throne."
+          }
+        />
+        <meta property="og:url" content="https://solthecat.com/solcam" />
       </Helmet>
 
       <PageContainer

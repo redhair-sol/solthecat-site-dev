@@ -235,6 +235,9 @@ export default function Episodes() {
         </title>
         <meta name="description" content={t.metaDescription} />
         <link rel="canonical" href="https://solthecat.com/episodes" />
+        <meta property="og:title" content={`${language === "el" ? "Επεισόδια" : "Episodes"} – SolTheCat`} />
+        <meta property="og:description" content={t.metaDescription} />
+        <meta property="og:url" content="https://solthecat.com/episodes" />
       </Helmet>
 
       <PageContainer

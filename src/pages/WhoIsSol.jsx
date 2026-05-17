@@ -150,6 +150,23 @@ export default function WhoIsSol() {
           }
         />
         <link rel="canonical" href="https://solthecat.com/whoissol" />
+        <meta
+          property="og:title"
+          content={
+            language === "en"
+              ? "Who is Sol the Cat? – SolTheCat"
+              : "Ποια είναι η Sol; – SolTheCat"
+          }
+        />
+        <meta
+          property="og:description"
+          content={
+            language === "en"
+              ? "Meet Sol the Cat, the calico feline queen behind 50+ SOLadventures around the world. Her story, her stare, her travels."
+              : "Γνώρισε τη Sol the Cat, τη βασίλισσα γάτα πίσω από 50+ SOLadventures σε όλο τον κόσμο. Η ιστορία της, το βλέμμα της, τα ταξίδια της."
+          }
+        />
+        <meta property="og:url" content="https://solthecat.com/whoissol" />
       </Helmet>
 
       <PageContainer

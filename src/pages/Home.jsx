@@ -546,6 +546,9 @@ export default function Home() {
         <meta name="description" content={t.metaDescription} />
         <link rel="canonical" href="https://solthecat.com/" />
         {hasSearchParam && <meta name="robots" content="noindex, follow" />}
+        <meta property="og:title" content="Sol’s Adventures – Home" />
+        <meta property="og:description" content={t.metaDescription} />
+        <meta property="og:url" content="https://solthecat.com/" />
       </Helmet>
 
       <RelativePageContainer
