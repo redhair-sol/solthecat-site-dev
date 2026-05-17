@@ -68,11 +68,12 @@ export default function Topbar() {
             <span
               aria-hidden="true"
               style={{
-                color: "var(--sol-ink)",
-                fontSize: "0.65em",
-                marginLeft: "0.18em",
-                verticalAlign: "baseline",
-                opacity: 0.85,
+                color: "var(--sol-sun)",
+                fontSize: "0.8em",
+                marginLeft: "0.32em",
+                verticalAlign: "middle",
+                position: "relative",
+                top: "-0.05em",
               }}
             >
               ♛
