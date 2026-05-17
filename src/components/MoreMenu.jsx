@@ -33,8 +33,7 @@ export default function MoreMenu({ isOpen, onClose }) {
 
   const labels = {
     en: {
-      header: "More",
-      tagline: "Royal stops",
+      language: "Language",
       gallery: "Gallery",
       solcam: "SolCam",
       about: "About",
@@ -42,8 +41,7 @@ export default function MoreMenu({ isOpen, onClose }) {
       contact: "Contact",
     },
     el: {
-      header: "Επιπλέον",
-      tagline: "Βασιλικές στάσεις",
+      language: "Γλώσσα",
       gallery: "Γκαλερί",
       solcam: "SolCam",
       about: "Σχετικά",
@@ -87,16 +85,11 @@ export default function MoreMenu({ isOpen, onClose }) {
             <div className="w-9 h-[3px] bg-[var(--sol-line)] rounded-full" />
           </div>
 
-          {/* Header — script tagline carries the section identity; the sans-uppercase
-              "MORE" eyebrow was removed because it duplicated and clashed with the
-              editorial voice. */}
-          <div className="flex items-center justify-between px-6 pb-6">
-            <p
-              className={`${navSizeClass} text-[#1a1614] leading-none`}
-              style={navStyle}
-            >
-              {t.tagline}
-            </p>
+          {/* Header — close button only. The "Royal stops" tagline was
+              removed: the drawer already carries a drag handle, LANGUAGE
+              row, 5 nav items, an Instagram row, and the Sol image — the
+              tagline was decoration competing for attention. */}
+          <div className="flex items-center justify-end px-6 pb-4">
             <button
               type="button"
               onClick={onClose}
@@ -113,7 +106,7 @@ export default function MoreMenu({ isOpen, onClose }) {
               for "more options". */}
           <div className="px-6 pb-4 flex items-center gap-2 text-sm">
             <span className="text-[#4a3f37] uppercase tracking-wider text-xs">
-              Language
+              {t.language}
             </span>
             <div className="flex items-center gap-1.5 ml-auto select-none">
               <button
