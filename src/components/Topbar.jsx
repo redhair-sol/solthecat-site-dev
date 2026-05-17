@@ -65,6 +65,18 @@ export default function Topbar() {
             }}
           >
             sol <span style={{ color: "var(--sol-sun)", fontStyle: "italic" }}>the</span> cat
+            <span
+              aria-hidden="true"
+              style={{
+                color: "var(--sol-ink)",
+                fontSize: "0.65em",
+                marginLeft: "0.18em",
+                verticalAlign: "0.18em",
+                opacity: 0.85,
+              }}
+            >
+              ♛
+            </span>
           </Link>
 
           {/* Language toggle — lives in the logo bar (its own row) instead of
