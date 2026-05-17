@@ -46,7 +46,7 @@ export default function BottomTabBar() {
   return (
     <>
       <nav
-        className="lg:hidden fixed bottom-0 left-0 right-0 z-[1100]
+        className="xl:hidden fixed bottom-0 left-0 right-0 z-[1100]
                    border-t border-[var(--sol-line)]
                    shadow-[0_-2px_10px_rgba(26,22,20,0.06)]"
         style={{

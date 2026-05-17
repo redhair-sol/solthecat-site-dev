@@ -124,7 +124,7 @@ export default function Topbar() {
           space-x-3 at lg (1024-1279px) prevents 9 nav items from clipping
           edges; restored to space-x-8 at xl: (1280px+). */}
       <nav
-        className="hidden lg:block w-full bg-[var(--sol-cream)] border-b border-[var(--sol-line)] py-0.1"
+        className="hidden xl:block w-full bg-[var(--sol-cream)] border-b border-[var(--sol-line)] py-0.1"
         style={{ backgroundColor: "#f5efe4" }}
       >
         <div className="max-w-screen-xl mx-auto px-4">
