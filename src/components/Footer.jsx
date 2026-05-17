@@ -57,6 +57,19 @@ export default function Footer() {
             aria-label="sol the cat"
           >
             sol <span style={{ color: "var(--sol-sun)", fontStyle: "italic" }}>the</span> cat
+            <span
+              aria-hidden="true"
+              style={{
+                color: "var(--sol-sun)",
+                fontSize: "0.7em",
+                marginLeft: "0.4em",
+                verticalAlign: "middle",
+                position: "relative",
+                top: "-0.2em",
+              }}
+            >
+              ♛
+            </span>
           </Link>
           <p className="mt-3 text-sm text-[var(--sol-ink-soft)] max-w-xs">
             {t.tagline}
