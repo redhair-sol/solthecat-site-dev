@@ -69,7 +69,7 @@ export default function Topbar() {
               aria-hidden="true"
               style={{
                 color: "var(--sol-sun)",
-                fontSize: "0.8em",
+                fontSize: "0.7em",
                 marginLeft: "0.32em",
                 verticalAlign: "middle",
                 position: "relative",
