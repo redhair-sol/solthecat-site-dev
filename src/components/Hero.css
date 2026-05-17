@@ -107,8 +107,14 @@
   letter-spacing: 0.05em; margin-top: 4px;
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
+/* MOBILE + TABLET PORTRAIT
+   iPad standard portrait (768px), iPad Pro 11" portrait (834px), and
+   iPad Pro 12.9" portrait (1024px) all carry the desktop 2-column hero
+   if the breakpoint stays at 768. The two narrow columns at portrait
+   widths produced an unbalanced photo/text alignment. Bumping to 1023
+   stacks the hero on every tablet in portrait while keeping side-by-side
+   for landscape tablets and desktops (>=1024px). */
+@media (max-width: 1023px) {
   .sol-hero { padding: 16px; min-height: auto; padding-top: 32px; }
   .sol-hero__inner { grid-template-columns: 1fr; gap: 32px; }
   .sol-hero__media { aspect-ratio: 4/5; max-height: 60vh; }
