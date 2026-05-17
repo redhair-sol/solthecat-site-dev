@@ -61,7 +61,15 @@ export const fonts = {
     fontStyle: "italic",
     fontWeight: 400,
   }),
-  // Same family + same italic in both languages means we can use one size
-  // for both. Kept as a function for API stability with existing call sites.
-  navSizeClassFor: (_language, baseClass) => baseClass,
+  // EN and EL use the same family/italic so most sizes can stay shared.
+  // The exception is the BottomTabBar (text-[0.95rem]) on narrow phones,
+  // where the longer EL labels (Περιπέτειες, Περισσότερα — both 11
+  // characters) overflow the flex-1 tab width unless we drop their size.
+  // Other base classes pass through unchanged for both languages.
+  navSizeClassFor: (language, baseClass) => {
+    if (language === "el" && baseClass === "text-[0.95rem]") {
+      return "text-[0.72rem]";
+    }
+    return baseClass;
+  },
 };
