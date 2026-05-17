@@ -63,6 +63,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                 {/* Legacy URL — redirect to /map (Cloudflare _redirects also serves a 301 in prod). */}
                 <Route path="solsjourney" element={<Navigate to="/map" replace />} />
                 <Route path="whoissol" element={<WhoIsSol />} />
+                {/* Friendly URL — /about redirects to the canonical /whoissol */}
+                <Route path="about" element={<Navigate to="/whoissol" replace />} />
                 <Route path="contact" element={<Contact />} />
                 <Route path="shop" element={<Shop />} />
 				<Route path="solcam" element={<SolCam />} />
