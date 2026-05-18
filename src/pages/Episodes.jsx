@@ -347,7 +347,7 @@ export default function Episodes() {
         )}
 
         {/* Episode cards */}
-        <div className="flex flex-col items-center gap-8 mt-2">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-2 w-full justify-items-center">
           {filteredEpisodes.map((ep, idx) => {
             const epTitle =
               typeof ep.title === "object" ? ep.title[language] : ep.title;

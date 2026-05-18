@@ -96,6 +96,9 @@
   list-style: none; padding: 24px 0 0; margin: 0;
   border-top: 1px solid var(--sol-line);
   display: flex; gap: 40px;
+  /* Match the lede's max-width so the divider does not stretch past the
+     text block above it. Stats and lede now share the same right edge. */
+  max-width: 460px;
 }
 .sol-hero__stats li { display: flex; flex-direction: column; }
 .sol-hero__stats strong {
