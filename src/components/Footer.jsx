@@ -48,7 +48,10 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="w-full border-t border-[var(--sol-line)] bg-[var(--sol-cream)] mt-6 sm:mt-10 lg:mt-16">
+    <footer className="w-full border-t border-[var(--sol-line)] bg-[var(--sol-cream)] mt-6 sm:mt-10 lg:mt-16 pb-24 xl:pb-0">
+      {/* pb-24 below xl: keeps the bottom rows clear of the fixed
+          BottomTabBar (xl:hidden), which otherwise overlapped the
+          partnership + 'Made in Greece' lines. */}
       <div className="max-w-6xl mx-auto px-4 py-8 sm:py-9 lg:py-10 grid gap-6 sm:gap-7 lg:gap-8 lg:grid-cols-3">
         <div>
           <Link
