@@ -387,7 +387,7 @@ export default function Episodes() {
             return (
               <article
                 key={ep.id}
-                className="bg-[var(--sol-cream-2)] rounded-3xl max-w-[640px] w-full p-5 md:p-6 shadow-[0_2px_12px_rgba(26,22,20,0.06)] transition-shadow hover:shadow-[0_4px_18px_rgba(26,22,20,0.09)]"
+                className="bg-[var(--sol-cream-2)] rounded-3xl max-w-[640px] w-full p-5 md:p-6 shadow-[0_2px_12px_rgba(26,22,20,0.06)] transition-shadow hover:shadow-[0_4px_18px_rgba(26,22,20,0.09)] flex flex-col h-full"
               >
                 <img
                   src={`${import.meta.env.BASE_URL}${ep.image}`}
@@ -435,7 +435,7 @@ export default function Episodes() {
                 )}
 
                 {ep.visible !== false && ep.city && (
-                  <div className="flex flex-wrap items-center justify-between gap-3 mt-5">
+                  <div className="flex flex-wrap items-center justify-between gap-3 mt-auto pt-5">
                     {/* See on Instagram. Uses ep.instagramUrl when set, else
                         falls back to the #soladventures hashtag feed so the
                         button never dead-ends while per-episode URLs are
