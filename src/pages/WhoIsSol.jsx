@@ -104,16 +104,15 @@ const FunFactsTitle = styled.h2`
   text-align: center;
 `;
 
-// 3 candids that act as a visual breath between the Life in Athens block
-// and the Fun Facts list. Frame matches the Gallery Tile exactly (same
-// cream padding + ink shadow + 4px / 2px radii) so the two pages read as
-// one collection.
+// 3 candids that close the page as a scrapbook moment after the Fun Facts
+// list. Frame matches the Gallery Tile exactly (same cream padding + ink
+// shadow + 4px / 2px radii) so the two pages read as one collection.
 const PolaroidGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   max-width: 900px;
-  margin: 1rem auto;
+  margin: 3rem auto 1rem;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -330,6 +329,16 @@ export default function WhoIsSol() {
           </div>
         </InlineBlock>
 
+        <FunFactsTitle>{t.funFactsTitle}</FunFactsTitle>
+
+        <FunFactsList>
+          {t.funFacts.map((fact, idx) => (
+            <FunFactItem key={idx}>
+              <strong>{fact.label}</strong> {fact.value}
+            </FunFactItem>
+          ))}
+        </FunFactsList>
+
         <PolaroidGrid>
           {[1, 2, 3].map((n, i) => (
             <Polaroid key={n}>
@@ -344,16 +353,6 @@ export default function WhoIsSol() {
             </Polaroid>
           ))}
         </PolaroidGrid>
-
-        <FunFactsTitle>{t.funFactsTitle}</FunFactsTitle>
-
-        <FunFactsList>
-          {t.funFacts.map((fact, idx) => (
-            <FunFactItem key={idx}>
-              <strong>{fact.label}</strong> {fact.value}
-            </FunFactItem>
-          ))}
-        </FunFactsList>
 
         <FooterText>{t.footer}</FooterText>
         <FooterText>
