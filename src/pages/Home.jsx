@@ -77,7 +77,7 @@ const ToggleButton = styled.button`
   min-width: 150px;
   border: 1px solid var(--sol-line);
   background-color: ${({ $active }) => ($active ? "var(--sol-rose)" : "transparent")};
-  color: ${({ $active }) => ($active ? "var(--sol-cream)" : "var(--sol-ink-soft)")};
+  color: ${({ $active }) => ($active ? "var(--sol-ink)" : "var(--sol-ink-soft)")};
   border-radius: 8px;
   font-size: 0.85rem;
   cursor: pointer;
@@ -127,35 +127,54 @@ const BadgeBox = styled(motion.div)`
   margin-top: 1.6rem;
 `;
 
+/* Loyalty card type scale — establishes a clear three-tier hierarchy
+   inside the card: BadgeName is the headline, StreakText is the stat
+   (second focal point), everything else is supporting context. */
+
 const BadgeIntro = styled.p`
+  font-size: 0.85rem;
   color: var(--sol-ink-soft);
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
 `;
 
 const BadgeName = styled.p`
-  font-size: 1.1rem;
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.6rem;
+  line-height: 1.1;
   color: var(--sol-ink);
   font-weight: 500;
+  margin: 0.25rem 0 0.3rem;
 `;
 
 const BadgeDesc = styled.p`
+  font-size: 0.9rem;
   color: var(--sol-ink-soft);
+  font-style: italic;
+  line-height: 1.5;
 `;
 
 const StreakText = styled.p`
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.15rem;
   color: var(--sol-ink);
-  margin-top: 0.5rem;
+  margin-top: 0.9rem;
+  font-weight: 500;
 `;
 
 const NextBadgeText = styled.p`
   color: var(--sol-ink-soft);
-  font-size: 0.9rem;
-  margin-top: 0.4rem;
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
   font-style: italic;
+  opacity: 0.85;
 `;
 
 const UnlockedText = styled.p`
-  color: var(--sol-ink);
-  margin-top: 0.5rem;
+  color: var(--sol-sun);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-top: 0.6rem;
 `;
 
 const GamesCard = styled(motion.div)`
