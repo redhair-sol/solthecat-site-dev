@@ -68,7 +68,7 @@ export default function Footer() {
                 marginLeft: "0.4em",
                 verticalAlign: "middle",
                 position: "relative",
-                top: "-0.2em",
+                top: "-0.35em",
               }}
             >
               ♛

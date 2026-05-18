@@ -16,18 +16,26 @@
 // hidden for 30 days afterwards. Already-installed users (running in
 // standalone mode) never see the banner.
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { X, Share } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext.jsx";
 
 const DISMISS_KEY = "solInstallDismissedAt";
 const DISMISS_DAYS = 30;
-const IOS_BANNER_DELAY_MS = 2000;
+// Reveal trigger: either the user scrolls past the hero or 10s elapses,
+// whichever happens first. Earlier behaviour (banner appears almost
+// immediately) overlapped the hero CTAs on mobile first visits.
+const REVEAL_DELAY_MS = 10000;
+const REVEAL_SCROLL_PX = 600;
 
 export default function InstallPrompt() {
   const { language } = useLanguage();
   const [deferredPrompt, setDeferredPrompt] = useState(null);
   const [mode, setMode] = useState(null); // "chromium" | "ios" | null
+  // Ref mirror so the reveal gate (set up once on mount) can read the
+  // current captured prompt without re-running the effect when state
+  // changes.
+  const deferredPromptRef = useRef(null);
 
   const t = {
     en: {
@@ -68,30 +76,50 @@ export default function InstallPrompt() {
 
     if (isRecentlyDismissed() || isStandaloneNow()) return;
 
-    // iOS: no install event exists. Show manual instructions banner after a
-    // short delay so it doesn't compete with first paint.
     const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-    if (isIOS) {
-      const timer = setTimeout(() => {
-        // Re-check at fire time in case state changed during the delay.
-        if (isRecentlyDismissed() || isStandaloneNow()) return;
-        setMode("ios");
-      }, IOS_BANNER_DELAY_MS);
-      return () => clearTimeout(timer);
+
+    // Shared reveal gate — fires whichever of (timer expired) OR (user
+    // scrolled past the hero) happens first. Prevents the banner from
+    // landing on top of the hero CTAs while the visitor is still reading.
+    let fired = false;
+    const reveal = (which) => {
+      if (fired) return;
+      if (isRecentlyDismissed() || isStandaloneNow()) return;
+      // Chromium-only: we need a captured deferredPrompt to be useful.
+      // If the event hasn't fired yet, skip — the handler below will
+      // call reveal() once it does.
+      if (which === "chromium" && !deferredPromptRef.current) return;
+      fired = true;
+      setMode(which);
+    };
+
+    const timer = setTimeout(
+      () => reveal(isIOS ? "ios" : "chromium"),
+      REVEAL_DELAY_MS
+    );
+    const onScroll = () => {
+      if (window.scrollY > REVEAL_SCROLL_PX) {
+        reveal(isIOS ? "ios" : "chromium");
+      }
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    let handler;
+    if (!isIOS) {
+      handler = (event) => {
+        event.preventDefault();
+        setDeferredPrompt(event);
+        deferredPromptRef.current = event;
+        // Don't reveal here — let the gate (timer / scroll) decide when.
+      };
+      window.addEventListener("beforeinstallprompt", handler);
     }
 
-    // Chromium browsers fire beforeinstallprompt when site is installable.
-    const handler = (event) => {
-      event.preventDefault();
-      setDeferredPrompt(event);
-      // Re-check dismiss state on every fire — Chromium re-fires this event
-      // on SPA route changes / installability re-evaluation, which would
-      // resurrect the banner after the user dismissed it.
-      if (isRecentlyDismissed() || isStandaloneNow()) return;
-      setMode("chromium");
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("scroll", onScroll);
+      if (handler) window.removeEventListener("beforeinstallprompt", handler);
     };
-    window.addEventListener("beforeinstallprompt", handler);
-    return () => window.removeEventListener("beforeinstallprompt", handler);
   }, []);
 
   // Successful install (Chromium only — iOS doesn't fire this).
