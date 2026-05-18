@@ -447,10 +447,11 @@ export default function Episodes() {
                       }
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-[0.9rem] font-medium border border-[var(--sol-line)] text-[var(--sol-ink)] no-underline transition-colors hover:bg-[var(--sol-cream)] hover:border-[var(--sol-rose)]"
+                      aria-label={t.igCTA}
+                      className="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-full text-[0.9rem] font-medium border border-[var(--sol-line)] text-[var(--sol-ink)] no-underline transition-colors hover:bg-[var(--sol-cream)] hover:border-[var(--sol-rose)]"
                     >
                       <Instagram size={16} aria-hidden="true" />
-                      {t.igCTA}
+                      <span className="hidden sm:inline">{t.igCTA}</span>
                     </a>
                     <Link
                       to="/games/cityquiz"
