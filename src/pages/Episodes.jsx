@@ -437,13 +437,13 @@ export default function Episodes() {
                 {ep.visible !== false && ep.city && (
                   <div className="flex flex-wrap items-center justify-between gap-3 mt-auto pt-5">
                     {/* See on Instagram. Uses ep.instagramUrl when set, else
-                        falls back to the #soladventures hashtag feed so the
+                        falls back to the main @solthecat01 profile so the
                         button never dead-ends while per-episode URLs are
                         being filled in. */}
                     <a
                       href={
                         ep.instagramUrl ||
-                        "https://www.instagram.com/explore/tags/soladventures/"
+                        "https://www.instagram.com/solthecat01/"
                       }
                       target="_blank"
                       rel="noopener noreferrer"
