@@ -16,7 +16,7 @@ const content = {
     ],
     rights: "All rights reserved.",
     follow: "Follow Sol",
-    madeIn: "Made with 🐾 in Greece",
+    madeIn: "Made with 🐾 in Greece by",
     travelPartnerLead: "Sol travels with",
     partnershipLabel: "Travel partner",
   },
@@ -36,7 +36,7 @@ const content = {
     ],
     rights: "Με επιφύλαξη παντός δικαιώματος.",
     follow: "ΑΚΟΛΟΥΘΗΣΕ ΤΗ SOL",
-    madeIn: "Φτιαγμένο με 🐾 στην Ελλάδα",
+    madeIn: "Φτιαγμένο με 🐾 στην Ελλάδα από τον",
     travelPartnerLead: "Η Sol ταξιδεύει με το",
     partnershipLabel: "Ταξιδιωτικός συνεργάτης",
   },
@@ -139,7 +139,15 @@ export default function Footer() {
             {" · "}
             <span className="opacity-70">{t.partnershipLabel}</span>
           </span>
-          <span>{t.madeIn}</span>
+          <span>
+            {t.madeIn}{" "}
+            <Link
+              to="/contact"
+              className="text-[var(--sol-ink)] hover:text-[var(--sol-mauve)] underline underline-offset-4 transition-colors"
+            >
+              RedhaiR
+            </Link>
+          </span>
         </div>
       </div>
     </footer>
