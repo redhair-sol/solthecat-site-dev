@@ -14,9 +14,13 @@
 //      → Add variable: RESEND_API_KEY = the key from step 3. Re-deploy.
 //
 // Endpoint:
-//   POST /contact   body: { name, email, subject, message, elapsedMs, language }
-//                   → { ok: true } on success
-//                   → { error: "..." } with appropriate status on failure
+//   POST /api/contact body: { name, email, subject, message, elapsedMs, language }
+//                     → { ok: true } on success
+//                     → { error: "..." } with appropriate status on failure
+//
+// Lives under /api/ so the React Router /contact page renders normally.
+// A function at functions/contact.js would intercept GET /contact and return
+// JSON instead of the SPA page.
 //
 // Spam guards (no third-party required):
 //   - Honeypot field "_gotcha" on the client. If filled, server returns 200
