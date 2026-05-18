@@ -116,10 +116,10 @@ export default function MoreMenu({ isOpen, onClose }) {
                 type="button"
                 onClick={() => setLanguage("en")}
                 aria-pressed={language === "en"}
-                className={`transition-colors px-1 ${
+                className={`transition-colors px-1 pb-0.5 border-b-2 ${
                   language === "en"
-                    ? "text-[#1a1614] font-medium"
-                    : "text-[#4a3f37] hover:text-[#1a1614]"
+                    ? "text-[#1a1614] font-semibold border-[#d4a5a5]"
+                    : "text-[#4a3f37] hover:text-[#1a1614] border-transparent"
                 }`}
               >
                 EN
@@ -129,10 +129,10 @@ export default function MoreMenu({ isOpen, onClose }) {
                 type="button"
                 onClick={() => setLanguage("el")}
                 aria-pressed={language === "el"}
-                className={`transition-colors px-1 ${
+                className={`transition-colors px-1 pb-0.5 border-b-2 ${
                   language === "el"
-                    ? "text-[#1a1614] font-medium"
-                    : "text-[#4a3f37] hover:text-[#1a1614]"
+                    ? "text-[#1a1614] font-semibold border-[#d4a5a5]"
+                    : "text-[#4a3f37] hover:text-[#1a1614] border-transparent"
                 }`}
               >
                 GR
