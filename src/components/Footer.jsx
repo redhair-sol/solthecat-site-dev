@@ -18,7 +18,7 @@ const content = {
     follow: "Follow Sol",
     madeIn: "Made with 🐾 in Greece",
     travelPartnerLead: "Sol travels with",
-    partnershipLabel: "Partnership",
+    partnershipLabel: "Travel partner",
   },
   el: {
     tagline: "Το ταξίδι της αιλουροειδούς βασίλισσας ανά τον κόσμο.",
@@ -38,7 +38,7 @@ const content = {
     follow: "ΑΚΟΛΟΥΘΗΣΕ ΤΗ SOL",
     madeIn: "Φτιαγμένο με 🐾 στην Ελλάδα",
     travelPartnerLead: "Η Sol ταξιδεύει με το",
-    partnershipLabel: "Συνεργασία",
+    partnershipLabel: "Ταξιδιωτικός συνεργάτης",
   },
 };
 

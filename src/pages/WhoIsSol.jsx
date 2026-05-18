@@ -115,13 +115,40 @@ const PartnerCard = styled.aside`
   }
 `;
 
+// Eyebrow on the left, logo on the right. The logo is small (56px tall
+// desktop, 44px mobile) so it acts as a partner credit rather than a
+// banner ad. Whole image is clickable, in addition to the inline link
+// inside the paragraph copy.
+const PartnerHeader = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.9rem;
+`;
+
 const PartnerLabel = styled.div`
   font-family: 'Inter', system-ui, sans-serif;
   font-size: 0.72rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--sol-ink-soft);
-  margin-bottom: 0.65rem;
+`;
+
+const PartnerLogo = styled.a`
+  display: inline-flex;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+  &:hover { transform: scale(1.04); }
+  img {
+    display: block;
+    height: 56px;
+    width: auto;
+
+    @media (max-width: 480px) {
+      height: 44px;
+    }
+  }
 `;
 
 const PartnerText = styled.p`
@@ -379,13 +406,30 @@ export default function WhoIsSol() {
         </InlineBlock>
 
         <PartnerCard>
-          <PartnerLabel>
-            {language === "el" ? "Συνεργασία" : "Partnership"}
-          </PartnerLabel>
+          <PartnerHeader>
+            <PartnerLabel>
+              {language === "el" ? "Ταξιδιωτικός συνεργάτης" : "Travel partner"}
+            </PartnerLabel>
+            <PartnerLogo
+              href="https://ilovetours.gr"
+              target="_blank"
+              rel="sponsored nofollow noopener noreferrer"
+              aria-label="ilovetours.gr"
+            >
+              <img
+                src="/images/about/ilt.webp"
+                alt="ilovetours"
+                width="188"
+                height="200"
+                loading="lazy"
+                decoding="async"
+              />
+            </PartnerLogo>
+          </PartnerHeader>
           <PartnerText>
             {language === "el" ? (
               <>
-                Μια βασίλισσα δεν κλείνει η ίδια τα εισιτήρια. Δεν οδηγεί. Δεν ασχολείται με τη διαδρομή. Πίσω από κάθε reel στη Ρώμη, κάθε ύπνο στο Μαρακές, κάθε καρτ ποστάλ από τη Λισαβόνα, υπάρχει κάποιος που κανονίζει στ' αλήθεια, η ομάδα του{" "}
+                Μια βασίλισσα δεν κλείνει η ίδια τα εισιτήρια της. Δεν οδηγεί. Δεν ασχολείται με τη διαδρομή. Πίσω από κάθε reel στη Ρώμη, κάθε ύπνο στο Μαρακές, κάθε καρτ ποστάλ από τη Λισαβόνα, υπάρχει κάποιος που κανονίζει στ' αλήθεια, η ομάδα του{" "}
                 <PartnerLink
                   href="https://ilovetours.gr"
                   target="_blank"
@@ -393,7 +437,7 @@ export default function WhoIsSol() {
                 >
                   ilovetours.gr
                 </PartnerLink>
-                . Αυτοί φροντίζουν τη διαδρομή, τα transfers, τις μικρές λεπτομέρειες που μετατρέπουν έναν προορισμό σε ιστορία. Η Sol απλώς εμφανίζεται και κοιτάζει.
+                . Αυτοί φροντίζουν τη διαδρομή, τα transfers, τις μικρές λεπτομέρειες που μετατρέπουν έναν προορισμό σε ιστορία.
               </>
             ) : (
               <>
@@ -405,7 +449,7 @@ export default function WhoIsSol() {
                 >
                   ilovetours.gr
                 </PartnerLink>
-                . They handle the road, the transfers, the small details that turn a destination into a story. Sol just shows up and stares.
+                . They handle the road, the transfers, the small details that turn a destination into a story.
               </>
             )}
           </PartnerText>
