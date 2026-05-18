@@ -317,7 +317,7 @@ export default function WhoIsSol() {
         { label: "Αγαπημένος άνθρωπος:", value: "Ο μπαμπάς της (προφανώς)." },
       ],
       footer: "Ναι, έχει προσωπικό. Τώρα είσαι κι εσύ μέλος. 🐾",
-      contact: "Για συνεργασίες ή δημοσιογραφική επικοινωνία: ",
+      contact: "Για συνεργασίες: ",
       heroAlt: "Η Sol, editorial πορτρέτο",
       portraitAlt: "Η Sol στο σπίτι στην Αθήνα",
       polaroidAlts: [
