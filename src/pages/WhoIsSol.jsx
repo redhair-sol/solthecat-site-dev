@@ -423,7 +423,11 @@ export default function WhoIsSol() {
               />
             </PartnerLogo>
             <PartnerLabel>
-              {language === "el" ? "Ταξιδιωτικός συνεργάτης" : "Travel partner"}
+              {/* EL pre-uppercased without tonos per the codebase convention
+                  (CSS text-transform: uppercase is not reliable for stripping
+                  Greek accents across all browsers). EN stays sentence-case
+                  and lets CSS uppercase it like the other Footer eyebrows. */}
+              {language === "el" ? "ΤΑΞΙΔΙΩΤΙΚΟΣ ΣΥΝΕΡΓΑΤΗΣ" : "Travel partner"}
             </PartnerLabel>
           </PartnerHeader>
           <PartnerText>
