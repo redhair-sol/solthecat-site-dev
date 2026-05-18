@@ -260,6 +260,7 @@ export default function SOLsJourneyAnimated() {
       metaDescription:
         "Interactive world map of Sol the Cat's travels, 50+ city pins from Athens to Petra. Click any pin to explore that SOLadventure.",
       heading: <>Sol's <TitleEm>Journey</TitleEm></>,
+      intro: "See Sol's adventures unfold, stop by stop.",
       currentLocation: "📍 Current Location: ",
       showJourney: "▶️ Show Journey",
       replayJourney: "🔁 Replay Journey",
@@ -269,6 +270,7 @@ export default function SOLsJourneyAnimated() {
       metaDescription:
         "Διαδραστικός παγκόσμιος χάρτης των ταξιδιών της Sol the Cat, 50+ πόλεις από την Αθήνα μέχρι την Πέτρα. Κλικ σε κάθε pin για το αντίστοιχο SOLadventure.",
       heading: <>Το Ταξίδι της <TitleEm>Sol</TitleEm></>,
+      intro: "Δες τις περιπέτειες της Sol, στάση στάση.",
       currentLocation: "📍 Τρέχουσα Τοποθεσία: ",
       showJourney: "▶️ Δες το Ταξίδι",
       replayJourney: "🔁 Δες το Ξανά",
@@ -283,9 +285,14 @@ export default function SOLsJourneyAnimated() {
   const center = route.length > 0 ? route[route.length - 1] : [45, 10];
   const lastTitle = episodes.length > 0 ? epTitle(episodes[episodes.length - 1]) : "";
 
+  // Idle state shows the intro that explains what Show Journey does;
+  // during playback the subheading flips to the current city title so the
+  // map narrates itself. The "Current Location:" line was the previous
+  // idle copy — informative but didn't tell the user what the button does,
+  // which is the more useful first-visit signal.
   const subheadingText = phase === "playing" && titles[currentIndex]
     ? titles[currentIndex]
-    : `${t.currentLocation}${lastTitle}`;
+    : t.intro;
 
   const handleStart = () => {
     setPhase("playing");
