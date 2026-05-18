@@ -71,6 +71,19 @@ const Subheading = styled.p`
   margin-bottom: 1.5rem;
 `;
 
+// Small secondary line under the intro — shows where Sol is currently
+// pinned on the map. Sans + non-italic so it reads as metadata rather
+// than continuation of the editorial intro line above.
+const SubheadingMeta = styled.span`
+  display: block;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-style: normal;
+  font-size: 0.85rem;
+  color: var(--sol-ink-soft);
+  margin-top: 0.35rem;
+  opacity: 0.9;
+`;
+
 // Matches SolButton style (used everywhere else for primary CTAs) but is a
 // real <button> with disabled state instead of a <Link>.
 const JourneyButton = styled.button`
@@ -285,14 +298,11 @@ export default function SOLsJourneyAnimated() {
   const center = route.length > 0 ? route[route.length - 1] : [45, 10];
   const lastTitle = episodes.length > 0 ? epTitle(episodes[episodes.length - 1]) : "";
 
-  // Idle state shows the intro that explains what Show Journey does;
-  // during playback the subheading flips to the current city title so the
-  // map narrates itself. The "Current Location:" line was the previous
-  // idle copy — informative but didn't tell the user what the button does,
-  // which is the more useful first-visit signal.
-  const subheadingText = phase === "playing" && titles[currentIndex]
-    ? titles[currentIndex]
-    : t.intro;
+  // Idle state shows the intro that explains what Show Journey does AND
+  // a small secondary line with the current pinned location. During
+  // playback the subheading flips to the current city title so the map
+  // narrates itself.
+  const isPlaying = phase === "playing" && titles[currentIndex];
 
   const handleStart = () => {
     setPhase("playing");
@@ -323,7 +333,20 @@ export default function SOLsJourneyAnimated() {
         transition={{ duration: 0.8 }}
       >
         <Heading>{t.heading}</Heading>
-        <Subheading>{subheadingText}</Subheading>
+        <Subheading>
+          {isPlaying ? (
+            titles[currentIndex]
+          ) : (
+            <>
+              {t.intro}
+              {lastTitle && (
+                <SubheadingMeta>
+                  {t.currentLocation}{lastTitle}
+                </SubheadingMeta>
+              )}
+            </>
+          )}
+        </Subheading>
 
         {route.length > 1 && (
           <JourneyButton onClick={handleStart} disabled={phase === "playing"}>
