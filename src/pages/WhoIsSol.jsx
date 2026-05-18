@@ -95,6 +95,55 @@ const InlineParagraph = styled.p`
   &:last-child { margin-bottom: 0; }
 `;
 
+// Partnership note. Bridges the "Sol's life in Athens" block to the broader
+// "rest of the world" story by introducing ilovetours, the real travel
+// agency that arranges her trips. Styled as a quiet aside (cream-2 card +
+// uppercase eyebrow label) so it reads as editorial sidenote rather than
+// an ad slot. Link carries rel="sponsored nofollow" because this is a
+// commercial/family partnership and search engines should not transfer
+// PageRank to it.
+const PartnerCard = styled.aside`
+  max-width: 720px;
+  margin: 2.5rem auto;
+  padding: 1.5rem 1.75rem;
+  background: var(--sol-cream-2);
+  border-radius: 12px;
+  border: 1px solid var(--sol-line);
+
+  @media (max-width: 600px) {
+    padding: 1.25rem 1.25rem 1.4rem;
+  }
+`;
+
+const PartnerLabel = styled.div`
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sol-ink-soft);
+  margin-bottom: 0.65rem;
+`;
+
+const PartnerText = styled.p`
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--sol-ink);
+  margin: 0;
+`;
+
+const PartnerLink = styled.a`
+  color: var(--sol-ink);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid var(--sol-sun);
+  transition: color 0.15s ease, border-color 0.15s ease;
+  &:hover {
+    color: var(--sol-sun);
+    border-color: var(--sol-ink);
+  }
+`;
+
 const FunFactsTitle = styled.h2`
   font-family: 'Instrument Serif', serif;
   font-size: 1.9rem;
@@ -328,6 +377,39 @@ export default function WhoIsSol() {
             ))}
           </div>
         </InlineBlock>
+
+        <PartnerCard>
+          <PartnerLabel>
+            {language === "el" ? "Συνεργασία" : "Partnership"}
+          </PartnerLabel>
+          <PartnerText>
+            {language === "el" ? (
+              <>
+                Μια βασίλισσα δεν κλείνει η ίδια τα εισιτήρια. Δεν οδηγεί. Δεν ασχολείται με τη διαδρομή. Πίσω από κάθε reel στη Ρώμη, κάθε ύπνο στο Μαρακές, κάθε καρτ ποστάλ από τη Λισαβόνα, υπάρχει κάποιος που κανονίζει στ' αλήθεια, η ομάδα του{" "}
+                <PartnerLink
+                  href="https://ilovetours.gr"
+                  target="_blank"
+                  rel="sponsored nofollow noopener noreferrer"
+                >
+                  ilovetours.gr
+                </PartnerLink>
+                . Αυτοί φροντίζουν τη διαδρομή, τα transfers, τις μικρές λεπτομέρειες που μετατρέπουν έναν προορισμό σε ιστορία. Η Sol απλώς εμφανίζεται και κοιτάζει.
+              </>
+            ) : (
+              <>
+                A queen doesn't book her own flights. She doesn't drive. She doesn't worry about the route. Behind every reel from Rome, every nap in Marrakech, every postcard from Lisbon, there's someone who actually plans things, the team at{" "}
+                <PartnerLink
+                  href="https://ilovetours.gr"
+                  target="_blank"
+                  rel="sponsored nofollow noopener noreferrer"
+                >
+                  ilovetours.gr
+                </PartnerLink>
+                . They handle the road, the transfers, the small details that turn a destination into a story. Sol just shows up and stares.
+              </>
+            )}
+          </PartnerText>
+        </PartnerCard>
 
         <FunFactsTitle>{t.funFactsTitle}</FunFactsTitle>
 

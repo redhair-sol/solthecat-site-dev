@@ -17,6 +17,8 @@ const content = {
     rights: "All rights reserved.",
     follow: "Follow Sol",
     madeIn: "Made with 🐾 in Greece",
+    travelPartnerLead: "Sol travels with",
+    partnershipLabel: "Partnership",
   },
   el: {
     tagline: "Το ταξίδι της αιλουροειδούς βασίλισσας ανά τον κόσμο.",
@@ -35,6 +37,8 @@ const content = {
     rights: "Με επιφύλαξη παντός δικαιώματος.",
     follow: "ΑΚΟΛΟΥΘΗΣΕ ΤΗ SOL",
     madeIn: "Φτιαγμένο με 🐾 στην Ελλάδα",
+    travelPartnerLead: "Η Sol ταξιδεύει με το",
+    partnershipLabel: "Συνεργασία",
   },
 };
 
@@ -119,6 +123,19 @@ export default function Footer() {
       <div className="border-t border-[var(--sol-line)]">
         <div className="max-w-6xl mx-auto px-4 py-4 sm:py-5 text-xs text-[var(--sol-ink-soft)] flex flex-col items-center gap-2 text-center">
           <span>© {year} sol the cat · {t.rights}</span>
+          <span>
+            {t.travelPartnerLead}{" "}
+            <a
+              href="https://ilovetours.gr"
+              target="_blank"
+              rel="sponsored nofollow noopener noreferrer"
+              className="text-[var(--sol-ink)] hover:text-[var(--sol-mauve)] underline underline-offset-4 transition-colors"
+            >
+              ilovetours.gr
+            </a>
+            {" · "}
+            <span className="opacity-70">{t.partnershipLabel}</span>
+          </span>
           <span>{t.madeIn}</span>
         </div>
       </div>
