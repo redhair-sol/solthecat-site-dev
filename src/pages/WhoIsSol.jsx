@@ -7,12 +7,6 @@ import PageContainer from "../components/PageContainer.jsx";
 import TitleEm from "../components/TitleEm.jsx";
 import styled from "styled-components";
 
-const Content = styled.div`
-  max-width: 768px;
-  margin: 0 auto;
-  text-align: center;
-`;
-
 const Title = styled.h1`
   font-family: 'Instrument Serif', serif;
   font-size: clamp(2.4rem, 6vw, 3.6rem);
@@ -30,11 +24,74 @@ const Subtitle = styled.p`
   margin-bottom: 2rem;
 `;
 
+// Hero portrait at the top of the page. 16:10 landscape source; stays in
+// proportion across breakpoints. Rounded corners + soft ink shadow tie it
+// to the editorial system without competing with the wordmark above.
+const HeroPhoto = styled.img`
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 2.5rem;
+  border-radius: 16px;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  box-shadow: 0 8px 30px -10px rgba(26, 22, 20, 0.18);
+`;
+
 const IntroText = styled.p`
   font-size: 1rem;
   color: var(--sol-ink-soft);
-  margin-bottom: 1.5rem;
+  margin: 0 auto 1.5rem;
   line-height: 1.6;
+  max-width: 720px;
+  text-align: left;
+
+  @media (max-width: 600px) {
+    text-align: justify;
+  }
+`;
+
+const SectionHeading = styled.h2`
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(1.7rem, 3.5vw, 2.3rem);
+  color: var(--sol-ink);
+  font-weight: 500;
+  margin: 3rem 0 1.5rem;
+  text-align: center;
+`;
+
+// 2-column "photo + paragraph" block. Stacks on tablet portrait via the
+// same 1023 breakpoint we use elsewhere for hero/footer.
+const InlineBlock = styled.div`
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 3rem;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+  text-align: left;
+
+  @media (max-width: 1023px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 560px;
+  }
+`;
+
+const InlinePhoto = styled.img`
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  box-shadow: 0 4px 18px -6px rgba(26, 22, 20, 0.18);
+`;
+
+const InlineParagraph = styled.p`
+  font-size: 1.02rem;
+  color: var(--sol-ink-soft);
+  line-height: 1.7;
+  margin: 0;
 `;
 
 const FunFactsTitle = styled.h2`
@@ -42,7 +99,43 @@ const FunFactsTitle = styled.h2`
   font-size: 1.9rem;
   color: var(--sol-ink);
   font-weight: 500;
-  margin: 2rem 0 1rem;
+  margin: 3rem 0 1rem;
+  text-align: center;
+`;
+
+// 3 polaroid-framed candids. Mirrors the Gallery polaroid treatment
+// (cream padding + dual ink shadow) so the About page reads as part of
+// the same editorial chassis.
+const PolaroidGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 1.2rem auto 2.5rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    max-width: 360px;
+  }
+`;
+
+const Polaroid = styled.figure`
+  margin: 0;
+  background: var(--sol-cream);
+  padding: 10px 10px 14px;
+  border-radius: 4px;
+  box-shadow:
+    0 1px 2px rgba(26, 22, 20, 0.08),
+    0 8px 20px -8px rgba(26, 22, 20, 0.18);
+`;
+
+const PolaroidImg = styled.img`
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 2px;
 `;
 
 const FunFactsList = styled.ul`
@@ -52,6 +145,8 @@ const FunFactsList = styled.ul`
   color: var(--sol-ink);
   font-size: 1rem;
   line-height: 1.6;
+  max-width: 720px;
+  margin: 0 auto;
 `;
 
 const FunFactItem = styled.li`
@@ -66,7 +161,8 @@ const FunFactItem = styled.li`
 const FooterText = styled.p`
   font-size: 0.875rem;
   color: var(--sol-ink-soft);
-  margin-top: 2rem;
+  margin: 2rem auto 0;
+  max-width: 720px;
 `;
 
 const ContactLink = styled.a`
@@ -90,6 +186,7 @@ export default function WhoIsSol() {
       subtitle: "The tale behind the stare",
       intro1:
         "Sol, known online as solthecat, wasn’t born to go unnoticed. She has the stillness that speaks louder than words, the grace of a queen without a crown, and the step of a cat who knows everything belongs to her. She’s the soul of SOLadventures, a storyteller with paws full of tales, wandering from Athens' marble to the pages of imagination… and then, to Instagram.",
+      lifeInAthens: "Life in Athens",
       intro2:
         "Raised in Athens, Sol always felt the windows of her neighborhood were too small for her world. She began quietly, curiosity in her gaze, dignity in her posture. But somewhere between the Parthenon and her first reel, she became more than a cat. She became a symbol. She became Sol.",
       funFactsTitle: "✨ Fun Facts About Sol",
@@ -106,12 +203,20 @@ export default function WhoIsSol() {
       ],
       footer: "Yes, she has staff. You’re one of them now. 🐾",
       contact: "For press or collaborations: ",
+      heroAlt: "Sol the cat, editorial portrait",
+      portraitAlt: "Sol at home in Athens",
+      polaroidAlts: [
+        "Candid moment with Sol",
+        "Sol in a quiet pose",
+        "Sol with her signature stare",
+      ],
     },
     el: {
       title: <>Η Ιστορία της <TitleEm>Sol</TitleEm></>,
       subtitle: "Η ιστορία πίσω από το βλέμμα",
       intro1:
         "Η Sol, γνωστή στο διαδίκτυο ως solthecat, δεν γεννήθηκε για να περάσει απαρατήρητη. Έχει το βλέμμα της σιωπής που σε καθηλώνει, τη χάρη μιας βασίλισσας που δε χρειάζεται στέμμα και το βήμα μιας γάτας που ξέρει πως όλα της ανήκουν. Είναι η ψυχή των SOLadventures, μια αφηγήτρια με πατούσες γεμάτες ιστορίες, που περιπλανιούνται από τα μάρμαρα της Αθήνας ώς τις σελίδες της φαντασίας… κι από εκεί, στο Instagram.",
+      lifeInAthens: "Ζωή στην Αθήνα",
       intro2:
         "Μεγαλωμένη στην Αθήνα, η Sol ένιωθε πάντα πως τα παράθυρα της γειτονιάς δεν της έφταναν. Ξεκίνησε σιωπηλά, με περιέργεια στα μάτια και αξιοπρέπεια στο βλέμμα. Κάπου όμως, ανάμεσα στον Παρθενώνα και το πρώτο της reel, έγινε κάτι παραπάνω από γάτα. Έγινε σύμβολο. Έγινε Sol.",
       funFactsTitle: "✨ Μικρά Μυστικά της Sol",
@@ -128,6 +233,13 @@ export default function WhoIsSol() {
       ],
       footer: "Ναι, έχει προσωπικό. Τώρα είσαι κι εσύ μέλος. 🐾",
       contact: "Για συνεργασίες ή δημοσιογραφική επικοινωνία: ",
+      heroAlt: "Η Sol, editorial πορτρέτο",
+      portraitAlt: "Η Sol στο σπίτι στην Αθήνα",
+      polaroidAlts: [
+        "Στιγμή με τη Sol",
+        "Η Sol σε ήρεμη πόζα",
+        "Η Sol με το χαρακτηριστικό της βλέμμα",
+      ],
     },
   };
 
@@ -175,27 +287,65 @@ export default function WhoIsSol() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <Content>
-          <Title>{t.title}</Title>
-          <Subtitle>{t.subtitle}</Subtitle>
-          <IntroText>{t.intro1}</IntroText>
-          <IntroText>{t.intro2}</IntroText>
-          <FunFactsTitle>{t.funFactsTitle}</FunFactsTitle>
-          <FunFactsList>
-            {t.funFacts.map((fact, idx) => (
-              <FunFactItem key={idx}>
-                <strong>{fact.label}</strong> {fact.value}
-              </FunFactItem>
-            ))}
-          </FunFactsList>
-          <FooterText>{t.footer}</FooterText>
-          <FooterText>
-            {t.contact}
-            <ContactLink href="mailto:info@solthecat.com">
-              info@solthecat.com
-            </ContactLink>
-          </FooterText>
-        </Content>
+        <Title>{t.title}</Title>
+        <Subtitle>{t.subtitle}</Subtitle>
+
+        <HeroPhoto
+          src="/images/about/hero.webp"
+          alt={t.heroAlt}
+          width="1586"
+          height="992"
+          loading="eager"
+          decoding="async"
+        />
+
+        <IntroText>{t.intro1}</IntroText>
+
+        <SectionHeading>{t.lifeInAthens}</SectionHeading>
+        <InlineBlock>
+          <InlinePhoto
+            src="/images/about/portrait.webp"
+            alt={t.portraitAlt}
+            width="1122"
+            height="1402"
+            loading="lazy"
+            decoding="async"
+          />
+          <InlineParagraph>{t.intro2}</InlineParagraph>
+        </InlineBlock>
+
+        <FunFactsTitle>{t.funFactsTitle}</FunFactsTitle>
+
+        <PolaroidGrid>
+          {[1, 2, 3].map((n, i) => (
+            <Polaroid key={n}>
+              <PolaroidImg
+                src={`/images/about/square0${n}.webp`}
+                alt={t.polaroidAlts[i]}
+                width="1254"
+                height="1254"
+                loading="lazy"
+                decoding="async"
+              />
+            </Polaroid>
+          ))}
+        </PolaroidGrid>
+
+        <FunFactsList>
+          {t.funFacts.map((fact, idx) => (
+            <FunFactItem key={idx}>
+              <strong>{fact.label}</strong> {fact.value}
+            </FunFactItem>
+          ))}
+        </FunFactsList>
+
+        <FooterText>{t.footer}</FooterText>
+        <FooterText>
+          {t.contact}
+          <ContactLink href="mailto:info@solthecat.com">
+            info@solthecat.com
+          </ContactLink>
+        </FooterText>
       </PageContainer>
     </>
   );
