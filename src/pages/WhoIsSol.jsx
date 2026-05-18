@@ -104,15 +104,16 @@ const FunFactsTitle = styled.h2`
   text-align: center;
 `;
 
-// 3 polaroid-framed candids. Mirrors the Gallery polaroid treatment
-// (cream padding + dual ink shadow) so the About page reads as part of
-// the same editorial chassis.
+// 3 candids that act as a visual breath between the Life in Athens block
+// and the Fun Facts list. Frame matches the Gallery Tile exactly (same
+// cream padding + ink shadow + 4px / 2px radii) so the two pages read as
+// one collection.
 const PolaroidGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   max-width: 900px;
-  margin: 1.2rem auto 2.5rem;
+  margin: 1rem auto;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -124,7 +125,7 @@ const PolaroidGrid = styled.div`
 const Polaroid = styled.figure`
   margin: 0;
   background: var(--sol-cream);
-  padding: 10px 10px 14px;
+  padding: 8px 8px 10px;
   border-radius: 4px;
   box-shadow:
     0 1px 2px rgba(26, 22, 20, 0.08),
@@ -329,8 +330,6 @@ export default function WhoIsSol() {
           </div>
         </InlineBlock>
 
-        <FunFactsTitle>{t.funFactsTitle}</FunFactsTitle>
-
         <PolaroidGrid>
           {[1, 2, 3].map((n, i) => (
             <Polaroid key={n}>
@@ -345,6 +344,8 @@ export default function WhoIsSol() {
             </Polaroid>
           ))}
         </PolaroidGrid>
+
+        <FunFactsTitle>{t.funFactsTitle}</FunFactsTitle>
 
         <FunFactsList>
           {t.funFacts.map((fact, idx) => (
