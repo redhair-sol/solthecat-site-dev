@@ -115,16 +115,15 @@ const PartnerCard = styled.aside`
   }
 `;
 
-// Eyebrow on the left, logo on the right. The logo is small (56px tall
-// desktop, 44px mobile) so it acts as a partner credit rather than a
-// banner ad. Whole image is clickable, in addition to the inline link
-// inside the paragraph copy.
+// Logo centered on top, eyebrow label centered below it. Acts as a partner
+// credit rather than a banner ad. Whole logo image is clickable, in
+// addition to the inline link inside the paragraph copy.
 const PartnerHeader = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: 0.9rem;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 `;
 
 const PartnerLabel = styled.div`
@@ -133,6 +132,7 @@ const PartnerLabel = styled.div`
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--sol-ink-soft);
+  text-align: center;
 `;
 
 const PartnerLogo = styled.a`
@@ -407,9 +407,6 @@ export default function WhoIsSol() {
 
         <PartnerCard>
           <PartnerHeader>
-            <PartnerLabel>
-              {language === "el" ? "Ταξιδιωτικός συνεργάτης" : "Travel partner"}
-            </PartnerLabel>
             <PartnerLogo
               href="https://ilovetours.gr"
               target="_blank"
@@ -425,6 +422,9 @@ export default function WhoIsSol() {
                 decoding="async"
               />
             </PartnerLogo>
+            <PartnerLabel>
+              {language === "el" ? "Ταξιδιωτικός συνεργάτης" : "Travel partner"}
+            </PartnerLabel>
           </PartnerHeader>
           <PartnerText>
             {language === "el" ? (
