@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { Search, X } from "lucide-react";
+import { Search, X, Instagram } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import PageContainer from "../components/PageContainer.jsx";
 import { fonts } from "../theme.js";
@@ -130,6 +130,7 @@ export default function Episodes() {
       storyTitle: "SOL’s Tale",
       loadFail: "Couldn't load episodes. Please try refreshing the page.",
       quizCTA: (city) => `Play the ${city} quiz →`,
+      igCTA: "See on Instagram",
       metaDescription:
         "All 52 SOLadventures, short travel stories from Athens, Rome, Paris, Marrakech, Petra and beyond. Each city, a queen's-eye view.",
       regions: {
@@ -153,6 +154,7 @@ export default function Episodes() {
       storyTitle: "Το Παραμύθι της SOL",
       loadFail: "Δεν φόρτωσαν τα επεισόδια. Παρακαλώ δοκίμασε refresh.",
       quizCTA: (city) => `Παίξε το quiz της ${city} →`,
+      igCTA: "Δες στο Instagram",
       metaDescription:
         "Όλα τα 52 SOLadventures, μικρές ταξιδιωτικές ιστορίες από Αθήνα, Ρώμη, Παρίσι, Μαρακές, Πέτρα και ακόμη πιο πέρα. Κάθε πόλη, μια βασιλική ματιά.",
       regions: {
@@ -433,7 +435,23 @@ export default function Episodes() {
                 )}
 
                 {ep.visible !== false && ep.city && (
-                  <div className="flex justify-end mt-5">
+                  <div className="flex flex-wrap items-center justify-between gap-3 mt-5">
+                    {/* See on Instagram. Uses ep.instagramUrl when set, else
+                        falls back to the #soladventures hashtag feed so the
+                        button never dead-ends while per-episode URLs are
+                        being filled in. */}
+                    <a
+                      href={
+                        ep.instagramUrl ||
+                        "https://www.instagram.com/explore/tags/soladventures/"
+                      }
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-[0.9rem] font-medium border border-[var(--sol-line)] text-[var(--sol-ink)] no-underline transition-colors hover:bg-[var(--sol-cream)] hover:border-[var(--sol-rose)]"
+                    >
+                      <Instagram size={16} aria-hidden="true" />
+                      {t.igCTA}
+                    </a>
                     <Link
                       to="/games/cityquiz"
                       className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-[0.9rem] font-medium bg-[var(--sol-plum)] text-[var(--sol-cream)] no-underline transition-all hover:bg-[var(--sol-mauve)] hover:scale-[1.02] shadow-[0_2px_8px_rgba(26,22,20,0.12)]"
