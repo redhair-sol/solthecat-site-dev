@@ -435,7 +435,7 @@ export default function Episodes() {
                 )}
 
                 {ep.visible !== false && ep.city && (
-                  <div className="flex flex-wrap items-center justify-between gap-3 mt-auto pt-5">
+                  <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-3 mt-auto pt-5">
                     {/* See on Instagram. Uses ep.instagramUrl when set, else
                         falls back to the main @solthecat01 profile so the
                         button never dead-ends while per-episode URLs are
@@ -447,15 +447,14 @@ export default function Episodes() {
                       }
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label={t.igCTA}
-                      className="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-full text-[0.9rem] font-medium border border-[var(--sol-line)] text-[var(--sol-ink)] no-underline transition-colors hover:bg-[var(--sol-cream)] hover:border-[var(--sol-rose)]"
+                      className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full text-[0.9rem] font-medium border border-[var(--sol-line)] text-[var(--sol-ink)] no-underline transition-colors hover:bg-[var(--sol-cream)] hover:border-[var(--sol-rose)] w-full sm:w-auto"
                     >
                       <Instagram size={16} aria-hidden="true" />
-                      <span className="hidden sm:inline">{t.igCTA}</span>
+                      {t.igCTA}
                     </a>
                     <Link
                       to="/games/cityquiz"
-                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-[0.9rem] font-medium bg-[var(--sol-plum)] text-[var(--sol-cream)] no-underline transition-all hover:bg-[var(--sol-mauve)] hover:scale-[1.02] shadow-[0_2px_8px_rgba(26,22,20,0.12)]"
+                      className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full text-[0.9rem] font-medium bg-[var(--sol-plum)] text-[var(--sol-cream)] no-underline transition-all hover:bg-[var(--sol-mauve)] hover:scale-[1.02] shadow-[0_2px_8px_rgba(26,22,20,0.12)] w-full sm:w-auto"
                     >
                       {t.quizCTA(extractCityName(ep, language))}
                     </Link>
