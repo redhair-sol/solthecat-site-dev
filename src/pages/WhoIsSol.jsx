@@ -283,7 +283,7 @@ export default function WhoIsSol() {
         { label: "Favorite human:", value: "Her dad (obviously)." },
       ],
       footer: "Yes, she has staff. You’re one of them now. 🐾",
-      contact: "For press or collaborations: ",
+      contact: "For collaborations: ",
       heroAlt: "Sol the cat, editorial portrait",
       portraitAlt: "Sol at home in Athens",
       polaroidAlts: [
