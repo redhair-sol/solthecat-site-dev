@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import PageContainer from "../components/PageContainer.jsx";
 import { celebrate } from "../utils/celebrate.js";
@@ -228,6 +228,13 @@ const SmallButton = styled.button`
 `;
 
 export default function QuizPlayer() {
+  // When an Adventures card links here with ?city=athens we pre-select that
+  // episode's quiz instead of defaulting to the first visible one. The URL
+  // is the source of truth: if it carries a city slug and we have the
+  // matching episode loaded, the dropdown jumps to it on mount.
+  const [searchParams] = useSearchParams();
+  const cityFromUrl = searchParams.get("city");
+
   const [episodes, setEpisodes] = useState([]);
   const [selectedId, setSelectedId] = useState("");
   const [questions, setQuestions] = useState([]);
@@ -311,10 +318,29 @@ export default function QuizPlayer() {
       .then((data) => {
         const visible = data.filter((ep) => ep.visible);
         setEpisodes(visible);
-        if (visible.length > 0) setSelectedId(visible[0].id.toString());
       })
       .catch(() => setError(t.errLoadEpisodes));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  // Pre-select an episode once we have the list. Priority: ?city=... param
+  // (Adventures-card deep link), otherwise the first visible episode. If
+  // the user later changes language and the URL still has a city, we keep
+  // honoring it so the selection survives the re-mount.
+  useEffect(() => {
+    if (episodes.length === 0) return;
+    if (cityFromUrl) {
+      const target = episodes.find(
+        (ep) => (ep.city || "").toLowerCase() === cityFromUrl.toLowerCase()
+      );
+      if (target) {
+        setSelectedId(target.id.toString());
+        return;
+      }
+    }
+    if (!selectedId) setSelectedId(episodes[0].id.toString());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [episodes, cityFromUrl]);
 
   const selectedEpisode = episodes.find((ep) => ep.id.toString() === selectedId);
   const city = selectedEpisode?.city;

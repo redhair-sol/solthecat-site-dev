@@ -453,7 +453,7 @@ export default function Episodes() {
                       {t.igCTA}
                     </a>
                     <Link
-                      to="/games/cityquiz"
+                      to={`/games/cityquiz?city=${encodeURIComponent(ep.city)}`}
                       className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full text-[0.9rem] font-medium bg-[var(--sol-plum)] text-[var(--sol-cream)] no-underline transition-all hover:bg-[var(--sol-mauve)] hover:scale-[1.02] shadow-[0_2px_8px_rgba(26,22,20,0.12)] w-full sm:w-auto"
                     >
                       {t.quizCTA(extractCityName(ep, language))}
