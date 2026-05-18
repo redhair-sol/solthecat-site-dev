@@ -93,10 +93,10 @@ export default function Topbar() {
               type="button"
               onClick={() => setLanguage("en")}
               aria-pressed={language === "en"}
-              className={`transition-colors px-1 ${
+              className={`transition-colors px-1 pb-0.5 border-b-2 ${
                 language === "en"
-                  ? "text-[var(--sol-ink)] font-medium"
-                  : "text-[var(--sol-ink-soft)] hover:text-[var(--sol-ink)]"
+                  ? "text-[var(--sol-ink)] font-semibold border-[var(--sol-rose)]"
+                  : "text-[var(--sol-ink-soft)] hover:text-[var(--sol-ink)] border-transparent"
               }`}
             >
               EN
@@ -106,10 +106,10 @@ export default function Topbar() {
               type="button"
               onClick={() => setLanguage("el")}
               aria-pressed={language === "el"}
-              className={`transition-colors px-1 ${
+              className={`transition-colors px-1 pb-0.5 border-b-2 ${
                 language === "el"
-                  ? "text-[var(--sol-ink)] font-medium"
-                  : "text-[var(--sol-ink-soft)] hover:text-[var(--sol-ink)]"
+                  ? "text-[var(--sol-ink)] font-semibold border-[var(--sol-rose)]"
+                  : "text-[var(--sol-ink-soft)] hover:text-[var(--sol-ink)] border-transparent"
               }`}
             >
               GR
