@@ -18,8 +18,35 @@ function extractCityName(ep, lang) {
     (typeof ep.title === "object" ? ep.title[lang] : ep.title) || "";
   const afterDash = title.split(" – ")[1];
   if (afterDash) {
+    // Pattern 1: "City, rest". Accept only when the candidate looks like
+    // an actual city (≤2 words, starts with a capital) so editorial titles
+    // without a comma (e.g. "Feline flair meets Parisian air") fall through
+    // instead of wrapping the entire rest in italic gold.
     const beforeComma = afterDash.split(",")[0].trim();
-    if (beforeComma) return beforeComma;
+    if (
+      beforeComma &&
+      beforeComma.split(/\s+/).length <= 2 &&
+      /^[\p{Lu}]/u.test(beforeComma)
+    ) {
+      return beforeComma;
+    }
+
+    // Pattern 2: no usable comma — match ep.city against words after the
+    // dash. Exact match first, then prefix so a slug like "paris" can
+    // light up the adjective "Parisian".
+    if (ep.city) {
+      const slug = ep.city.replace(/-/g, "").toLowerCase();
+      const words = afterDash
+        .split(/\s+/)
+        .map((w) => w.replace(/[^\p{L}]/gu, ""))
+        .filter(Boolean);
+      const exact = words.find((w) => w.toLowerCase() === slug);
+      if (exact) return exact;
+      const prefix = words.find(
+        (w) => w.toLowerCase().startsWith(slug) && w.length > slug.length
+      );
+      if (prefix) return prefix;
+    }
   }
   if (ep.city) {
     return ep.city
