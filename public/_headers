@@ -6,7 +6,7 @@
   Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=()
   Cross-Origin-Opener-Policy: same-origin-allow-popups
   Cross-Origin-Resource-Policy: same-origin
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-eBxj/VKoChJtsPZ1yB3mPQDFBaprVf1CUF/VBbAQu/c=' 'sha256-h6m11rTYITmlfJAgJWqoLnWCK/xpG/fGFIx0qQw4nP8=' 'sha256-g9MirRUz8yo2qG1RDsIku0OBC03varB4omhkBYzAr9c=' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data: blob: https:; connect-src 'self' https://solcam.solthecat.com https://cloudflareinsights.com https://*.cloudflareinsights.com; frame-src https://docs.google.com; media-src 'self' https://solcam.solthecat.com blob:; object-src 'none'; base-uri 'self'; form-action 'self' https://docs.google.com
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-eBxj/VKoChJtsPZ1yB3mPQDFBaprVf1CUF/VBbAQu/c=' 'sha256-h6m11rTYITmlfJAgJWqoLnWCK/xpG/fGFIx0qQw4nP8=' 'sha256-g9MirRUz8yo2qG1RDsIku0OBC03varB4omhkBYzAr9c=' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data: blob: https:; connect-src 'self' https://solcam.solthecat.com https://cloudflareinsights.com https://*.cloudflareinsights.com; media-src 'self' https://solcam.solthecat.com blob:; object-src 'none'; base-uri 'self'; form-action 'self'
 
 /sitemap.xml
   Content-Type: application/xml
