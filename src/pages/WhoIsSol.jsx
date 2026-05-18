@@ -91,7 +91,8 @@ const InlineParagraph = styled.p`
   font-size: 1.02rem;
   color: var(--sol-ink-soft);
   line-height: 1.7;
-  margin: 0;
+  margin: 0 0 1rem;
+  &:last-child { margin-bottom: 0; }
 `;
 
 const FunFactsTitle = styled.h2`
@@ -184,11 +185,15 @@ export default function WhoIsSol() {
     en: {
       title: <>Sol’s <TitleEm>Story</TitleEm></>,
       subtitle: "The tale behind the stare",
-      intro1:
+      intro1: [
         "Sol, known online as solthecat, wasn’t born to go unnoticed. She has the stillness that speaks louder than words, the grace of a queen without a crown, and the step of a cat who knows everything belongs to her. She’s the soul of SOLadventures, a storyteller with paws full of tales, wandering from Athens' marble to the pages of imagination… and then, to Instagram.",
-      lifeInAthens: "Life in Athens",
-      intro2:
-        "Raised in Athens, Sol always felt the windows of her neighborhood were too small for her world. She began quietly, curiosity in her gaze, dignity in her posture. But somewhere between the Parthenon and her first reel, she became more than a cat. She became a symbol. She became Sol.",
+        "What makes her hers is the stare. A long, patient look that decides whether you are worth the second glance. She is suspicious of grand gestures and unimpressed by gifts that cost more than a sunbeam. She trusts slowly, judges quickly, and forgives only her dad, who has been her favorite human since the first time he let her sleep on his keyboard. Everything you read on this site, every reel, every adventure, begins with that look.",
+      ],
+      lifeInAthens: <>Life in <TitleEm>Athens</TitleEm></>,
+      intro2: [
+        "She was raised in Athens, on a balcony that smelled of basil and warm marble. The city taught her early. Sun is currency, and the best one is the one you don’t share. She learned the geography of her neighborhood by ear: the gate that creaks at six, the moped that rounds the corner at noon, the cat across the road who is, frankly, no competition.",
+        "Somewhere between the Parthenon and her first reel, the world got bigger. The windows of the apartment stopped being enough. She started traveling, first in her dad’s lap, then in his stories, then on her own terms. Athens stayed her ground. The rest became her stage. Quietly, queenly, on her own schedule, she became Sol.",
+      ],
       funFactsTitle: "✨ Fun Facts About Sol",
       funFacts: [
         { label: "Favorite food:", value: "Cooked chicken. With attitude." },
@@ -214,11 +219,15 @@ export default function WhoIsSol() {
     el: {
       title: <>Η Ιστορία της <TitleEm>Sol</TitleEm></>,
       subtitle: "Η ιστορία πίσω από το βλέμμα",
-      intro1:
+      intro1: [
         "Η Sol, γνωστή στο διαδίκτυο ως solthecat, δεν γεννήθηκε για να περάσει απαρατήρητη. Έχει το βλέμμα της σιωπής που σε καθηλώνει, τη χάρη μιας βασίλισσας που δε χρειάζεται στέμμα και το βήμα μιας γάτας που ξέρει πως όλα της ανήκουν. Είναι η ψυχή των SOLadventures, μια αφηγήτρια με πατούσες γεμάτες ιστορίες, που περιπλανιούνται από τα μάρμαρα της Αθήνας ώς τις σελίδες της φαντασίας… κι από εκεί, στο Instagram.",
-      lifeInAthens: "Ζωή στην Αθήνα",
-      intro2:
-        "Μεγαλωμένη στην Αθήνα, η Sol ένιωθε πάντα πως τα παράθυρα της γειτονιάς δεν της έφταναν. Ξεκίνησε σιωπηλά, με περιέργεια στα μάτια και αξιοπρέπεια στο βλέμμα. Κάπου όμως, ανάμεσα στον Παρθενώνα και το πρώτο της reel, έγινε κάτι παραπάνω από γάτα. Έγινε σύμβολο. Έγινε Sol.",
+        "Αυτό που την κάνει εκείνη είναι το βλέμμα. Μια μακριά, υπομονετική ματιά που αποφασίζει αν αξίζεις τη δεύτερη. Δυσπιστεί στις μεγάλες χειρονομίες και αδιαφορεί για δώρα που κοστίζουν περισσότερο από μια λωρίδα ηλιαχτίδας. Εμπιστεύεται αργά, κρίνει γρήγορα, και συγχωρεί μόνο τον μπαμπά της, τον αγαπημένο της άνθρωπο από την πρώτη φορά που την άφησε να κοιμηθεί πάνω στο πληκτρολόγιο. Κάθε ιστορία εδώ μέσα, κάθε reel, κάθε περιπέτεια, ξεκινάει από εκείνη τη ματιά.",
+      ],
+      lifeInAthens: <>Ζωή στην <TitleEm>Αθήνα</TitleEm></>,
+      intro2: [
+        "Μεγάλωσε στην Αθήνα, σε ένα μπαλκόνι που μύριζε βασιλικό και ζεστό μάρμαρο. Η πόλη της έμαθε νωρίς δύο πράγματα. Ο ήλιος είναι νόμισμα, και ο καλύτερος είναι αυτός που δεν μοιράζεσαι. Έμαθε τη γεωγραφία της γειτονιάς της ακούγοντας: την πόρτα που τρίζει στις έξι, το μηχανάκι που στρίβει τη γωνία το μεσημέρι, τη γάτα απέναντι που, ειλικρινά, δεν αποτελεί ανταγωνισμό.",
+        "Κάπου ανάμεσα στον Παρθενώνα και το πρώτο της reel, ο κόσμος μεγάλωσε. Τα παράθυρα του διαμερίσματος έπαψαν να της φτάνουν. Άρχισε να ταξιδεύει, πρώτα στην αγκαλιά του μπαμπά της, μετά στις ιστορίες του, μετά με τους δικούς της όρους. Η Αθήνα παρέμεινε το έδαφός της. Ο υπόλοιπος κόσμος έγινε η σκηνή της. Αθόρυβα, βασιλικά, με το δικό της ωράριο, έγινε Sol.",
+      ],
       funFactsTitle: "✨ Μικρά Μυστικά της Sol",
       funFacts: [
         { label: "Αγαπημένο φαγητό:", value: "Ψητό κοτόπουλο. Με ύφος." },
@@ -299,7 +308,9 @@ export default function WhoIsSol() {
           decoding="async"
         />
 
-        <IntroText>{t.intro1}</IntroText>
+        {t.intro1.map((para, i) => (
+          <IntroText key={i}>{para}</IntroText>
+        ))}
 
         <SectionHeading>{t.lifeInAthens}</SectionHeading>
         <InlineBlock>
@@ -311,7 +322,11 @@ export default function WhoIsSol() {
             loading="lazy"
             decoding="async"
           />
-          <InlineParagraph>{t.intro2}</InlineParagraph>
+          <div>
+            {t.intro2.map((para, i) => (
+              <InlineParagraph key={i}>{para}</InlineParagraph>
+            ))}
+          </div>
         </InlineBlock>
 
         <FunFactsTitle>{t.funFactsTitle}</FunFactsTitle>
