@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { celebrate } from "../utils/celebrate.js";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import PageContainer from "../components/PageContainer.jsx";
+import TitleEm from "../components/TitleEm.jsx";
 import { markDailyDoneIfMatches } from "../utils/dailyChallenge.js";
 
 const Title = styled.h1`
@@ -277,7 +278,7 @@ export default function PawprintsGame() {
   const content = {
     en: {
       pageTitle: "Match the Pawprints – SolTheCat",
-      heading: "Sol’s Pawprints Game 🐾",
+      heading: <>Sol's <TitleEm>Pawprints</TitleEm> 🐾</>,
       subtitle: "Find all the matching pairs before time runs out!",
       start: "Start Game",
       playAgain: "Play Again",
@@ -305,7 +306,7 @@ export default function PawprintsGame() {
     },
     el: {
       pageTitle: "Βρες τα Πατουσάκια – SolTheCat",
-      heading: "Sol’s Πατουσάκια Παιχνίδι 🐾",
+      heading: <><TitleEm>Πατουσάκια</TitleEm> της Sol 🐾</>,
       subtitle: "Βρες όλα τα ζευγάρια πριν τελειώσει ο χρόνος!",
       start: "Έναρξη Παιχνιδιού",
       playAgain: "Παίξε Ξανά",

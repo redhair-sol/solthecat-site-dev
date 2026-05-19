@@ -5,6 +5,7 @@ import html2canvas from "html2canvas";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import PageContainer from "../components/PageContainer.jsx";
+import TitleEm from "../components/TitleEm.jsx";
 import SolButton from "../components/SolButton.jsx";
 import { celebrate } from "../utils/celebrate.js";
 import { markDailyDoneIfMatches } from "../utils/dailyChallenge.js";
@@ -231,7 +232,7 @@ export default function RoyalPuzzleGame() {
   const t = {
     en: {
       pageTitle: "Royal Puzzle – SolTheCat",
-      title: "Royal Puzzle 🧩",
+      title: <>Royal <TitleEm>Puzzle</TitleEm> 🧩</>,
       subtitle: "Puzzle: SOLadventure:",
       description: "Choose your episode, pick your challenge level and piece together the royal puzzle!",
       back: "← Back to games",
@@ -257,7 +258,7 @@ export default function RoyalPuzzleGame() {
     },
     el: {
       pageTitle: "Βασιλικό Παζλ – SolTheCat",
-      title: "Βασιλικό Παζλ 🧩",
+      title: <>Βασιλικό <TitleEm>Παζλ</TitleEm> 🧩</>,
       subtitle: "Παζλ: SOLadventure:",
       description: "Διάλεξε επεισόδιο, επίπεδο δυσκολίας και συναρμολόγησε το βασιλικό παζλ!",
       back: "← Επιστροφή στα παιχνίδια",

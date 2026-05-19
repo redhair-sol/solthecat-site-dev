@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Helmet } from "react-helmet-async";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import PageContainer from "../components/PageContainer.jsx";
+import TitleEm from "../components/TitleEm.jsx";
 import { Link } from "react-router-dom";
 import { celebrate } from "../utils/celebrate.js";
 import SolButton from "../components/SolButton.jsx";
@@ -104,7 +105,7 @@ export default function SolsTreasureHunt() {
   const t = {
     en: {
       pageTitle: "Sol’s Treasure Hunt – SolTheCat",
-      title: "Sol’s Treasure Hunt 🗺️",
+      title: <>Sol's <TitleEm>Treasure Hunt</TitleEm> 🗺️</>,
       subtitle: "Find all the hidden treasures!",
       description: "Sol hid 3 royal treasures in this area. Can you find them all?",
       back: "← Back to games",
@@ -115,7 +116,7 @@ export default function SolsTreasureHunt() {
     },
     el: {
       pageTitle: "Κυνήγι Θησαυρού της Sol – SolTheCat",
-      title: "Κυνήγι Θησαυρού της Sol 🗺️",
+      title: <><TitleEm>Κυνήγι Θησαυρού</TitleEm> της Sol 🗺️</>,
       subtitle: "Βρες όλους τους κρυμμένους θησαυρούς!",
       description: "Η Sol έκρυψε 3 βασιλικούς θησαυρούς εδώ. Μπορείς να τους βρεις όλους;",
       back: "← Επιστροφή στα παιχνίδια",

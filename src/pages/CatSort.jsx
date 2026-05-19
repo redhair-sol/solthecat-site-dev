@@ -13,6 +13,7 @@ import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import PageContainer from "../components/PageContainer.jsx";
+import TitleEm from "../components/TitleEm.jsx";
 import { celebrate } from "../utils/celebrate.js";
 import { markDailyDoneIfMatches } from "../utils/dailyChallenge.js";
 import { upperLocal } from "../utils/greekUpper.js";
@@ -337,7 +338,7 @@ export default function CatSort() {
   const t = {
     en: {
       pageTitle: "Cat Sort – SolTheCat",
-      title: "Cat Sort 🏠",
+      title: <>Cat <TitleEm>Sort</TitleEm> 🏠</>,
       subtitle:
         "Tap a cat to send it to the nest. Two matching cats auto-rescue. Don't fill the nest with different cats!",
       start: "🐾 Start",
@@ -371,7 +372,7 @@ export default function CatSort() {
     },
     el: {
       pageTitle: "Ταξινόμηση Γατών – SolTheCat",
-      title: "Ταξινόμηση Γατών 🏠",
+      title: <>Ταξινόμηση <TitleEm>Γατών</TitleEm> 🏠</>,
       subtitle:
         "Πάτα γάτα για να την στείλεις στη φωλιά. Δύο ίδιες auto-rescue. Μη γεμίσεις τη φωλιά με διαφορετικές!",
       start: "🐾 Ξεκίνα",

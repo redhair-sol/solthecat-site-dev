@@ -16,6 +16,7 @@ import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import PageContainer from "../components/PageContainer.jsx";
+import TitleEm from "../components/TitleEm.jsx";
 import { celebrate } from "../utils/celebrate.js";
 import { markDailyDoneIfMatches } from "../utils/dailyChallenge.js";
 
@@ -373,7 +374,7 @@ export default function MapQuiz() {
   const t = {
     en: {
       pageTitle: "Where in the World? – SolTheCat",
-      title: "Where in the World? 🌍",
+      title: <>Where in the <TitleEm>World</TitleEm>? 🌍</>,
       subtitle: `Sol took a photo. Click on the map where you think she was. ${ROUNDS} rounds.`,
       start: "🐾 Start the journey",
       progress: (r) => `Round ${r} / ${ROUNDS}`,
@@ -410,7 +411,7 @@ export default function MapQuiz() {
     },
     el: {
       pageTitle: "Πού στον Κόσμο; – SolTheCat",
-      title: "Πού στον Κόσμο; 🌍",
+      title: <>Πού στον <TitleEm>Κόσμο</TitleEm>; 🌍</>,
       subtitle: `Η Sol έβγαλε μια φωτογραφία. Κλίκαρε στον χάρτη πού νομίζεις ότι ήταν. ${ROUNDS} γύροι.`,
       start: "🐾 Ξεκίνα το ταξίδι",
       progress: (r) => `Γύρος ${r} / ${ROUNDS}`,

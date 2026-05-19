@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { Helmet } from "react-helmet-async";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import PageContainer from "../components/PageContainer.jsx";
+import TitleEm from "../components/TitleEm.jsx";
 import { celebrate } from "../utils/celebrate.js";
 import { markDailyDoneIfMatches } from "../utils/dailyChallenge.js";
 
@@ -220,7 +221,7 @@ export default function SolSnap() {
   const t = {
     en: {
       pageTitle: "SolSnap – SolTheCat",
-      title: "Sol’s Snap Game 📸",
+      title: <>Sol's <TitleEm>Snap</TitleEm> 📸</>,
       subtitle: "Ready to test your knowledge? Press Start to begin!",
       start: "Start Game",
       back: "← Back to games",
@@ -250,7 +251,7 @@ export default function SolSnap() {
     },
     el: {
       pageTitle: "SolSnap – SolTheCat",
-      title: "Το Snap Παιχνίδι της Sol 📸",
+      title: <><TitleEm>Snap</TitleEm> της Sol 📸</>,
       subtitle: "Έτοιμος να δοκιμάσεις τις γνώσεις σου; Πάτα Έναρξη!",
       start: "Έναρξη Παιχνιδιού",
       back: "← Επιστροφή στα παιχνίδια",

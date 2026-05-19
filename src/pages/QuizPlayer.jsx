@@ -6,6 +6,7 @@ import { Helmet } from "react-helmet-async";
 import { Link, useSearchParams } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import PageContainer from "../components/PageContainer.jsx";
+import TitleEm from "../components/TitleEm.jsx";
 import { celebrate } from "../utils/celebrate.js";
 import { formatScore } from "../utils/dailyChallenge.js";
 
@@ -262,7 +263,7 @@ export default function QuizPlayer() {
 
   const content = {
     en: {
-      title: "Sol’s Quiz 🧠",
+      title: <>Sol's <TitleEm>Quiz</TitleEm> 🧠</>,
       subtitle: selectedId ? `Quiz: SOLadventure #${selectedId}` : "",
       loading: "Loading...",
       start: "Start Quiz",
@@ -286,7 +287,7 @@ export default function QuizPlayer() {
       submittedRank: (r) => `You're #${r} on the board!`,
     },
     el: {
-      title: "Quiz της Sol 🧠",
+      title: <><TitleEm>Quiz</TitleEm> της Sol 🧠</>,
       subtitle: selectedId ? `Quiz: SOLadventure #${selectedId}` : "",
       loading: "Φόρτωση...",
       start: "Εκκίνηση Quiz",

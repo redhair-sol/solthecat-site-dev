@@ -6,6 +6,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import PageContainer from "../components/PageContainer.jsx";
+import TitleEm from "../components/TitleEm.jsx";
 import { celebrate } from "../utils/celebrate.js";
 import { markDailyDoneIfMatches } from "../utils/dailyChallenge.js";
 
@@ -242,7 +243,7 @@ export default function PuzzleMapGame() {
   const content = {
     en: {
       pageTitle: "Sol’s Puzzle Game – SolTheCat",
-      title: "Sol’s Puzzle Game 🧩",
+      title: <>Sol's <TitleEm>Puzzle</TitleEm> Game 🧩</>,
       subtitle: selectedId ? `Puzzle: SOLadventure #${selectedId}` : "",
       playAgain: "🔁 Play Again",
       startPuzzle: "🐾 Start puzzle",
@@ -265,7 +266,7 @@ export default function PuzzleMapGame() {
     },
     el: {
       pageTitle: "Παζλ της Sol – SolTheCat",
-      title: "Παζλ της Sol 🧩",
+      title: <><TitleEm>Παζλ</TitleEm> της Sol 🧩</>,
       subtitle: selectedId ? `Παζλ: SOLadventure #${selectedId}` : "",
       playAgain: "🔁 Παίξε Ξανά",
       startPuzzle: "🐾 Ξεκίνα το παζλ",

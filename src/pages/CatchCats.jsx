@@ -27,6 +27,7 @@ import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import PageContainer from "../components/PageContainer.jsx";
+import TitleEm from "../components/TitleEm.jsx";
 import { celebrate } from "../utils/celebrate.js";
 import { markDailyDoneIfMatches } from "../utils/dailyChallenge.js";
 
@@ -388,7 +389,7 @@ export default function CatchCats() {
   const t = {
     en: {
       pageTitle: "Catch the Cats – SolTheCat",
-      title: "Catch the Cats 🧺",
+      title: <>Catch the <TitleEm>Cats</TitleEm> 🧺</>,
       subtitle:
         "Drag the basket to catch falling cats. Crown cats are worth 5 points. Don't let them all slip!",
       pickLevel: "Pick a difficulty",
@@ -420,7 +421,7 @@ export default function CatchCats() {
     },
     el: {
       pageTitle: "Πιάσε τις Γάτες – SolTheCat",
-      title: "Πιάσε τις Γάτες 🧺",
+      title: <>Πιάσε τις <TitleEm>Γάτες</TitleEm> 🧺</>,
       subtitle:
         "Σύρε το καλάθι για να πιάσεις τις γάτες που πέφτουν. Οι γάτες με κορώνα μετρούν 5 πόντους. Μην τις αφήσεις να χαθούν!",
       pickLevel: "Διάλεξε δυσκολία",

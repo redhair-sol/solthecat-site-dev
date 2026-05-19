@@ -7,6 +7,7 @@ import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import PageContainer from "../components/PageContainer.jsx";
+import TitleEm from "../components/TitleEm.jsx";
 import { celebrate } from "../utils/celebrate.js";
 import { markDailyDoneIfMatches, formatScore } from "../utils/dailyChallenge.js";
 
@@ -334,7 +335,7 @@ export default function SpotTheCity() {
   const t = {
     en: {
       pageTitle: "Spot the City – SolTheCat",
-      title: "Spot the City 🔍",
+      title: <>Spot the <TitleEm>City</TitleEm> 🔍</>,
       subtitle: `Sol zoomed in on a corner of one of her ${ROUNDS}-round adventures. Can you tell where she is?`,
       start: "🐾 Start guessing",
       progress: (r) => `Round ${r} / ${ROUNDS}`,
@@ -364,7 +365,7 @@ export default function SpotTheCity() {
     },
     el: {
       pageTitle: "Βρες την Πόλη – SolTheCat",
-      title: "Βρες την Πόλη 🔍",
+      title: <>Βρες την <TitleEm>Πόλη</TitleEm> 🔍</>,
       subtitle: `Η Sol εστίασε σε μια γωνιά από ${ROUNDS} περιπέτειες. Μπορείς να μαντέψεις πού βρίσκεται;`,
       start: "🐾 Ξεκίνα να μαντεύεις",
       progress: (r) => `Γύρος ${r} / ${ROUNDS}`,

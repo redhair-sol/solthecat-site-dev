@@ -13,6 +13,7 @@ import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import PageContainer from "../components/PageContainer.jsx";
+import TitleEm from "../components/TitleEm.jsx";
 import { celebrate } from "../utils/celebrate.js";
 import { markDailyDoneIfMatches } from "../utils/dailyChallenge.js";
 
@@ -293,7 +294,7 @@ export default function SolTap() {
   const t = {
     en: {
       pageTitle: "Quick Paws – SolTheCat",
-      title: "Quick Paws 🐾",
+      title: <>Quick <TitleEm>Paws</TitleEm> 🐾</>,
       subtitle: `Tap the cats before they vanish! ${ROUND_SECONDS} seconds, quick cats are worth more, golden ones even more.`,
       start: "🐾 Start round",
       score: "Score",
@@ -317,7 +318,7 @@ export default function SolTap() {
     },
     el: {
       pageTitle: "Γρήγορες Πατούσες – SolTheCat",
-      title: "Γρήγορες Πατούσες 🐾",
+      title: <>Γρήγορες <TitleEm>Πατούσες</TitleEm> 🐾</>,
       subtitle: `Πάτα τις γάτες πριν εξαφανιστούν! ${ROUND_SECONDS} δευτερόλεπτα, οι γρήγορες δίνουν παραπάνω, οι χρυσές ακόμη περισσότερα.`,
       start: "🐾 Ξεκίνα τον γύρο",
       score: "Σκορ",

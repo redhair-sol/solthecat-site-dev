@@ -7,6 +7,7 @@ import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import PageContainer from "../components/PageContainer.jsx";
+import TitleEm from "../components/TitleEm.jsx";
 import { celebrate } from "../utils/celebrate.js";
 
 const Title = styled.h1`
@@ -225,7 +226,7 @@ export default function SolPicks() {
   const t = {
     en: {
       pageTitle: "Travel with Sol – SolTheCat",
-      title: "Travel with Sol 🎲",
+      title: <><TitleEm>Travel</TitleEm> with Sol 🎲</>,
       subtitle: "Where would Sol travel with you?",
       pickButton: "🐾 Pick our next stop",
       loading: "Sol is checking her map...",
@@ -239,7 +240,7 @@ export default function SolPicks() {
     },
     el: {
       pageTitle: "Ταξίδι με τη Sol – SolTheCat",
-      title: "Ταξίδι με τη Sol 🎲",
+      title: <><TitleEm>Ταξίδι</TitleEm> με τη Sol 🎲</>,
       subtitle: "Πού θα ταξίδευε η Sol μαζί σου;",
       pickButton: "🐾 Διάλεξε επόμενο σταθμό",
       loading: "Η Sol κοιτάζει τον χάρτη...",
