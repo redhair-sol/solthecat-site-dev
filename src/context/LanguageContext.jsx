@@ -9,10 +9,19 @@ const LanguageContext = createContext({
 });
 
 export function LanguageProvider({ children }) {
-  // Φορτώνουμε από localStorage ή επιλέγουμε 'en' ως default
+  // Πρώτη επίσκεψη: δοκιμάζουμε το browser language (π.χ. "el-GR" → EL).
+  // Επιστρέφοντες χρήστες: η αποθηκευμένη τους επιλογή στο localStorage πάντα νικά,
+  // ώστε ένα χειροκίνητο override να επιβιώνει σε επόμενες επισκέψεις ακόμα και αν
+  // αλλάξει το browser locale.
   const [language, setLanguage] = useState(() => {
     const saved = localStorage.getItem('appLanguage');
-    return saved === 'el' ? 'el' : 'en';
+    if (saved === 'el' || saved === 'en') return saved;
+    const browserLang = (
+      (typeof navigator !== 'undefined' &&
+        (navigator.language || navigator.userLanguage)) ||
+      'en'
+    ).toLowerCase();
+    return browserLang.startsWith('el') ? 'el' : 'en';
   });
 
   // Κάθε φορά που αλλάζει το language, το σώζουμε στο localStorage
