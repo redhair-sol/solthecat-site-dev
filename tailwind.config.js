@@ -12,7 +12,6 @@ export default {
       // every styled-components usage and inline className arbitrary
       // values like bg-[var(--sol-cream)].
       fontFamily: {
-        cursive: ['"Dancing Script"', "cursive"],
         sans: ['"Poppins"', "sans-serif"],
       },
     },

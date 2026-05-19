@@ -9,7 +9,7 @@
 //   1. Delete this file (BottomTabBar.jsx)
 //   2. In src/App.jsx: remove the BottomTabBar import + <BottomTabBar /> usage
 //   3. In src/App.jsx: change `pb-20 md:pb-0` back to no padding-bottom class
-// The rest of the app (Topbar, Sidebar, MobileMenu) stays untouched.
+// The rest of the app (Topbar, MoreMenu) stays untouched.
 
 import { useState } from "react";
 import { NavLink } from "react-router-dom";

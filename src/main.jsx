@@ -3,11 +3,9 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async"; // ✅ ΝΕΟ
 
-// Self-hosted fonts. Dancing Script remains for the legacy LogoText
-// components, Poppins is the body sans used across every game page.
+// Self-hosted font: Poppins (body sans used across every game page).
 // Instrument Serif + Inter come from Google Fonts CDN at runtime via
 // src/index.css (the editorial + nav system uses those exclusively).
-import "@fontsource/dancing-script/700.css";
 import "@fontsource/poppins/400.css";
 import "@fontsource/poppins/500.css";
 import "@fontsource/poppins/600.css";
