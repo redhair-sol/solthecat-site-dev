@@ -8,6 +8,7 @@ import { useLanguage } from "../context/LanguageContext.jsx";
 import PageContainer from "../components/PageContainer.jsx";
 import { fonts } from "../theme.js";
 import { detectRegion } from "../utils/region.js";
+import { cityGenitiveEl } from "../utils/cityForms.js";
 
 // Pulls the human-friendly city name out of the episode title so the
 // per-card quiz CTA reads "Play the Athens quiz" etc. Titles follow the
@@ -55,6 +56,18 @@ function extractCityName(ep, lang) {
       .join("-");
   }
   return "";
+}
+
+// Returns the city name as it should appear inside the per-card quiz CTA.
+// EL needs the genitive form ("Παίξε το quiz της Αθήνας") which the title
+// only ever holds in nominative ("Αθήνα"), so we look it up in cityForms.
+// EN and any EL slug we haven't mapped fall back to extractCityName so the
+// button never goes empty.
+function cityForCTA(ep, lang) {
+  if (lang === "el" && ep.city && cityGenitiveEl[ep.city]) {
+    return cityGenitiveEl[ep.city];
+  }
+  return extractCityName(ep, lang);
 }
 
 // Renders the episode title with the city name in italic sun (mirrors the
@@ -456,7 +469,7 @@ export default function Episodes() {
                       to={`/games/cityquiz?city=${encodeURIComponent(ep.city)}`}
                       className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full text-[0.9rem] font-medium bg-[var(--sol-plum)] text-[var(--sol-cream)] no-underline transition-all hover:bg-[var(--sol-mauve)] hover:scale-[1.02] shadow-[0_2px_8px_rgba(26,22,20,0.12)] w-full sm:w-auto"
                     >
-                      {t.quizCTA(extractCityName(ep, language))}
+                      {t.quizCTA(cityForCTA(ep, language))}
                     </Link>
                   </div>
                 )}

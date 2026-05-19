@@ -2,7 +2,10 @@
   {
     "id": 1,
     "instagramUrl": "https://www.instagram.com/p/DJ4Mrn-M998/",
-    "title": "SOLadventure #1 – Athens, obviously 🦉 🇬🇷",
+    "title": {
+      "en": "SOLadventure #1 – Athens, obviously 🦉 🇬🇷",
+      "el": "SOLadventure #1 – Αθήνα, προφανώς 🦉 🇬🇷"
+    },
     "quote": "Historic? So am I.",
     "caption": "Paws touched the Parthenon. 🐾🐾🐾",
     "image": "episodes/athens.webp",
@@ -44,7 +47,10 @@
   {
     "id": 2,
     "instagramUrl": "https://www.instagram.com/p/DKHIo6wssII/",
-    "title": "SOLadventure #2 – Rome, with attitude 🍕 🇮🇹",
+    "title": {
+      "en": "SOLadventure #2 – Rome, with attitude 🍕 🇮🇹",
+      "el": "SOLadventure #2 – Ρώμη, με ύφος 🍕 🇮🇹"
+    },
     "quote": "She came. She saw. She purred.",
     "caption": "Colosseum? Just her playground. History bows when she walks 🐾🐾🐾",
     "image": "episodes/rome.webp",
@@ -86,7 +92,10 @@
   {
     "id": 3,
     "instagramUrl": "https://www.instagram.com/p/DKe2Kh7K1rM/",
-    "title": "SOLadventure #3 – Feline flair meets Parisian air 🗼 🇫🇷",
+    "title": {
+      "en": "SOLadventure #3 – Feline flair meets Parisian air 🗼 🇫🇷",
+      "el": "SOLadventure #3 – Παρίσι, αιλουροειδής χάρη στον παρισινό αέρα 🗼 🇫🇷"
+    },
     "quote": "Allure built in. Like her gaze.",
     "caption": "Paris didn’t stand a chance. 🐾🐾🐾",
     "image": "episodes/paris.webp",
@@ -128,7 +137,10 @@
   {
     "id": 4,
     "instagramUrl": "https://www.instagram.com/p/DKxMlnLs3r1/",
-    "title": "SOLadventure #4 – Barcelona, architected to impress 🎨 🇪🇸",
+    "title": {
+      "en": "SOLadventure #4 – Barcelona, architected to impress 🎨 🇪🇸",
+      "el": "SOLadventure #4 – Βαρκελώνη, αρχιτεκτονική που εντυπωσιάζει 🎨 🇪🇸"
+    },
     "quote": "Curves, spires, and one queen.",
     "caption": "She danced with Gaudí’s ghosts. 🐾🐾🐾",
     "image": "episodes/barcelona.webp",
@@ -170,7 +182,10 @@
   {
     "id": 5,
     "instagramUrl": "https://www.instagram.com/p/DLDE3TLqDxT/",
-    "title": "SOLadventure #5 – London, mind the Queen 🕰️🇬🇧",
+    "title": {
+      "en": "SOLadventure #5 – London, mind the Queen 🕰️🇬🇧",
+      "el": "SOLadventure #5 – Λονδίνο, προσοχή στη βασίλισσα 🕰️🇬🇧"
+    },
     "quote": "Fog lifted. She didn’t need directions.",
     "caption": "No fanfare. No velvet. Just presence. 🐾🐾🐾",
     "image": "episodes/london.webp",
@@ -212,7 +227,10 @@
   {
     "id": 6,
     "instagramUrl": "https://www.instagram.com/p/DLVHSpKqi5N/",
-    "title": "SOLadventure #6 – Amsterdam, quiet reigns & reflections 🌷 🇳🇱",
+    "title": {
+      "en": "SOLadventure #6 – Amsterdam, quiet reigns & reflections 🌷 🇳🇱",
+      "el": "SOLadventure #6 – Άμστερνταμ, σιωπηλή βασιλεία και αντανακλάσεις 🌷 🇳🇱"
+    },
     "quote": "Paws before pedals.",
     "caption": "No bike. No boat. Just grace on cobblestones. 🐾🐾🐾",
     "image": "episodes/amsterdam.webp",
@@ -254,7 +272,10 @@
   {
     "id": 7,
     "instagramUrl": "https://www.instagram.com/p/DLnIDGUs9xm/",
-    "title": "SOLadventure #7 – Berlin, straight through the gate 🏛 ️🇩🇪",
+    "title": {
+      "en": "SOLadventure #7 – Berlin, straight through the gate 🏛 ️🇩🇪",
+      "el": "SOLadventure #7 – Βερολίνο, ίσια μέσα από την πύλη 🏛 ️🇩🇪"
+    },
     "quote": "Power spoke. She didn’t need to.",
     "caption": "She walked. History saluted. 🐾🐾🐾",
     "image": "episodes/berlin.webp",
@@ -296,7 +317,10 @@
   {
     "id": 8,
     "instagramUrl": "https://www.instagram.com/p/DL5I1aBKjbB/",
-    "title": "SOLadventure #8 – Vienna, velvet paws 🎻 🇦🇹",
+    "title": {
+      "en": "SOLadventure #8 – Vienna, velvet paws 🎻 🇦🇹",
+      "el": "SOLadventure #8 – Βιέννη, βελούδινες πατούσες 🎻 🇦🇹"
+    },
     "quote": "She didn’t knock. The doors knew.",
     "caption": "In stillness, she reigned. In stone, she bloomed 🐾🐾🐾",
     "image": "episodes/vienna.webp",
@@ -338,7 +362,10 @@
   {
     "id": 9,
     "instagramUrl": "https://www.instagram.com/p/DMLLGweqQ40/",
-    "title": "SOLadventure #9 – Prague, spellbound in gold 🕯️🇨🇿",
+    "title": {
+      "en": "SOLadventure #9 – Prague, spellbound in gold 🕯️🇨🇿",
+      "el": "SOLadventure #9 – Πράγα, μαγεμένη στο χρυσό 🕯️🇨🇿"
+    },
     "quote": "She wandered slow. The shadows bent",
     "caption": "Where myths curled, she glowed. 🐾🐾🐾",
     "image": "episodes/prague.webp",
@@ -380,7 +407,10 @@
   {
     "id": 10,
     "instagramUrl": "https://www.instagram.com/p/DMdMxw0scaE/",
-    "title": "SOLadventure #10 – Swiss, air, alpine stare 🏔 ️🇨🇭",
+    "title": {
+      "en": "SOLadventure #10 – Swiss, air, alpine stare 🏔 ️🇨🇭",
+      "el": "SOLadventure #10 – Ελβετία, αέρας, αλπικό βλέμμα 🏔 ️🇨🇭"
+    },
     "quote": "Height never humbled her.",
     "caption": "The Alps called. She brought silence. 🐾🐾🐾",
     "image": "episodes/swiss.webp",
@@ -422,7 +452,10 @@
   {
     "id": 11,
     "instagramUrl": "https://www.instagram.com/p/DMvOO09MSk7/",
-    "title": "SOLadventure #11 – Ljubljana, softly crowned 🏰 🇸🇮",
+    "title": {
+      "en": "SOLadventure #11 – Ljubljana, softly crowned 🏰 🇸🇮",
+      "el": "SOLadventure #11 – Λιουμπλιάνα, απαλά στεμμένη 🏰 🇸🇮"
+    },
     "quote": "Crowned by calm.",
     "caption": "Pastel walls. Quiet rule. 🐾🐾🐾",
     "image": "episodes/ljubljana.webp",
@@ -464,7 +497,10 @@
   {
     "id": 12,
     "instagramUrl": "https://www.instagram.com/p/DNBPzE1M243/",
-    "title": "SOLadventure #12 – Budapest, throne by the river 🌉 🇭🇺",
+    "title": {
+      "en": "SOLadventure #12 – Budapest, throne by the river 🌉 🇭🇺",
+      "el": "SOLadventure #12 – Βουδαπέστη, θρόνος δίπλα στο ποτάμι 🌉 🇭🇺"
+    },
     "quote": "She cast no shadow. Just authority.",
     "caption": "She sat. The Parliament bowed. 🐾🐾🐾",
     "image": "episodes/budapest.webp",
@@ -506,7 +542,10 @@
   {
     "id": 13,
     "instagramUrl": "https://www.instagram.com/p/DNTRXFjseMS/",
-    "title": "SOLadventure #13 – Kraków, echoes in stone 🏰🇵🇱",
+    "title": {
+      "en": "SOLadventure #13 – Kraków, echoes in stone 🏰🇵🇱",
+      "el": "SOLadventure #13 – Κρακοβία, αντηχήσεις στην πέτρα 🏰🇵🇱"
+    },
     "quote": "She walked soft. The city whispered back.",
     "caption": "Past and pawprints never fade. 🐾🐾🐾",
     "image": "episodes/Kraków.webp",
@@ -548,7 +587,10 @@
   {
     "id": 14,
     "instagramUrl": "https://www.instagram.com/p/DNlS6_DMz04/",
-    "title": "SOLadventure #14 – Tallinn, soft reign 🌫️ 🇪🇪",
+    "title": {
+      "en": "SOLadventure #14 – Tallinn, soft reign 🌫️ 🇪🇪",
+      "el": "SOLadventure #14 – Ταλίν, απαλή βασιλεία 🌫️ 🇪🇪"
+    },
     "quote": "Even the dusk waited",
     "caption": "When cobblestones hush, she rules. 🐾🐾🐾",
     "image": "episodes/Tallinn.webp",
@@ -590,7 +632,10 @@
   {
     "id": 15,
     "instagramUrl": "https://www.instagram.com/p/DN3UlRv2N1c/",
-    "title": "SOLadventure #15 – Helsinki, white whispers ❄️🇫🇮",
+    "title": {
+      "en": "SOLadventure #15 – Helsinki, white whispers ❄️🇫🇮",
+      "el": "SOLadventure #15 – Ελσίνκι, λευκοί ψίθυροι ❄️🇫🇮"
+    },
     "quote": "She didn’t wear white — she defined it.",
     "caption": "No chill. No hush. Just quiet grace. 🐾🐾🐾",
     "image": "episodes/helsinki.webp",
@@ -632,7 +677,10 @@
   {
     "id": 16,
     "instagramUrl": "https://www.instagram.com/p/DOJLj-YDDSO/",
-    "title": "SOLadventure #16 – Stockholm, light on water 🌊🇸🇪",
+    "title": {
+      "en": "SOLadventure #16 – Stockholm, light on water 🌊🇸🇪",
+      "el": "SOLadventure #16 – Στοκχόλμη, φως στο νερό 🌊🇸🇪"
+    },
     "quote": "Light speaks in stillness.",
     "caption": "No ripples. No echoes. Just still light. 🐾🐾🐾",
     "image": "episodes/stockholm.webp",
@@ -674,7 +722,10 @@
   {
     "id": 17,
     "instagramUrl": "https://www.instagram.com/p/DObKjrOiOEo/",
-    "title": "SOLadventure #17 – Copenhagen, Nyhavn & cycle vibes 🚲 🇩🇰",
+    "title": {
+      "en": "SOLadventure #17 – Copenhagen, Nyhavn & cycle vibes 🚲 🇩🇰",
+      "el": "SOLadventure #17 – Κοπεγχάγη, Nyhavn και ποδηλατικές διαθέσεις 🚲 🇩🇰"
+    },
     "quote": "In her wake, color blooms.",
     "caption": "No traffic. No pause. Just pedal art. 🐾🐾🐾",
     "image": "episodes/copenhagen.webp",
@@ -716,7 +767,10 @@
   {
     "id": 18,
     "instagramUrl": "https://www.instagram.com/p/DOtZKN2DN3r/",
-    "title": "SOLadventure #18 – Bergen, mist and melody 🎶🇳🇴",
+    "title": {
+      "en": "SOLadventure #18 – Bergen, mist and melody 🎶🇳🇴",
+      "el": "SOLadventure #18 – Μπέργκεν, ομίχλη και μελωδία 🎶🇳🇴"
+    },
     "quote": "Fjords cradle her melody.",
     "caption": "No storm. No sorrow. Just whispered tunes. 🐾🐾🐾",
     "image": "episodes/bergen.webp",
@@ -758,7 +812,10 @@
   {
     "id": 19,
     "instagramUrl": "https://www.instagram.com/p/DO_avxjjN8d/",
-    "title": "SOLadventure #19 – Edinburgh, where legends linger 🌫 ️🇬🇧",
+    "title": {
+      "en": "SOLadventure #19 – Edinburgh, where legends linger 🌫 ️🇬🇧",
+      "el": "SOLadventure #19 – Εδιμβούργο, εκεί που μένουν οι θρύλοι 🌫 ️🇬🇧"
+    },
     "quote": "Legends bowed to her stride.",
     "caption": "Storied steps, no turning back. 🐾🐾🐾",
     "image": "episodes/edinburgh.webp",
@@ -800,7 +857,10 @@
   {
     "id": 20,
     "instagramUrl": "https://www.instagram.com/p/DPRcUODDFe9/",
-    "title": "SOLadventure #20 – Dublin, literary pubs & Georgian squares 🍻📚🇮🇪",
+    "title": {
+      "en": "SOLadventure #20 – Dublin, literary pubs & Georgian squares 🍻📚🇮🇪",
+      "el": "SOLadventure #20 – Δουβλίνο, λογοτεχνικές παμπ και γεωργιανές πλατείες 🍻📚🇮🇪"
+    },
     "quote": "She wrote her story in every raised glass.",
     "caption": "No pause. No encore. Just pages and pints. 🐾🐾🐾",
     "image": "episodes/dublin.webp",
@@ -842,7 +902,10 @@
   {
     "id": 21,
     "instagramUrl": "https://www.instagram.com/p/DPjd4OFjPOG/",
-    "title": "SOLadventure #21 – Reykjavík, fire & ice ❄️🔥🇮🇸",
+    "title": {
+      "en": "SOLadventure #21 – Reykjavík, fire & ice ❄️🔥🇮🇸",
+      "el": "SOLadventure #21 – Ρέικιαβικ, φωτιά και πάγος ❄️🔥🇮🇸"
+    },
     "quote": "She wrote warmth on ice.",
     "caption": "No freeze. No thaw. Just fiery grace. 🐾🐾🐾",
     "image": "episodes/reykjavik.webp",
@@ -884,7 +947,10 @@
   {
     "id": 22,
     "instagramUrl": "https://www.instagram.com/p/DP1fcIgjDTP/",
-    "title": "SOLadventure #22 – Toronto, cityscapes & Niagara tale 🌊🇨🇦",
+    "title": {
+      "en": "SOLadventure #22 – Toronto, cityscapes & Niagara tale 🌊🇨🇦",
+      "el": "SOLadventure #22 – Τορόντο, αστικά τοπία και η ιστορία του Νιαγάρα 🌊🇨🇦"
+    },
     "quote": "She bridged roar and reflection.",
     "caption": "No boundaries. No divides. Just currents and towers. 🐾🐾🐾",
     "image": "episodes/toronto.webp",
@@ -926,7 +992,10 @@
   {
     "id": 23,
     "instagramUrl": "https://www.instagram.com/p/DQHhAz9jHF4/",
-    "title": "SOLadventure #23 – New York City, skyline queen 🏙️🇺🇸",
+    "title": {
+      "en": "SOLadventure #23 – New York City, skyline queen 🏙️🇺🇸",
+      "el": "SOLadventure #23 – Νέα Υόρκη, βασίλισσα του skyline 🏙️🇺🇸"
+    },
     "quote": "Bridges bow to her gaze.",
     "caption": "No pause. No skyline unseen. Just her and the city lights. 🐾🐾🐾",
     "image": "episodes/newyork.webp",
@@ -968,7 +1037,10 @@
   {
     "id": 24,
     "instagramUrl": "https://www.instagram.com/p/DQZpel_jF41/",
-    "title": "SOLadventure #24 – Miami, sunlit streets 🌞🇺🇸",
+    "title": {
+      "en": "SOLadventure #24 – Miami, sunlit streets 🌞🇺🇸",
+      "el": "SOLadventure #24 – Μαϊάμι, ηλιόλουστοι δρόμοι 🌞🇺🇸"
+    },
     "quote": "She owns the golden hour.",
     "caption": "No traffic. No hurry. Just sunlit steps. 🐾🐾🐾",
     "image": "episodes/miami.webp",
@@ -1010,7 +1082,10 @@
   {
     "id": 25,
     "instagramUrl": "https://www.instagram.com/p/DQrrAcijN2l/",
-    "title": "SOLadventure #25 – San Francisco, bridge tales 🌉🇺🇸",
+    "title": {
+      "en": "SOLadventure #25 – San Francisco, bridge tales 🌉🇺🇸",
+      "el": "SOLadventure #25 – Σαν Φρανσίσκο, ιστορίες της γέφυρας 🌉🇺🇸"
+    },
     "quote": "She draped the bridge in gold.",
     "caption": "No crosswalks. No commutes. Just arches and dreams. 🐾🐾🐾",
     "image": "episodes/sanfrancisco.webp",
@@ -1052,7 +1127,10 @@
   {
     "id": 26,
     "instagramUrl": "https://www.instagram.com/p/DQ9ssczDMwS/",
-    "title": "SOLadventure #26 – Honolulu, island hush 🌺🇺🇸",
+    "title": {
+      "en": "SOLadventure #26 – Honolulu, island hush 🌺🇺🇸",
+      "el": "SOLadventure #26 – Χονολουλού, νησιωτική γαλήνη 🌺🇺🇸"
+    },
     "quote": "She found sunrise in palms.",
     "caption": "No bustle. No borders. Only island calm. 🐾🐾🐾",
     "image": "episodes/honolulu.webp",
@@ -1094,7 +1172,10 @@
   {
     "id": 27,
     "instagramUrl": "https://www.instagram.com/p/DRPuIQIDB7w/",
-    "title": "SOLadventure #27 – Los Angeles, Hollywood & beach vibes 🎬🌴🇺🇸",
+    "title": {
+      "en": "SOLadventure #27 – Los Angeles, Hollywood & beach vibes 🎬🌴🇺🇸",
+      "el": "SOLadventure #27 – Λος Άντζελες, Hollywood και παραλιακές διαθέσεις 🎬🌴🇺🇸"
+    },
     "quote": "Dreams moved slower under the sun.",
     "caption": "Fame fades. Waves don’t. 🐾🐾🐾",
     "image": "episodes/LosAngeles.webp",
@@ -1136,7 +1217,10 @@
   {
     "id": 28,
     "instagramUrl": "https://www.instagram.com/p/DRhvr5EjGLc/",
-    "title": "SOLadventure #28 – Chichén Itzá, steps of time & silent kings 🗿🇲🇽",
+    "title": {
+      "en": "SOLadventure #28 – Chichén Itzá, steps of time & silent kings 🗿🇲🇽",
+      "el": "SOLadventure #28 – Τσιτσέν Ιτζά, βήματα του χρόνου και σιωπηλοί βασιλείς 🗿🇲🇽"
+    },
     "quote": "Time watched quietly as she passed.",
     "caption": "Stone, sun and quiet footsteps of history. 🐾🐾🐾",
     "image": "episodes/chichenitza.webp",
@@ -1178,7 +1262,10 @@
   {
     "id": 29,
     "instagramUrl": "https://www.instagram.com/p/DRzxQgCjA0r/",
-    "title": "SOLadventure #29 – Havana, vintage soul 🚗🇨🇺",
+    "title": {
+      "en": "SOLadventure #29 – Havana, vintage soul 🚗🇨🇺",
+      "el": "SOLadventure #29 – Αβάνα, vintage ψυχή 🚗🇨🇺"
+    },
     "quote": "The air itself remembered the music.",
     "caption": "No hurry. No horns. Just rhythm in the air. 🐾🐾🐾",
     "image": "episodes/havana.webp",
@@ -1220,7 +1307,10 @@
   {
     "id": 30,
     "instagramUrl": "https://www.instagram.com/p/DSF0cypjIfk/",
-    "title": "SOLadventure #30 – La Fortuna, where the wild breathes 🌋🇨🇷",
+    "title": {
+      "en": "SOLadventure #30 – La Fortuna, where the wild breathes 🌋🇨🇷",
+      "el": "SOLadventure #30 – Λα Φορτούνα, εκεί που ανασαίνει η φύση 🌋🇨🇷"
+    },
     "quote": "The earth has music for those who will listen.",
     "caption": "Mist, calm and wild echoes all around her. 🐾🐾🐾",
     "image": "episodes/lafortuna.webp",
@@ -1263,7 +1353,10 @@
   {
     "id": 31,
     "instagramUrl": "https://www.instagram.com/p/DSX0mUZDAxy/",
-    "title": "SOLadventure #31 – Panama City, canal’s embrace 🚢🇵🇦",
+    "title": {
+      "en": "SOLadventure #31 – Panama City, canal’s embrace 🚢🇵🇦",
+      "el": "SOLadventure #31 – Παναμάς, αγκαλιά της διώρυγας 🚢🇵🇦"
+    },
     "quote": "Stillness steers the tide.",
     "caption": "No hurry. No noise. Just motion made calm. 🐾🐾🐾",
     "image": "episodes/panama.webp",
@@ -1306,7 +1399,10 @@
   {
     "id": 32,
     "instagramUrl": "https://www.instagram.com/p/DSp18qcjLpB/",
-    "title": "SOLadventure #32 – Cartagena, walled colors 🎨🇨🇴",
+    "title": {
+      "en": "SOLadventure #32 – Cartagena, walled colors 🎨🇨🇴",
+      "el": "SOLadventure #32 – Καρθαγένη, τοίχοι σε χρώματα 🎨🇨🇴"
+    },
     "quote": "She reigned in still hues.",
     "caption": "No drums. No rush. Just colors breathing history. 🐾🐾🐾",
     "image": "episodes/cartagena.webp",
@@ -1348,7 +1444,10 @@
   {
     "id": 33,
     "instagramUrl": "https://www.instagram.com/p/DS73hCwjCUt/",
-    "title": "SOLadventure #33 – Quito, equatorial heights 🌍🇪🇨",
+    "title": {
+      "en": "SOLadventure #33 – Quito, equatorial heights 🌍🇪🇨",
+      "el": "SOLadventure #33 – Κίτο, ισημερινά ύψη 🌍🇪🇨"
+    },
     "quote": "Where the roofs meet the sky",
     "caption": "Old tiles, thin air, timeless view. 🐾🐾🐾",
     "image": "episodes/quito.webp",
@@ -1390,7 +1489,10 @@
   {
     "id": 34,
     "instagramUrl": "https://www.instagram.com/p/DTN8KQdjFit/",
-    "title": "SOLadventure #34 – Machu Picchu, Inca’s crown 🏯🇵🇪",
+    "title": {
+      "en": "SOLadventure #34 – Machu Picchu, Inca’s crown 🏯🇵🇪",
+      "el": "SOLadventure #34 – Μάτσου Πίτσου, το στέμμα των Ίνκας 🏯🇵🇪"
+    },
     "quote": "The mountain kept her secret.",
     "caption": "No words. No throne. Just stone and silence. 🐾🐾🐾",
     "image": "episodes/machupicchu.webp",
@@ -1432,7 +1534,10 @@
   {
     "id": 35,
     "instagramUrl": "https://www.instagram.com/p/DTf6pRgjKMC/",
-    "title": "SOLadventure #35 – La Paz, sky-high wonders 🌌🇧🇴",
+    "title": {
+      "en": "SOLadventure #35 – La Paz, sky-high wonders 🌌🇧🇴",
+      "el": "SOLadventure #35 – Λα Παζ, θαύματα στα ύψη 🌌🇧🇴"
+    },
     "quote": "She rode where the air whispered freedom.",
     "caption": "No roads. No rails. Just sky trails. 🐾🐾🐾",
     "image": "episodes/lapaz.webp",
@@ -1474,7 +1579,10 @@
   {
     "id": 36,
     "instagramUrl": "https://www.instagram.com/p/DTx8cpsjO15/",
-    "title": "SOLadventure #36 – Santiago, Andean skyline 🏔️🇨🇱",
+    "title": {
+      "en": "SOLadventure #36 – Santiago, Andean skyline 🏔️🇨🇱",
+      "el": "SOLadventure #36 – Σαντιάγο, ορίζοντας των Άνδεων 🏔️🇨🇱"
+    },
     "quote": "The city shimmered, the peaks stayed bold.",
     "caption": "Santiago below, Andes above, Sol in control. 🐾🐾🐾",
     "image": "episodes/santiago.webp",
@@ -1517,7 +1625,10 @@
   {
     "id": 37,
     "instagramUrl": "https://www.instagram.com/p/DUD9xeQDK-1/",
-    "title": "SOLadventure #37 – Buenos Aires, tango twilight 💃 🇦🇷",
+    "title": {
+      "en": "SOLadventure #37 – Buenos Aires, tango twilight 💃 🇦🇷",
+      "el": "SOLadventure #37 – Μπουένος Άιρες, λυκόφως του τανγκό 💃 🇦🇷"
+    },
     "quote": "She didn’t follow the rhythm. She set it.",
     "caption": "Cobblestones, bandoneón, and a queen in slow motion. 🐾🐾🐾",
     "image": "episodes/buenosaires.webp",
@@ -1560,7 +1671,10 @@
   {
     "id": 38,
     "instagramUrl": "https://www.instagram.com/p/DUWEf6tDJ5H/",
-    "title": "SOLadventure #38 – Montevideo, riverside rhythms 🌊 🇺🇾",
+    "title": {
+      "en": "SOLadventure #38 – Montevideo, riverside rhythms 🌊 🇺🇾",
+      "el": "SOLadventure #38 – Μοντεβιδέο, ρυθμοί δίπλα στο ποτάμι 🌊 🇺🇾"
+    },
     "quote": "The river kept time. She owned the beat.",
     "caption": "Lamplight, waterfront air, and a queen who moves like music. 🐾🐾🐾",
     "image": "episodes/montevideo.webp",
@@ -1603,7 +1717,10 @@
   {
     "id": 39,
     "instagramUrl": "https://www.instagram.com/p/DUoA3dEDJoF/",
-    "title": "SOLadventure #39 – Rio de Janeiro, carnival pulse & beach haze 🎉🏖️ 🇧🇷",
+    "title": {
+      "en": "SOLadventure #39 – Rio de Janeiro, carnival pulse & beach haze 🎉🏖️ 🇧🇷",
+      "el": "SOLadventure #39 – Ρίο ντε Τζανέιρο, παλμός καρναβαλιού και παραλιακή αχλύ 🎉🏖️ 🇧🇷"
+    },
     "quote": "She didn’t need the parade. The rhythm found her anyway.",
     "caption": "Golden haze, shoreline lights. 🐾🐾🐾",
     "image": "episodes/riodejaneiro.webp",
@@ -1646,7 +1763,10 @@
   {
     "id": 40,
     "instagramUrl": "https://www.instagram.com/p/DU6Cd3gjALN/",
-    "title": "SOLadventure #40 – Cape Town, ocean’s edge 🌊 🇿🇦",
+    "title": {
+      "en": "SOLadventure #40 – Cape Town, ocean’s edge 🌊 🇿🇦",
+      "el": "SOLadventure #40 – Κέιπ Τάουν, στην άκρη του ωκεανού 🌊 🇿🇦"
+    },
     "quote": "The mountain kept watch. She kept calm.",
     "caption": "Even the skyline whispers when the queen is watching. 🐾🐾🐾",
     "image": "episodes/capetown.webp",
@@ -1689,7 +1809,10 @@
   {
     "id": 41,
     "instagramUrl": "https://www.instagram.com/p/DVMED3ejHg1/",
-    "title": "SOLadventure #41 – Victoria Falls, thunder’s veil 🌋 🇿🇼",
+    "title": {
+      "en": "SOLadventure #41 – Victoria Falls, thunder’s veil 🌋 🇿🇼",
+      "el": "SOLadventure #41 – Καταρράκτες Βικτώρια, πέπλο βροντής 🌋 🇿🇼"
+    },
     "quote": "Mist took the noise. She kept the calm.",
     "caption": "Even thunder learns manners when the queen is watching. 🐾🐾🐾",
     "image": "episodes/victoria.webp",
@@ -1732,7 +1855,10 @@
   {
     "id": 42,
     "instagramUrl": "https://www.instagram.com/p/DVeFmD9DMuP/",
-    "title": "SOLadventure #42 – Zanzibar, spice islands 🏝️ 🇹🇿",
+    "title": {
+      "en": "SOLadventure #42 – Zanzibar, spice islands 🏝️ 🇹🇿",
+      "el": "SOLadventure #42 – Ζανζιβάρη, νησιά μπαχαρικών 🏝️ 🇹🇿"
+    },
     "quote": "She ruled the hush between waves.",
     "caption": "Sun on the sand, spice in the air, and the queen in her element. 🐾🐾🐾",
     "image": "episodes/zanzibar.webp",
@@ -1775,7 +1901,10 @@
   {
     "id": 43,
     "instagramUrl": "https://www.instagram.com/p/DVwHLoXDFh-/",
-    "title": "SOLadventure #43 – Nairobi, safari gateway 🦓🌍 🇰🇪",
+    "title": {
+      "en": "SOLadventure #43 – Nairobi, safari gateway 🦓🌍 🇰🇪",
+      "el": "SOLadventure #43 – Ναϊρόμπι, πύλη για σαφάρι 🦓🌍 🇰🇪"
+    },
     "quote": "She sat where the skyline gave way to stripes.",
     "caption": "Where the city softens and the wild steps forward, the queen already belongs. 🐾🐾🐾",
     "image": "episodes/nairobi.webp",
@@ -1818,7 +1947,10 @@
   {
     "id": 44,
     "instagramUrl": "https://www.instagram.com/p/DWCIua4DMOJ/",
-    "title": "SOLadventure #44 – Madagascar, tree of life 🌅🌴 🇲🇬",
+    "title": {
+      "en": "SOLadventure #44 – Madagascar, tree of life 🌅🌴 🇲🇬",
+      "el": "SOLadventure #44 – Μαδαγασκάρη, δέντρο της ζωής 🌅🌴 🇲🇬"
+    },
     "quote": "She paused where giants hold the evening.",
     "caption": "Under Madagascar’s giants, even the sunset knows who rules the road. 🐾🐾🐾",
     "image": "episodes/madagascar.webp",
@@ -1861,7 +1993,10 @@
   {
     "id": 45,
     "instagramUrl": "https://www.instagram.com/p/DWUUP-ojLmF/",
-    "title": "SOLadventure #45 – Lalibela, sacred stones ⛪🪨 🇪🇹",
+    "title": {
+      "en": "SOLadventure #45 – Lalibela, sacred stones ⛪🪨 🇪🇹",
+      "el": "SOLadventure #45 – Λαλιμπέλα, ιερές πέτρες ⛪🪨 🇪🇹"
+    },
     "quote": "She rested where the stone remembers.",
     "caption": "Among carved silence and ancient faith, even a queen learns to tread softly. 🐾🐾🐾",
     "image": "episodes/lalibela.webp",
@@ -1904,7 +2039,10 @@
   {
     "id": 46,
     "instagramUrl": "https://www.instagram.com/p/DWmFAA_jDOX/",
-    "title": "SOLadventure #46 – Saint-Louis, river-wind beats 🌬️ 🇸🇳",
+    "title": {
+      "en": "SOLadventure #46 – Saint-Louis, river-wind beats 🌬️ 🇸🇳",
+      "el": "SOLadventure #46 – Σεν Λουί, ρυθμοί ποταμίσιου ανέμου 🌬️ 🇸🇳"
+    },
     "quote": "She listened where the river kept its old songs.",
     "caption": "Where river light and old facades meet, even a queen lets the wind set the rhythm. 🐾🐾🐾",
     "image": "episodes/saint-louis.webp",
@@ -1947,7 +2085,10 @@
   {
     "id": 47,
     "instagramUrl": "https://www.instagram.com/p/DW4GwvUDL4g/",
-    "title": "SOLadventure #47 – Marrakech, desert’s jewel 🏜️ 🇲🇦",
+    "title": {
+      "en": "SOLadventure #47 – Marrakech, desert’s jewel 🏜️ 🇲🇦",
+      "el": "SOLadventure #47 – Μαρακές, στολίδι της ερήμου 🏜️ 🇲🇦"
+    },
     "quote": "Where color speaks before words.",
     "caption": "Colors above, quiet below, and one queen exactly where she belongs. 🐾🐾🐾",
     "image": "episodes/marrakech.webp",
@@ -1990,7 +2131,10 @@
   {
     "id": 48,
     "instagramUrl": "https://www.instagram.com/p/DXKIHDfDK3z/",
-    "title": "SOLadventure #48 – Lisbon, pastel tiles & Atlantic tides 🌊 🇵🇹",
+    "title": {
+      "en": "SOLadventure #48 – Lisbon, pastel tiles & Atlantic tides 🌊 🇵🇹",
+      "el": "SOLadventure #48 – Λισαβόνα, παστέλ πλακάκια και ατλαντικές παλίρροιες 🌊 🇵🇹"
+    },
     "quote": "Pastel light, Atlantic calm.",
     "caption": "Lisbon didn’t ask for a queen. It already had one. 🐾🐾🐾",
     "image": "episodes/lisbon.webp",
@@ -2033,7 +2177,10 @@
   {
     "id": 49,
     "instagramUrl": "https://www.instagram.com/p/DXcJ04wDNTl/",
-    "title": "SOLadventure #49 – Tunis, medina maze & quiet arches 🕌 🇹🇳",
+    "title": {
+      "en": "SOLadventure #49 – Tunis, medina maze & quiet arches 🕌 🇹🇳",
+      "el": "SOLadventure #49 – Τύνιδα, λαβύρινθος μεντίνας και σιωπηλά τόξα 🕌 🇹🇳"
+    },
     "quote": "The medina parted, paw by paw.",
     "caption": "Tunis did not try to impress her. It simply opened, turn by turn. 🐾🐾🐾",
     "image": "episodes/tunis.webp",
@@ -2076,7 +2223,10 @@
   {
     "id": 50,
     "instagramUrl": "https://www.instagram.com/p/DXwGeC9jFX1/",
-    "title": "SOLadventure #50 – Cairo, pharaoh’s gaze 🏺 🇪🇬",
+    "title": {
+      "en": "SOLadventure #50 – Cairo, pharaoh’s gaze 🏺 🇪🇬",
+      "el": "SOLadventure #50 – Κάιρο, βλέμμα φαραώ 🏺 🇪🇬"
+    },
     "quote": "She sat where empires sleep.",
     "caption": "The stones had already spoken, and Sol listened like royalty. 🐾🐾🐾",
     "image": "episodes/cairo.webp",
@@ -2119,7 +2269,10 @@
   {
     "id": 51,
     "instagramUrl": "https://www.instagram.com/p/DYAMzruDFyl/",
-    "title": "SOLadventure #51 – Paphos, ancient mosaics & royal tombs 🏺🌊 🇨🇾",
+    "title": {
+      "en": "SOLadventure #51 – Paphos, ancient mosaics & royal tombs 🏺🌊 🇨🇾",
+      "el": "SOLadventure #51 – Πάφος, αρχαία ψηφιδωτά και βασιλικοί τάφοι 🏺🌊 🇨🇾"
+    },
     "quote": "Sun-warmed stone, royal calm.",
     "caption": "Among ancient echoes and sea light, Sol moved with timeless grace. 🐾🐾🐾",
     "image": "episodes/paphos.webp",
@@ -2162,7 +2315,10 @@
   {
     "id": 52,
     "instagramUrl": "https://www.instagram.com/p/DYSR5kwMWMi/",
-    "title": "SOLadventure #52 – Petra, rose‑red city of secrets 🌹 🇯🇴",
+    "title": {
+      "en": "SOLadventure #52 – Petra, rose‑red city of secrets 🌹 🇯🇴",
+      "el": "SOLadventure #52 – Πέτρα, ροδοκόκκινη πόλη μυστικών 🌹 🇯🇴"
+    },
     "quote": "She walked where the stone remembered queens.",
     "caption": "Even rose stone bowed to royal paws. 🐾🐾🐾",
     "image": "episodes/petra.webp",
