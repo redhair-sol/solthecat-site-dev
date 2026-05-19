@@ -8,7 +8,7 @@ import { useLanguage } from "../context/LanguageContext.jsx";
 import PageContainer from "../components/PageContainer.jsx";
 import { fonts } from "../theme.js";
 import { detectRegion } from "../utils/region.js";
-import { cityGenitiveEl } from "../utils/cityForms.js";
+import { cityArticleGenEl } from "../utils/cityForms.js";
 
 // Pulls the human-friendly city name out of the episode title so the
 // per-card quiz CTA reads "Play the Athens quiz" etc. Titles follow the
@@ -58,14 +58,15 @@ function extractCityName(ep, lang) {
   return "";
 }
 
-// Returns the city name as it should appear inside the per-card quiz CTA.
-// EL needs the genitive form ("Παίξε το quiz της Αθήνας") which the title
-// only ever holds in nominative ("Αθήνα"), so we look it up in cityForms.
-// EN and any EL slug we haven't mapped fall back to extractCityName so the
-// button never goes empty.
+// Returns the city phrase to drop into the per-card quiz CTA. For EL we
+// need the article + genitive together ("της Αθήνας", "του Καΐρου", "των
+// Καταρρακτών Βικτώρια") because a single hardcoded article in the
+// template can't cover all three genders + the plural-form falls. The
+// title only ever holds nominative, so the article+case form lives in
+// cityForms. EN and unmapped EL slugs fall back to extractCityName.
 function cityForCTA(ep, lang) {
-  if (lang === "el" && ep.city && cityGenitiveEl[ep.city]) {
-    return cityGenitiveEl[ep.city];
+  if (lang === "el" && ep.city && cityArticleGenEl[ep.city]) {
+    return cityArticleGenEl[ep.city];
   }
   return extractCityName(ep, lang);
 }
@@ -166,7 +167,10 @@ export default function Episodes() {
       clearLabel: "Καθαρισμός αναζήτησης",
       storyTitle: "Το Παραμύθι της SOL",
       loadFail: "Δεν φόρτωσαν τα επεισόδια. Παρακαλώ δοκίμασε refresh.",
-      quizCTA: (city) => `Παίξε το quiz της ${city} →`,
+      // The argument carries the article + genitive together ("της Αθήνας",
+      // "του Καΐρου", "των Καταρρακτών Βικτώρια") so we do not hardcode an
+      // article in the template — that would only work for one gender.
+      quizCTA: (cityPhrase) => `Παίξε το quiz ${cityPhrase} →`,
       igCTA: "Δες στο Instagram",
       metaDescription:
         "Όλα τα 52 SOLadventures, μικρές ταξιδιωτικές ιστορίες από Αθήνα, Ρώμη, Παρίσι, Μαρακές, Πέτρα και ακόμη πιο πέρα. Κάθε πόλη, μια βασιλική ματιά.",
