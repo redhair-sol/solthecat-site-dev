@@ -9,7 +9,6 @@
 //   1. Delete this file (BottomTabBar.jsx)
 //   2. In src/App.jsx: remove the BottomTabBar import + <BottomTabBar /> usage
 //   3. In src/App.jsx: change `pb-20 md:pb-0` back to no padding-bottom class
-//   4. In src/components/InstagramFloatingButton.jsx: change `bottom-24` back to `bottom-4`
 // The rest of the app (Topbar, Sidebar, MobileMenu) stays untouched.
 
 import { useState } from "react";
