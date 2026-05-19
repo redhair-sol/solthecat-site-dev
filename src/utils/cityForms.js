@@ -55,7 +55,7 @@ export const cityArticleGenEl = {
   montevideo: "του Μοντεβιδέο",
   riodejaneiro: "του Ρίο ντε Τζανέιρο",
   capetown: "του Κέιπ Τάουν",
-  victoriafalls: "των Καταρρακτών Βικτώρια",
+  victoriafalls: "των Καταρρακτών",
   zanzibar: "της Ζανζιβάρης",
   nairobi: "του Ναϊρόμπι",
   madagascar: "της Μαδαγασκάρης",
