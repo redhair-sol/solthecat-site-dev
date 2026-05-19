@@ -2357,5 +2357,50 @@
       }
     ],
     "region": "asia"
+  },
+  {
+    "id": 53,
+    "instagramUrl": "",
+    "title": {
+      "en": "SOLadventure #53 – Dubai, where the skyline bows 🏙️ 🇦🇪",
+      "el": "SOLadventure #53 – Ντουμπάι, εκεί που υποκλίνεται ο ορίζοντας 🏙️ 🇦🇪"
+    },
+    "quote": "Some cities rise high. Others bow.",
+    "caption": "Glass towers, golden dusk, and a queen who never blinks. 🐾🐾🐾",
+    "image": "episodes/Dubai.webp",
+    "location": {
+      "lat": 25.1972,
+      "lng": 55.2744
+    },
+    "visible": true,
+    "city": "dubai",
+    "story": {
+      "en": "Dubai met her at golden hour. She climbed onto a marble ledge above the Burj Khalifa's reflection, and the tallest tower in the world turned gold around her. Glass walls multiplied her in every direction, a queen reigning across a kingdom of mirrors. Far below, the fountains rose and fell, the city hummed its evening prayer, and the desert beyond breathed out its day's heat. She didn't move. Other cities rise high. This one bowed first.",
+      "el": "Το Ντουμπάι την υποδέχτηκε στη χρυσή ώρα. Σκαρφάλωσε σε ένα μάρμαρο πάνω από τις αντανακλάσεις του Burj Khalifa, και ο ψηλότερος πύργος του κόσμου χρυσώθηκε γύρω της. Γυάλινοι τοίχοι την πολλαπλασίαζαν προς κάθε κατεύθυνση, μια βασίλισσα που βασίλευε σε ένα βασίλειο από καθρέφτες. Πιο κάτω, τα συντριβάνια ανέβαιναν και έπεφταν, η πόλη ψιθύριζε την εσπερινή της προσευχή, και η έρημος πέρα ανέπνεε τη ζέστη της μέρας. Δεν κουνήθηκε. Άλλες πόλεις υψώνονται. Αυτή υποκλίθηκε πρώτη."
+    },
+    "snapQuestions": [
+      {
+        "question": {
+          "en": "Did Sol arrive in Dubai at golden hour, just before sunset?",
+          "el": "Έφτασε η Sol στο Ντουμπάι τη χρυσή ώρα, λίγο πριν τη δύση;"
+        },
+        "answer": true
+      },
+      {
+        "question": {
+          "en": "Did the Burj Khalifa, the world's tallest tower, turn gold around her?",
+          "el": "Χρυσώθηκε γύρω της ο Burj Khalifa, ο ψηλότερος πύργος του κόσμου;"
+        },
+        "answer": true
+      },
+      {
+        "question": {
+          "en": "Did Sol leap from the marble ledge into the fountains far below?",
+          "el": "Πήδηξε η Sol από το μαρμάρινο πεζούλι στα συντριβάνια πιο κάτω;"
+        },
+        "answer": false
+      }
+    ],
+    "region": "asia"
   }
 ]

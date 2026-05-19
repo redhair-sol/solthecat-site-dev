@@ -1,0 +1,252 @@
+[
+  {
+    "id": 1,
+    "question": { "en": "Which is the world's tallest building?", "el": "Ποιο είναι το ψηλότερο κτίριο του κόσμου;" },
+    "answers": [
+      { "text": { "en": "Burj Khalifa", "el": "Burj Khalifa" }, "correct": true },
+      { "text": { "en": "Empire State Building", "el": "Empire State Building" }, "correct": false },
+      { "text": { "en": "Eiffel Tower", "el": "Πύργος του Άιφελ" }, "correct": false },
+      { "text": { "en": "Shanghai Tower", "el": "Πύργος της Σαγκάης" }, "correct": false }
+    ]
+  },
+  {
+    "id": 2,
+    "question": { "en": "In which country is Dubai located?", "el": "Σε ποια χώρα βρίσκεται το Ντουμπάι;" },
+    "answers": [
+      { "text": { "en": "United Arab Emirates", "el": "Ηνωμένα Αραβικά Εμιράτα" }, "correct": true },
+      { "text": { "en": "Saudi Arabia", "el": "Σαουδική Αραβία" }, "correct": false },
+      { "text": { "en": "Qatar", "el": "Κατάρ" }, "correct": false },
+      { "text": { "en": "Oman", "el": "Ομάν" }, "correct": false }
+    ]
+  },
+  {
+    "id": 3,
+    "question": { "en": "What is the currency of the UAE?", "el": "Ποιο είναι το νόμισμα των ΗΑΕ;" },
+    "answers": [
+      { "text": { "en": "Dirham", "el": "Ντιρχάμ" }, "correct": true },
+      { "text": { "en": "Saudi Riyal", "el": "Σαουδαραβικό Ριάλ" }, "correct": false },
+      { "text": { "en": "Dinar", "el": "Δηνάριο" }, "correct": false },
+      { "text": { "en": "Iranian Rial", "el": "Ιρανικό Ριάλ" }, "correct": false }
+    ]
+  },
+  {
+    "id": 4,
+    "question": { "en": "On which continent is Dubai?", "el": "Σε ποια ήπειρο βρίσκεται το Ντουμπάι;" },
+    "answers": [
+      { "text": { "en": "Asia", "el": "Ασία" }, "correct": true },
+      { "text": { "en": "Africa", "el": "Αφρική" }, "correct": false },
+      { "text": { "en": "Europe", "el": "Ευρώπη" }, "correct": false },
+      { "text": { "en": "Oceania", "el": "Ωκεανία" }, "correct": false }
+    ]
+  },
+  {
+    "id": 5,
+    "question": { "en": "Approximately how tall is the Burj Khalifa?", "el": "Πόσο ψηλός είναι περίπου ο Burj Khalifa;" },
+    "answers": [
+      { "text": { "en": "828 m", "el": "828 μ." }, "correct": true },
+      { "text": { "en": "1010 m", "el": "1010 μ." }, "correct": false },
+      { "text": { "en": "540 m", "el": "540 μ." }, "correct": false },
+      { "text": { "en": "700 m", "el": "700 μ." }, "correct": false }
+    ]
+  },
+  {
+    "id": 6,
+    "question": { "en": "Which luxury hotel in Dubai is shaped like a sail?", "el": "Ποιο πολυτελές ξενοδοχείο στο Ντουμπάι έχει σχήμα πανί ιστιοφόρου;" },
+    "answers": [
+      { "text": { "en": "Burj Al Arab", "el": "Burj Al Arab" }, "correct": true },
+      { "text": { "en": "Atlantis The Palm", "el": "Atlantis The Palm" }, "correct": false },
+      { "text": { "en": "Address Downtown", "el": "Address Downtown" }, "correct": false },
+      { "text": { "en": "Armani Hotel", "el": "Armani Hotel" }, "correct": false }
+    ]
+  },
+  {
+    "id": 7,
+    "question": { "en": "What is the name of Dubai's famous palm-shaped artificial island?", "el": "Πώς λέγεται το διάσημο τεχνητό νησί του Ντουμπάι σε σχήμα φοίνικα;" },
+    "answers": [
+      { "text": { "en": "Palm Jumeirah", "el": "Palm Jumeirah" }, "correct": true },
+      { "text": { "en": "The World Islands", "el": "The World Islands" }, "correct": false },
+      { "text": { "en": "Dubai Creek", "el": "Dubai Creek" }, "correct": false },
+      { "text": { "en": "Yas Island", "el": "Yas Island" }, "correct": false }
+    ]
+  },
+  {
+    "id": 8,
+    "question": { "en": "Which mall in Dubai is among the largest in the world by total area?", "el": "Ποιο εμπορικό κέντρο του Ντουμπάι είναι από τα μεγαλύτερα στον κόσμο σε συνολική επιφάνεια;" },
+    "answers": [
+      { "text": { "en": "Dubai Mall", "el": "Dubai Mall" }, "correct": true },
+      { "text": { "en": "Mall of the Emirates", "el": "Mall of the Emirates" }, "correct": false },
+      { "text": { "en": "Ibn Battuta Mall", "el": "Ibn Battuta Mall" }, "correct": false },
+      { "text": { "en": "City Walk", "el": "City Walk" }, "correct": false }
+    ]
+  },
+  {
+    "id": 9,
+    "question": { "en": "In which year did the Burj Khalifa officially open?", "el": "Σε ποιο έτος εγκαινιάστηκε επίσημα ο Burj Khalifa;" },
+    "answers": [
+      { "text": { "en": "2010", "el": "2010" }, "correct": true },
+      { "text": { "en": "2005", "el": "2005" }, "correct": false },
+      { "text": { "en": "2015", "el": "2015" }, "correct": false },
+      { "text": { "en": "2000", "el": "2000" }, "correct": false }
+    ]
+  },
+  {
+    "id": 10,
+    "question": { "en": "What is the name of the choreographed water show at the base of the Burj Khalifa?", "el": "Πώς λέγεται το χορογραφημένο σόου νερού στη βάση του Burj Khalifa;" },
+    "answers": [
+      { "text": { "en": "Dubai Fountain", "el": "Dubai Fountain" }, "correct": true },
+      { "text": { "en": "Bellagio Fountain", "el": "Συντριβάνια Bellagio" }, "correct": false },
+      { "text": { "en": "Magic Fountain", "el": "Magic Fountain" }, "correct": false },
+      { "text": { "en": "Trevi Fountain", "el": "Φοντάνα ντι Τρέβι" }, "correct": false }
+    ]
+  },
+  {
+    "id": 11,
+    "question": { "en": "What traditional wooden boat is still used on Dubai Creek?", "el": "Ποια παραδοσιακή ξύλινη βάρκα χρησιμοποιείται ακόμη στο Dubai Creek;" },
+    "answers": [
+      { "text": { "en": "Dhow", "el": "Dhow" }, "correct": true },
+      { "text": { "en": "Gondola", "el": "Γόνδολα" }, "correct": false },
+      { "text": { "en": "Caique", "el": "Καΐκι" }, "correct": false },
+      { "text": { "en": "Junk", "el": "Τζανκ" }, "correct": false }
+    ]
+  },
+  {
+    "id": 12,
+    "question": { "en": "In which year was the United Arab Emirates founded as a country?", "el": "Σε ποιο έτος ιδρύθηκαν τα Ηνωμένα Αραβικά Εμιράτα ως κράτος;" },
+    "answers": [
+      { "text": { "en": "1971", "el": "1971" }, "correct": true },
+      { "text": { "en": "1965", "el": "1965" }, "correct": false },
+      { "text": { "en": "1981", "el": "1981" }, "correct": false },
+      { "text": { "en": "1955", "el": "1955" }, "correct": false }
+    ]
+  },
+  {
+    "id": 13,
+    "question": { "en": "Which is the largest emirate of the UAE by land area?", "el": "Ποιο είναι το μεγαλύτερο εμιράτο των ΗΑΕ σε έκταση;" },
+    "answers": [
+      { "text": { "en": "Abu Dhabi", "el": "Άμπου Ντάμπι" }, "correct": true },
+      { "text": { "en": "Dubai", "el": "Ντουμπάι" }, "correct": false },
+      { "text": { "en": "Sharjah", "el": "Σάρτζα" }, "correct": false },
+      { "text": { "en": "Ras Al Khaimah", "el": "Ρας Αλ Κάιμα" }, "correct": false }
+    ]
+  },
+  {
+    "id": 14,
+    "question": { "en": "What is the official language of the UAE?", "el": "Ποια είναι η επίσημη γλώσσα των ΗΑΕ;" },
+    "answers": [
+      { "text": { "en": "Arabic", "el": "Αραβικά" }, "correct": true },
+      { "text": { "en": "English", "el": "Αγγλικά" }, "correct": false },
+      { "text": { "en": "Persian", "el": "Περσικά" }, "correct": false },
+      { "text": { "en": "Urdu", "el": "Ουρντού" }, "correct": false }
+    ]
+  },
+  {
+    "id": 15,
+    "question": { "en": "Which major airline is based in Dubai?", "el": "Ποια μεγάλη αεροπορική εταιρεία έχει έδρα στο Ντουμπάι;" },
+    "answers": [
+      { "text": { "en": "Emirates", "el": "Emirates" }, "correct": true },
+      { "text": { "en": "Etihad Airways", "el": "Etihad Airways" }, "correct": false },
+      { "text": { "en": "Qatar Airways", "el": "Qatar Airways" }, "correct": false },
+      { "text": { "en": "Lufthansa", "el": "Lufthansa" }, "correct": false }
+    ]
+  },
+  {
+    "id": 16,
+    "question": { "en": "What is the predominant religion in the UAE?", "el": "Ποια είναι η επικρατούσα θρησκεία στα ΗΑΕ;" },
+    "answers": [
+      { "text": { "en": "Islam", "el": "Ισλάμ" }, "correct": true },
+      { "text": { "en": "Christianity", "el": "Χριστιανισμός" }, "correct": false },
+      { "text": { "en": "Hinduism", "el": "Ινδουισμός" }, "correct": false },
+      { "text": { "en": "Buddhism", "el": "Βουδισμός" }, "correct": false }
+    ]
+  },
+  {
+    "id": 17,
+    "question": { "en": "Which historic Dubai neighborhood preserves traditional wind-tower architecture?", "el": "Ποια ιστορική γειτονιά του Ντουμπάι διατηρεί την παραδοσιακή αρχιτεκτονική με ανεμοπύργους;" },
+    "answers": [
+      { "text": { "en": "Al Fahidi", "el": "Al Fahidi" }, "correct": true },
+      { "text": { "en": "Dubai Marina", "el": "Dubai Marina" }, "correct": false },
+      { "text": { "en": "JBR", "el": "JBR" }, "correct": false },
+      { "text": { "en": "Business Bay", "el": "Business Bay" }, "correct": false }
+    ]
+  },
+  {
+    "id": 18,
+    "question": { "en": "What is the name of Dubai's iconic giant picture-frame structure?", "el": "Πώς λέγεται το εμβληματικό γιγάντιο μνημείο σε σχήμα κορνίζας στο Ντουμπάι;" },
+    "answers": [
+      { "text": { "en": "Dubai Frame", "el": "Dubai Frame" }, "correct": true },
+      { "text": { "en": "Dubai Eye", "el": "Dubai Eye" }, "correct": false },
+      { "text": { "en": "Burj Plaza", "el": "Burj Plaza" }, "correct": false },
+      { "text": { "en": "Sky Views", "el": "Sky Views" }, "correct": false }
+    ]
+  },
+  {
+    "id": 19,
+    "question": { "en": "Which climate type best describes Dubai?", "el": "Ποιος τύπος κλίματος περιγράφει καλύτερα το Ντουμπάι;" },
+    "answers": [
+      { "text": { "en": "Hot desert", "el": "Θερμή έρημος" }, "correct": true },
+      { "text": { "en": "Mediterranean", "el": "Μεσογειακό" }, "correct": false },
+      { "text": { "en": "Tropical rainforest", "el": "Τροπικό υγρό" }, "correct": false },
+      { "text": { "en": "Continental", "el": "Ηπειρωτικό" }, "correct": false }
+    ]
+  },
+  {
+    "id": 20,
+    "question": { "en": "Summer temperatures in Dubai routinely exceed:", "el": "Οι καλοκαιρινές θερμοκρασίες στο Ντουμπάι ξεπερνούν συχνά:" },
+    "answers": [
+      { "text": { "en": "45 °C", "el": "45 °C" }, "correct": true },
+      { "text": { "en": "30 °C", "el": "30 °C" }, "correct": false },
+      { "text": { "en": "25 °C", "el": "25 °C" }, "correct": false },
+      { "text": { "en": "60 °C", "el": "60 °C" }, "correct": false }
+    ]
+  },
+  {
+    "id": 21,
+    "question": { "en": "Which traditional sport is part of the UAE's cultural heritage?", "el": "Ποιο παραδοσιακό άθλημα ανήκει στην πολιτιστική κληρονομιά των ΗΑΕ;" },
+    "answers": [
+      { "text": { "en": "Falconry", "el": "Ιερακοθηρία" }, "correct": true },
+      { "text": { "en": "Cricket", "el": "Κρίκετ" }, "correct": false },
+      { "text": { "en": "Polo", "el": "Πόλο" }, "correct": false },
+      { "text": { "en": "Cycling", "el": "Ποδηλασία" }, "correct": false }
+    ]
+  },
+  {
+    "id": 22,
+    "question": { "en": "The UAE Dirham is subdivided into:", "el": "Το Ντιρχάμ των ΗΑΕ υποδιαιρείται σε:" },
+    "answers": [
+      { "text": { "en": "Fils", "el": "Fils" }, "correct": true },
+      { "text": { "en": "Cents", "el": "Σεντς" }, "correct": false },
+      { "text": { "en": "Paise", "el": "Πάιζε" }, "correct": false },
+      { "text": { "en": "Pence", "el": "Πένες" }, "correct": false }
+    ]
+  },
+  {
+    "id": 23,
+    "question": { "en": "Which famous luxury resort sits on Palm Jumeirah?", "el": "Ποιο διάσημο πολυτελές resort βρίσκεται στο Palm Jumeirah;" },
+    "answers": [
+      { "text": { "en": "Atlantis The Palm", "el": "Atlantis The Palm" }, "correct": true },
+      { "text": { "en": "Armani Hotel Dubai", "el": "Armani Hotel Dubai" }, "correct": false },
+      { "text": { "en": "Address Downtown", "el": "Address Downtown" }, "correct": false },
+      { "text": { "en": "Rove City Walk", "el": "Rove City Walk" }, "correct": false }
+    ]
+  },
+  {
+    "id": 24,
+    "question": { "en": "Which futuristic Dubai landmark, opened in 2022, looks like a giant glowing ring covered in Arabic calligraphy?", "el": "Ποιο φουτουριστικό αξιοθέατο του Ντουμπάι, εγκαίνια 2022, μοιάζει με γιγάντιο φωτεινό δαχτυλίδι με αραβική καλλιγραφία;" },
+    "answers": [
+      { "text": { "en": "Museum of the Future", "el": "Museum of the Future" }, "correct": true },
+      { "text": { "en": "Dubai Frame", "el": "Dubai Frame" }, "correct": false },
+      { "text": { "en": "Burj Khalifa", "el": "Burj Khalifa" }, "correct": false },
+      { "text": { "en": "Sky Views Observatory", "el": "Sky Views Observatory" }, "correct": false }
+    ]
+  },
+  {
+    "id": 25,
+    "question": { "en": "What is the natural saltwater inlet that historically divided old Dubai in two?", "el": "Ποιος είναι ο φυσικός κόλπος που ιστορικά χώριζε το παλιό Ντουμπάι στα δύο;" },
+    "answers": [
+      { "text": { "en": "Dubai Creek", "el": "Dubai Creek" }, "correct": true },
+      { "text": { "en": "Strait of Hormuz", "el": "Στενά του Ορμούζ" }, "correct": false },
+      { "text": { "en": "Persian Gulf", "el": "Περσικός Κόλπος" }, "correct": false },
+      { "text": { "en": "Sharjah Bay", "el": "Κόλπος Σάρτζα" }, "correct": false }
+    ]
+  }
+]

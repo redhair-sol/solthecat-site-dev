@@ -146,7 +146,7 @@ export default function Episodes() {
       quizCTA: (city) => `Play the ${city} quiz →`,
       igCTA: "See on Instagram",
       metaDescription:
-        "All 52 SOLadventures, short travel stories from Athens, Rome, Paris, Marrakech, Petra and beyond. Each city, a queen's-eye view.",
+        "All 53 SOLadventures, short travel stories from Athens, Rome, Paris, Marrakech, Petra, Dubai and beyond. Each city, a queen's-eye view.",
       regions: {
         all: "All",
         europe: "Europe",
@@ -173,7 +173,7 @@ export default function Episodes() {
       quizCTA: (cityPhrase) => `Παίξε το quiz ${cityPhrase} →`,
       igCTA: "Δες στο Instagram",
       metaDescription:
-        "Όλα τα 52 SOLadventures, μικρές ταξιδιωτικές ιστορίες από Αθήνα, Ρώμη, Παρίσι, Μαρακές, Πέτρα και ακόμη πιο πέρα. Κάθε πόλη, μια βασιλική ματιά.",
+        "Όλα τα 53 SOLadventures, μικρές ταξιδιωτικές ιστορίες από Αθήνα, Ρώμη, Παρίσι, Μαρακές, Πέτρα, Ντουμπάι και ακόμη πιο πέρα. Κάθε πόλη, μια βασιλική ματιά.",
       regions: {
         all: "Όλα",
         europe: "Ευρώπη",

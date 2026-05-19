@@ -67,4 +67,5 @@ export const cityArticleGenEl = {
   cairo: "του Καΐρου",
   paphos: "της Πάφου",
   petra: "της Πέτρας",
+  dubai: "του Ντουμπάι",
 };
