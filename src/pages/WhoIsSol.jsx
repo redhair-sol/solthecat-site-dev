@@ -433,7 +433,7 @@ export default function WhoIsSol() {
           <PartnerText>
             {language === "el" ? (
               <>
-                Μια βασίλισσα δεν κλείνει η ίδια τα εισιτήρια της. Δεν οδηγεί. Δεν ασχολείται με τη διαδρομή. Πίσω από κάθε reel στη Ρώμη, κάθε ύπνο στο Μαρακές, κάθε καρτ ποστάλ από τη Λισαβόνα, υπάρχει κάποιος που κανονίζει στ' αλήθεια, η ομάδα του{" "}
+                Μια βασίλισσα δεν κλείνει η ίδια τα εισιτήρια της. Δεν οδηγεί. Δεν ασχολείται με τη διαδρομή. Πίσω από κάθε reel στη Ρώμη, κάθε ύπνο στο Μαρακές, κάθε καρτ ποστάλ από τη Λισαβόνα, υπάρχει κάποιος που κανονίζει τα πάντα, η ομάδα του{" "}
                 <PartnerLink
                   href="https://ilovetours.gr"
                   target="_blank"
@@ -445,7 +445,7 @@ export default function WhoIsSol() {
               </>
             ) : (
               <>
-                A queen doesn't book her own flights. She doesn't drive. She doesn't worry about the route. Behind every reel from Rome, every nap in Marrakech, every postcard from Lisbon, there's someone who actually plans things, the team at{" "}
+                A queen doesn't book her own flights. She doesn't drive. She doesn't worry about the route. Behind every reel from Rome, every nap in Marrakech, every postcard from Lisbon, there's someone who plans everything, the team at{" "}
                 <PartnerLink
                   href="https://ilovetours.gr"
                   target="_blank"
