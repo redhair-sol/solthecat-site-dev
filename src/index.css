@@ -39,54 +39,6 @@ body {
 }
 
 /* ————————————————————————————— */
-/* App structure */
-
-.app-container {
-  display: flex;
-  min-height: 100vh;
-}
-
-/* Sidebar (desktop only) */
-.sidebar {
-  width: 180px;
-  background-color: #f5c2d1;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-  padding: 1.5rem 1rem;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.sidebar a {
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.sidebar a:hover {
-  color: #c35ca0;
-}
-
-/* ————————————————————————————— */
-/* Main content (optimized for mobile) */
-
-.main-content {
-  flex-grow: 1;
-  padding: 1.5rem 1rem;
-}
-
-@media (min-width: 640px) {
-  .main-content {
-    padding: 2rem 2rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .main-content {
-    padding: 2rem 3rem;
-  }
-}
-
-/* ————————————————————————————— */
 /* Custom Tailwind components */
 
 @layer components {

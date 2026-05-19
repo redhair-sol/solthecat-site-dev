@@ -6,14 +6,11 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        "royal-bg": "#fffafc",
-        "royal-pink": "#f5c2d1",
-        "royal-purple": "#9253a5",
-        "royal-text": "#3e2e41",
-        "royal-lilac": "#d9b8ff",
-        "royal-shadow": "#ead6ea",
-      },
+      // Custom colors are managed via CSS variables in src/index.css
+      // (--sol-*). Keep this block out unless we need Tailwind-utility
+      // class names for a colour, since those variables already cover
+      // every styled-components usage and inline className arbitrary
+      // values like bg-[var(--sol-cream)].
       fontFamily: {
         cursive: ['"Dancing Script"', "cursive"],
         sans: ['"Poppins"', "sans-serif"],

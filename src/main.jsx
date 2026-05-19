@@ -3,21 +3,14 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async"; // ✅ ΝΕΟ
 
-// Self-hosted fonts (replace Google Fonts CDN — better privacy + CSP).
-// Match the previous Google Fonts URL exactly: Dancing Script 700,
-// Playfair Display italic 400, Poppins 400/500/600, Marcellus default.
+// Self-hosted fonts. Dancing Script remains for the legacy LogoText
+// components, Poppins is the body sans used across every game page.
+// Instrument Serif + Inter come from Google Fonts CDN at runtime via
+// src/index.css (the editorial + nav system uses those exclusively).
 import "@fontsource/dancing-script/700.css";
-import "@fontsource/playfair-display/400-italic.css";
 import "@fontsource/poppins/400.css";
 import "@fontsource/poppins/500.css";
 import "@fontsource/poppins/600.css";
-import "@fontsource/marcellus";
-// EB Garamond Italic — used for Greek nav labels (Dancing Script has no Greek glyphs).
-// Bilingual font swap is handled in src/theme.js (fonts.navStyleFor).
-// Using 600 weight to match the perceived visual density of Dancing Script Bold —
-// 400 italic looked too wispy/thin compared to the EN bold cursive.
-import "@fontsource/eb-garamond/600-italic.css";
-import "@fontsource/eb-garamond/greek-600-italic.css";
 
 import { LanguageProvider } from "./context/LanguageContext.jsx";
 import App from "./App.jsx";
